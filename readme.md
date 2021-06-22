@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Development Version 1.0][1]  
+Download [Development Version 0.1][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search selected text, via various search engines.  
@@ -26,4 +26,4 @@ Yahoo, Bing, DuckDuckGo, and Youtube.
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/1.0-dev/searchWith-1.0-dev.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/0.1-dev/searchWith-0.1-dev.nvda-addon
