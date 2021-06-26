@@ -63,7 +63,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		#log.info('activating virtual menu ...')
 		if self.virtualMenuActive:
 			return
-		log.info('binding gestures for virtual menu...')
+		#log.info('binding gestures for virtual menu...')
 		for key in ('downArrow', 'upArrow', 'leftArrow', 'rightArrow'):
 			self.bindGesture(f'kb:{key}', 'moveOnVirtual')
 		self.bindGesture('kb:escape', 'closeVirtual')
@@ -75,7 +75,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_moveOnVirtual(self, gesture):
 		'''Script to help us moving on virtual menu, using up and down arrow.'''
-		log.info('under script movingOnVirtual')
+		#log.info('under script movingOnVirtual')
 		key= gesture.mainKeyName
 		if key in ('leftArrow', 'rightArrow'):
 			return
@@ -102,7 +102,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_activateMenuItem(self, gesture):
 		''' Activating a menu item with enter key.'''
-		log.info('activating menu item ...')
+		#log.info('activating menu item ...')
 		text= isSelectedText()
 		index= self.index
 		# Get the url of the search engine.
@@ -127,12 +127,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# NVDA language
 			lang= languageHandler.getLanguage()
 			lang= lang.split('_')[0] if '_' in lang else lang
-			log.info(f'nvdaLang: {lang}')
+			#log.info(f'nvdaLang: {lang}')
 		elif config.conf["searchWith"]["lang"]== 2:
 			# Windows language
 			lang= languageHandler.getWindowsLanguage()
 			lang= lang.split('_')[0] if '_' in lang else lang
-			log.info(f'winLang: {lang}')
+			#log.info(f'winLang: {lang}')
 		langParam= f"&lr=lang_{lang}&hr={lang}" if lang else ""
 		webbrowser.open(googleUrl+ text+ langParam)
 		self.clearVirtual()
