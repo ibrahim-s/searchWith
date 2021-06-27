@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Version 0.2][1]  
+Download [Version 0.3][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search selected text, via various search engines.  
@@ -9,7 +9,7 @@ select the text and press once, a menu will be displayed with various search eng
 otherwise, you press the gesture twice to search with Google directly.  
 The Default gesture for the addon is: NVDA+ E.  
 but you can as always add a gesture or change the existed one going to :  
-NVDA menu>preferences>inputGestures>Search With.  
+NVDA menu>preferences>inputGestures>Search With category.  
 
 ## Usage ##
 
@@ -21,7 +21,7 @@ Yahoo, Bing, DuckDuckGo, and Youtube.
 *	Changed your mind? press the escape key to close the menu.  
 *	Or, if you want to search with Google directly  
 *	Press the gesture twice, and the results will be shown in the default browser.  
-*	Want to search Google using other language?  
+*	Want to search Google using other language options?  
 Go to, Search With category in setting panels  
 From the cumbo box there, you can choose search Google either:  
 	1.	Using browser settings and language.  
@@ -29,7 +29,7 @@ From the cumbo box there, you can choose search Google either:
 	3.	Using windows language.  
 That's it! Happy searching.  
 
-### Changes for 0.2 ###
+### Changes for 0.3 ###
 
 *	Add setting panel, giving more language options in Google search.  
 
@@ -37,4 +37,4 @@ That's it! Happy searching.
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.2/searchWith-0.2.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.3/searchWith-0.3.nvda-addon

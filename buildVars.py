@@ -27,7 +27,7 @@ addon_info = {
 Pressing once displays a menu of various search engines.
 choose one , otherwise press twice and search with Google"""),
 	# version
-	"addon_version": "0.2",
+	"addon_version": "0.3",
 	# Author(s)
 	"addon_author": "ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
