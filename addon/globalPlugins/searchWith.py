@@ -5,8 +5,9 @@
 # See the file COPYING for more details.
 
 import api
-import ui
+import core, ui
 import gui, wx
+import os, json
 from gui import guiHelper
 import config
 import queueHandler
@@ -37,20 +38,45 @@ def isSelectedText():
 		return info.text
 
 # Search engines name and url
-engineNameAndUrl= (
-	('Yahoo', 'https://search.yahoo.com/search/?p='),
-	('Bing', 'https://www.bing.com/search?q='),
-	('DuckDuckGo', 'https://duckduckgo.com/?q='),
-	('Youtube', 'http://www.youtube.com/results?search_query=')
-)
+#engineNameAndUrl= (
+	#('Yahoo', 'https://search.yahoo.com/search/?p='),
+	#('Bing', 'https://www.bing.com/search?q='),
+	#('DuckDuckGo', 'https://duckduckgo.com/?q='),
+	#('Youtube', 'http://www.youtube.com/results?search_query=')
+#)
+
+class MenuHelper:
+	allItemsDict= None
+	defaultMenuItems= ['Yahoo', 'Bing', 'DuckDuckGo', 'Youtube']
+
+	@classmethod
+	def getAllItemsDict(cls):
+		path= os.path.join(os.path.dirname(__file__), "..", "data", "searchEngines.json")
+		with open(path, encoding= "utf-8") as f:
+			d= json.load(f)
+			cls.allItemsDict= d
+
+	@classmethod
+	def getItemsToAdd(cls):
+		return [key for key in cls.allItemsDict if key not in cls.getMenuItems()]
+
+	@classmethod
+	def getMenuItems(cls):
+		return config.conf["searchWith"]["menuItems"]
+
+	@classmethod
+	def setMenuItems(cls, _list):
+		config.conf["searchWith"]["menuItems"]= _list
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
+		MenuHelper.getAllItemsDict()
 		self.virtualMenuActive= False
 		# Menu items, or labels of search engines in virtual menu.
-		self.menuItems= [name for name, url in engineNameAndUrl]
+		#self.menuItems= MenuHelper.getMenuItems()
+		self.menuItems= []
 		self.index= 0
 
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(SearchWithPanel)
@@ -68,6 +94,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.bindGesture(f'kb:{key}', 'moveOnVirtual')
 		self.bindGesture('kb:escape', 'closeVirtual')
 		self.bindGesture('kb:enter', 'activateMenuItem')
+		self.menuItems= MenuHelper.getMenuItems()
 		self.virtualMenuActive= True
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Search With Menu"))
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, f"{self.menuItems[self.index]}")
@@ -106,7 +133,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		text= isSelectedText()
 		index= self.index
 		# Get the url of the search engine.
-		url= engineNameAndUrl[index][1]
+		url= MenuHelper.allItemsDict[MenuHelper.getMenuItems()[index]]
 		webbrowser.open(url+ text)
 		self.clearVirtual()
 
@@ -148,9 +175,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 #default configuration 
 configspec={
+	"menuItems": "list(default=list())",
+	#"menuItems": "'option(),
 	"lang": "integer(default=0)",
+	"useLastSpokenAsDefault": "boolean(default=False)",
 }
 config.conf.spec["searchWith"]= configspec
+if not config.conf["searchWith"]["menuItems"]:
+	config.conf["searchWith"]["menuItems"]= MenuHelper.defaultMenuItems
 
 #make  SettingsPanel  class
 class SearchWithPanel(gui.SettingsPanel):
@@ -158,15 +190,121 @@ class SearchWithPanel(gui.SettingsPanel):
 	title= _("Search With")
 
 	def makeSettings(self, sizer):
-		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=sizer)
+		sHelper = guiHelper.BoxSizerHelper(self, sizer=sizer)
+
+		staticMenuSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, "Menu"))
+		staticMenuSizer.Add(wx.StaticText(staticMenuSizer.GetStaticBox(), label= _("Available items to add from")))
+		# Translators: List of available items to add from.
+		#self.availableItems= sHelper.addLabeledControl(_("Available items to add from"),
+		#self.availableItems= wx.ListBox(staticMenuSizer.GetStaticBox(), choices= ['apple', 'orange', 'banana', 'cherry'])
+		self.availableItems= wx.ListBox(staticMenuSizer.GetStaticBox(), choices= [])
+		staticMenuSizer.Add(self.availableItems)
+		self.availableItems.Set(MenuHelper.getItemsToAdd())
+		self.availableItems.SetSelection(0)
+
+		# Translators: Label of add button.
+		addButton= wx.Button(staticMenuSizer.GetStaticBox(), label=_("Add to menu"))
+		staticMenuSizer.Add(addButton)
+		addButton.Bind(wx.EVT_BUTTON, self.onAdd)
+
+		# Translators: Search with menu items.
+		staticMenuSizer.Add(wx.StaticText(staticMenuSizer.GetStaticBox(), label= _("Search with menu")))
+		self.customMenu=wx.ListBox(staticMenuSizer.GetStaticBox(), choices= [])
+		staticMenuSizer.Add(self.customMenu)
+		self.customMenu.Set(MenuHelper.getMenuItems())
+		self.customMenu.SetSelection(0)
+
+		buttonGroup = guiHelper.ButtonHelper(wx.VERTICAL)
+		# Translators: Label of remove button.
+		removeButton= buttonGroup.addButton(self, label= _("Remove"))
+		removeButton.Bind(wx.EVT_BUTTON, self.onRemove)
+		# Translators: Label of move up button.
+		moveUpButton= buttonGroup.addButton(self, label= _("Move item up"))
+		moveUpButton.Bind(wx.EVT_BUTTON, self.onMoveUp)
+		# Translators: Label of move down button.
+		moveDownButton= buttonGroup.addButton(self, label= _("Move item down"))
+		moveDownButton.Bind(wx.EVT_BUTTON, self.onMoveDown)
+		# Translators: Label of set menu to default button.
+		setDefaultButton= buttonGroup.addButton(self, label= _("Set menu to default"))
+		setDefaultButton.Bind(wx.EVT_BUTTON, self.onSetDefault)
+		sHelper.addItem(buttonGroup)
 
 		# Translators: Languages used in Google search.
 		langs= [_("Browser language and setting"), _("NVDA language"), _("Windows language")]
-		self.langsComboBox= settingsSizerHelper.addLabeledControl(
-		# Translators: label of cumbo box to choose language for Google search.
-		_("Choose language used in Google search"), 
-		wx.Choice, choices= langs)
+		staticCumboSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, "In Google search"))
+		staticCumboSizer.Add(wx.StaticText(staticCumboSizer.GetStaticBox(), label= "Use:"))
+		self.langsComboBox= wx.Choice(
+		staticCumboSizer.GetStaticBox(),
+		choices= langs)
+		staticCumboSizer.Add(self.langsComboBox)
 		self.langsComboBox.SetSelection(config.conf["searchWith"]["lang"])
 
+		# Translators:
+		staticCheckSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("In search with dialog")))
+		self.lastSpokenDefault= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Use last spoken as default query"))
+		staticCheckSizer.Add(self.lastSpokenDefault)
+
+	def onAdd(self, event):
+		log.info('adding item to  search menu...')
+		i= self.availableItems.GetSelection()
+		numItems = self.availableItems.GetCount()
+		if i== -1:
+			return
+		item= self.availableItems.GetStringSelection()
+		self.customMenu.Append(item)
+		self.availableItems.Delete(i)
+		core.callLater(100, ui.message, "Information: Item added")
+		#numItems = self.availableItems.GetCount()
+		if numItems== 1:
+			return
+		newIndex= i if i!= numItems-1 else i-1
+		self.availableItems.SetSelection(newIndex)
+
+	def onRemove(self, event):
+		''' Removing an item from search with menu.'''
+		i= self.customMenu.GetSelection()
+		item= self.customMenu.GetStringSelection()
+		numItems = self.customMenu.GetCount()
+		if i==-1 or not numItems:
+			return
+		self.customMenu.Delete(i)
+		self.availableItems.Append(item)
+		core.callLater(100, ui.message, _("Information: item removed"))
+		newIndex= i if i!= numItems-1 else i-1
+		if newIndex< 0:
+			return
+		self.customMenu.SetSelection(newIndex)
+
+	def onMoveUp(self, event):
+		i= self.customMenu.GetSelection()
+		item= self.customMenu.GetStringSelection()
+		numItems= self.customMenu.GetCount()
+		if numItems== 0 or i in (0, -1):
+			return
+		self.customMenu.Insert(item, i-1)
+		self.customMenu.Delete(i+1)
+		self.customMenu.SetSelection(i-1)
+		core.callLater(100, ui.message, _("Item moved up"))
+
+	def onMoveDown(self, event):
+		''' Moving an item down in search with menu.'''
+		i= self.customMenu.GetSelection()
+		item= self.customMenu.GetStringSelection()
+		numItems= self.customMenu.GetCount()
+		if numItems== 1 or i in (numItems-1, -1):
+			return
+		self.customMenu.Insert(item, i+2)
+		self.customMenu.Delete(i)
+		self.customMenu.SetSelection(i+1)
+		core.callLater(100, ui.message, _("Item moved down"))
+
+	def onSetDefault(self, event):
+		''' Setting search with menu to default.'''
+		self.customMenu.Set(MenuHelper.defaultMenuItems)
+		self.customMenu.SetSelection(0)
+		core.callLater(100, ui.message, _("Information: Menu set to default"))
+
 	def onSave(self):
+		config.conf["searchWith"]["menuItems"]= self.customMenu.GetItems()
 		config.conf["searchWith"]["lang"]= self.langsComboBox.GetSelection()
+		config.conf["searchWith"]["useLastSpokenAsDefault"]= self.lastSpokenDefault.GetValue()

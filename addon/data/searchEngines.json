@@ -1,0 +1,10 @@
+{
+	"Ask.com": "https://www.ask.com/web?q=",
+	"Github.com": "https://github.com/search?q=",
+	"Archive.org": "https://archive.org/search.php?query=",
+	"BBC.co.uk": "https://www.bbc.co.uk/search?q=",
+	"Yahoo": "https://search.yahoo.com/search/?p=",
+	"Bing": "https://www.bing.com/search?q=",
+	"DuckDuckGo": "https://duckduckgo.com/?q=",
+	"Youtube": "http://www.youtube.com/results?search_query="
+}
