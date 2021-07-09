@@ -19,6 +19,8 @@ import webbrowser
 from logHandler import log
 import addonHandler
 addonHandler.initTranslation()
+#Insure one instance of Search with dialog is active.
+_searchWithDialog= None
 
 def isSelectedText():
 	"""this function  specifies if a certain text is selected or not
@@ -37,16 +39,10 @@ def isSelectedText():
 	else:
 		return info.text
 
-# Search engines name and url
-#engineNameAndUrl= (
-	#('Yahoo', 'https://search.yahoo.com/search/?p='),
-	#('Bing', 'https://www.bing.com/search?q='),
-	#('DuckDuckGo', 'https://duckduckgo.com/?q='),
-	#('Youtube', 'http://www.youtube.com/results?search_query=')
-#)
-
 class MenuHelper:
+	# dictionary of search engines, name and url from json file.
 	allItemsDict= None
+	# Default search with menu, and the user can change it later from addon setting.
 	defaultMenuItems= ['Yahoo', 'Bing', 'DuckDuckGo', 'Youtube']
 
 	@classmethod
@@ -68,6 +64,23 @@ class MenuHelper:
 	def setMenuItems(cls, _list):
 		config.conf["searchWith"]["menuItems"]= _list
 
+def searchWithGoogle(text):
+	googleUrl= 'https://google.com/search?q='
+	if config.conf["searchWith"]["lang"]== 0:
+		lang= ""
+	elif config.conf["searchWith"]["lang"]== 1:
+		# NVDA language
+		lang= languageHandler.getLanguage()
+		lang= lang.split('_')[0] if '_' in lang else lang
+		#log.info(f'nvdaLang: {lang}')
+	elif config.conf["searchWith"]["lang"]== 2:
+		# Windows language
+		lang= languageHandler.getWindowsLanguage()
+		lang= lang.split('_')[0] if '_' in lang else lang
+		#log.info(f'winLang: {lang}')
+	langParam= f"&lr=lang_{lang}&hr={lang}" if lang else ""
+	webbrowser.open(googleUrl+ text+ langParam)
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
@@ -75,7 +88,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		MenuHelper.getAllItemsDict()
 		self.virtualMenuActive= False
 		# Menu items, or labels of search engines in virtual menu.
-		#self.menuItems= MenuHelper.getMenuItems()
 		self.menuItems= []
 		self.index= 0
 
@@ -137,31 +149,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		webbrowser.open(url+ text)
 		self.clearVirtual()
 
+	def openSearchWithDialog(self):
+		''' Open Search with dialog if no text is selected.'''
+		global _searchWithDialog
+		if not _searchWithDialog:
+			dialog= SearchWithDialog(gui.mainFrame)
+			dialog.Show()
+			_searchWithDialog= dialog
+		else:
+			_searchWithDialog.Raise()
+
 	def script_searchWith(self, gesture):
 		text= isSelectedText()
 		if not text:
-			# Translators: Message displayed if no text selected.
-			ui.message(_("No text selected"))
+			self.openSearchWithDialog()
 			return
 		scriptCount= scriptHandler.getLastScriptRepeatCount()
 		if scriptCount== 0:
 			self.activateMenu()
 			return
-		googleUrl= 'https://google.com/search?q='
-		if config.conf["searchWith"]["lang"]== 0:
-			lang= ""
-		elif config.conf["searchWith"]["lang"]== 1:
-			# NVDA language
-			lang= languageHandler.getLanguage()
-			lang= lang.split('_')[0] if '_' in lang else lang
-			#log.info(f'nvdaLang: {lang}')
-		elif config.conf["searchWith"]["lang"]== 2:
-			# Windows language
-			lang= languageHandler.getWindowsLanguage()
-			lang= lang.split('_')[0] if '_' in lang else lang
-			#log.info(f'winLang: {lang}')
-		langParam= f"&lr=lang_{lang}&hr={lang}" if lang else ""
-		webbrowser.open(googleUrl+ text+ langParam)
+		searchWithGoogle(text)
 		self.clearVirtual()
 
 	# Translators: Category of addon in input gestures.
@@ -170,13 +177,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_searchWith.__doc__= _("Open search with menu if pressed once, search with Google directly twice.")
 
 	__gestures= {
-	'kb:nvda+e': 'searchWith',
+	'kb:nvda+windows+s': 'searchWith',
 	}
 
 #default configuration 
 configspec={
 	"menuItems": "list(default=list())",
-	#"menuItems": "'option(),
 	"lang": "integer(default=0)",
 	"useLastSpokenAsDefault": "boolean(default=False)",
 }
@@ -193,10 +199,8 @@ class SearchWithPanel(gui.SettingsPanel):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=sizer)
 
 		staticMenuSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, "Menu"))
-		staticMenuSizer.Add(wx.StaticText(staticMenuSizer.GetStaticBox(), label= _("Available items to add from")))
 		# Translators: List of available items to add from.
-		#self.availableItems= sHelper.addLabeledControl(_("Available items to add from"),
-		#self.availableItems= wx.ListBox(staticMenuSizer.GetStaticBox(), choices= ['apple', 'orange', 'banana', 'cherry'])
+		staticMenuSizer.Add(wx.StaticText(staticMenuSizer.GetStaticBox(), label= _("Available items to add from")))
 		self.availableItems= wx.ListBox(staticMenuSizer.GetStaticBox(), choices= [])
 		staticMenuSizer.Add(self.availableItems)
 		self.availableItems.Set(MenuHelper.getItemsToAdd())
@@ -214,6 +218,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.Set(MenuHelper.getMenuItems())
 		self.customMenu.SetSelection(0)
 
+		# Group of buttons, remove, move up, move down and set default.
 		buttonGroup = guiHelper.ButtonHelper(wx.VERTICAL)
 		# Translators: Label of remove button.
 		removeButton= buttonGroup.addButton(self, label= _("Remove"))
@@ -239,13 +244,14 @@ class SearchWithPanel(gui.SettingsPanel):
 		staticCumboSizer.Add(self.langsComboBox)
 		self.langsComboBox.SetSelection(config.conf["searchWith"]["lang"])
 
-		# Translators:
+		# Translators: In search with dialog group
 		staticCheckSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("In search with dialog")))
+		# Translators: Label of checkbox to use last spoken ad default query.
 		self.lastSpokenDefault= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Use last spoken as default query"))
 		staticCheckSizer.Add(self.lastSpokenDefault)
 
 	def onAdd(self, event):
-		log.info('adding item to  search menu...')
+		#log.info('adding item to  search menu...')
 		i= self.availableItems.GetSelection()
 		numItems = self.availableItems.GetCount()
 		if i== -1:
@@ -254,7 +260,6 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.Append(item)
 		self.availableItems.Delete(i)
 		core.callLater(100, ui.message, "Information: Item added")
-		#numItems = self.availableItems.GetCount()
 		if numItems== 1:
 			return
 		newIndex= i if i!= numItems-1 else i-1
@@ -276,6 +281,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.SetSelection(newIndex)
 
 	def onMoveUp(self, event):
+		''' Moving item up in Search with menu.'''
 		i= self.customMenu.GetSelection()
 		item= self.customMenu.GetStringSelection()
 		numItems= self.customMenu.GetCount()
@@ -284,7 +290,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.Insert(item, i-1)
 		self.customMenu.Delete(i+1)
 		self.customMenu.SetSelection(i-1)
-		core.callLater(100, ui.message, _("Item moved up"))
+		core.callLater(100, ui.message, _("Information: item moved up"))
 
 	def onMoveDown(self, event):
 		''' Moving an item down in search with menu.'''
@@ -296,7 +302,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.Insert(item, i+2)
 		self.customMenu.Delete(i)
 		self.customMenu.SetSelection(i+1)
-		core.callLater(100, ui.message, _("Item moved down"))
+		core.callLater(100, ui.message, _("Information: item moved down"))
 
 	def onSetDefault(self, event):
 		''' Setting search with menu to default.'''
@@ -308,3 +314,81 @@ class SearchWithPanel(gui.SettingsPanel):
 		config.conf["searchWith"]["menuItems"]= self.customMenu.GetItems()
 		config.conf["searchWith"]["lang"]= self.langsComboBox.GetSelection()
 		config.conf["searchWith"]["useLastSpokenAsDefault"]= self.lastSpokenDefault.GetValue()
+
+# Graphical user interface for search with dialog
+# It should open if no text is selected.
+class SearchWithDialog(wx.Dialog):
+
+	def __init__(self, parent):
+		# Translators: Title of dialog
+		super(SearchWithDialog, self).__init__(parent, title=_("Search With"))
+
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+		sHelper = guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+
+		editTextSizer= guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+		# Translators: Label of static text
+		editTextSizer.addItem(wx.StaticText(self, wx.ID_ANY, label= _("Search with google")))
+		# Translators: Label of text control to enter query.
+		self.editControl= editTextSizer.addLabeledControl(_("Enter a search query"), wx.TextCtrl)
+		sHelper.addItem(editTextSizer.sizer)
+
+		# Translators: Label of Other engines button
+		self.otherEngines= sHelper.addItem(wx.Button(self, wx.ID_ANY, label= _("Other Engines")))
+		self.otherEngines.Bind(wx.EVT_BUTTON, self.onOtherEngines)
+
+		sHelper.addDialogDismissButtons(wx.OK | wx.CANCEL)
+		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
+		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
+
+		mainSizer.Add(sHelper.sizer, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		mainSizer.Fit(self)
+		self.editControl.SetFocus()
+		self.CentreOnScreen()
+		self.Raise()
+
+	def onOtherEngines(self, event):
+		text= self.editControl.GetValue()
+		if not text:
+			return
+		btn = event.GetEventObject()
+		pos = btn.ClientToScreen( (0,0) )
+		menu= OtherEnginesMenu(self, text)
+		self.PopupMenu(menu, pos)
+		menu.Destroy()
+		#log.info('destroying openWith popup menu')
+
+	def onOk(self, event):
+		text= self.editControl.GetValue()
+		if not text:
+			self.editControl.SetFocus()
+			return
+		searchWithGoogle(text)
+		wx.CallLater(4000, self.Destroy)
+
+	def onCancel(self, event):
+		self.Destroy()
+
+# Other Engines menu
+class OtherEnginesMenu(wx.Menu):
+	''' The menu that pops up when pressing Other Engines button in Search with dialog
+	items of this menu are the labels of the Search With menu.
+	'''
+	def __init__(self, parentDialog, text):
+		super(OtherEnginesMenu, self).__init__()
+		self.text= text
+		self.parentDialog= parentDialog
+
+		#Add menu items for search engines in Search With menu
+		for label in MenuHelper.getMenuItems():
+			item= wx.MenuItem(self, -1, label)
+			self.Append(item)
+			self.Bind(wx.EVT_MENU, lambda evt , args=label : self.onActivate(evt, args), item)
+
+	def onActivate(self, event, label):
+		#log.info(label)
+		url= MenuHelper.allItemsDict[label]
+		webbrowser.open(url+ self.text)
+		import speech
+		speech.cancelSpeech()
+		wx.CallLater(3000, self.parentDialog.Destroy)
