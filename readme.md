@@ -37,4 +37,4 @@ That's it! Happy searching.
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.4-DEV/searchWith-0.4-DEV.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.4-dev/searchWith-0.4-dev.nvda-addon
