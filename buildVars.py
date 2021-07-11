@@ -23,11 +23,16 @@ addon_info = {
 	"addon_summary": _("Search With"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""Search selected text with various search engines.
-Pressing once displays a menu of various search engines.
-choose one , otherwise press twice and search with Google"""),
+	"addon_description": _("""This addon helps you to search text, via various search engines.
+Let no text selected, and press the gesture of the addon
+A dialog will be displayed, with an edit box to enter a search query
+To search with Google press enter, or tab to search with other engins.
+Or
+select some text and press once, a menu will be displayed with various search engines to choose from.
+And while text is selected, you can press the gesture twice to search with Google directly.
+The Default gesture for the addon is: NVDA+ Windows+ S."""),
 	# version
-	"addon_version": "0.4-dev",
+	"addon_version": "0.4",
 	# Author(s)
 	"addon_author": "ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support

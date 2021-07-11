@@ -19,6 +19,7 @@ import webbrowser
 from logHandler import log
 import addonHandler
 addonHandler.initTranslation()
+
 #Insure one instance of Search with dialog is active.
 _searchWithDialog= None
 
@@ -40,17 +41,21 @@ def isSelectedText():
 		return info.text
 
 class MenuHelper:
-	# dictionary of search engines, name and url from json file.
-	allItemsDict= None
+	# dictionary of search engines, name as key and url as value from json file.
+	allItemsDict= {}
 	# Default search with menu, and the user can change it later from addon setting.
 	defaultMenuItems= ['Yahoo', 'Bing', 'DuckDuckGo', 'Youtube']
 
 	@classmethod
 	def getAllItemsDict(cls):
 		path= os.path.join(os.path.dirname(__file__), "..", "data", "searchEngines.json")
-		with open(path, encoding= "utf-8") as f:
-			d= json.load(f)
-			cls.allItemsDict= d
+		try:
+			with open(path, encoding= "utf-8") as f:
+				d= json.load(f)
+				cls.allItemsDict= d
+		# If exception happens, allItemsDict will stay empty.
+		except:
+			log.info('Error in reading json file', exc_info=1)
 
 	@classmethod
 	def getItemsToAdd(cls):
@@ -174,7 +179,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Category of addon in input gestures.
 	script_searchWith.category= _("Search With")
 	# Translators: Message displayed in input help more.
-	script_searchWith.__doc__= _("Open search with menu if pressed once, search with Google directly twice.")
+	script_searchWith.__doc__= _("Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice.")
 
 	__gestures= {
 	'kb:nvda+windows+s': 'searchWith',
@@ -204,7 +209,9 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.availableItems= wx.ListBox(staticMenuSizer.GetStaticBox(), choices= [])
 		staticMenuSizer.Add(self.availableItems)
 		self.availableItems.Set(MenuHelper.getItemsToAdd())
-		self.availableItems.SetSelection(0)
+		if MenuHelper.getItemsToAdd():
+			# There should be items in the list to set selection.
+			self.availableItems.SetSelection(0)
 
 		# Translators: Label of add button.
 		addButton= wx.Button(staticMenuSizer.GetStaticBox(), label=_("Add to menu"))
@@ -350,6 +357,7 @@ class SearchWithDialog(wx.Dialog):
 	def onOtherEngines(self, event):
 		text= self.editControl.GetValue()
 		if not text:
+			self.editControl.SetFocus()
 			return
 		btn = event.GetEventObject()
 		pos = btn.ClientToScreen( (0,0) )
