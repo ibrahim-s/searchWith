@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Version 0.4][1]  
+Download [Version 0.5][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -21,7 +21,7 @@ NVDA menu>preferences>inputGestures>Search With category.
 *	A dialog will be displayed, with an edit field to enter the search term you want  
 Want to search with Google, just press enter  
 *	Otherwise tab to Other Engines button, and give it a space  
-*	A popup menu will show up, with various search engines to choose from.  
+*	A popup menu will show up, with various search engines to choose.  
 Yahoo, Bing, DuckDuckGo, and Youtube.  
 This is the default menu, and you may modify it from addon's setting panel.  
 *	Anothr way to use the addon, is by selecting some text  
@@ -35,6 +35,7 @@ Either the default menu, or any other you have tailed to your needs.
 *	Yes you  can do that from the setting panel,  and adjust the menu to fit to your mood and needs.  
 *	You can from there, add to Search with menu, other available search engines  
 *	And you can if you like, remove an item from it, move item up, move item down, or return and set it to default state.  
+*	If you want these modifications to be permanant, you have to save configuration after wards.  
 *	Want to search Google using other language options?  
 Go to, Search With category in setting panels  
 From the cumbo box there, you can choose search Google either:  
@@ -55,4 +56,4 @@ From the cumbo box there, you can choose search Google either:
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.4/searchWith-0.4.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.5/searchWith-0.5.nvda-addon

@@ -40,36 +40,8 @@ def isSelectedText():
 	else:
 		return info.text
 
-class MenuHelper:
-	# dictionary of search engines, name as key and url as value from json file.
-	allItemsDict= {}
-	# Default search with menu, and the user can change it later from addon setting.
-	defaultMenuItems= ['Yahoo', 'Bing', 'DuckDuckGo', 'Youtube']
-
-	@classmethod
-	def getAllItemsDict(cls):
-		path= os.path.join(os.path.dirname(__file__), "..", "data", "searchEngines.json")
-		try:
-			with open(path, encoding= "utf-8") as f:
-				d= json.load(f)
-				cls.allItemsDict= d
-		# If exception happens, allItemsDict will stay empty.
-		except:
-			log.info('Error in reading json file', exc_info=1)
-
-	@classmethod
-	def getItemsToAdd(cls):
-		return [key for key in cls.allItemsDict if key not in cls.getMenuItems()]
-
-	@classmethod
-	def getMenuItems(cls):
-		return config.conf["searchWith"]["menuItems"]
-
-	@classmethod
-	def setMenuItems(cls, _list):
-		config.conf["searchWith"]["menuItems"]= _list
-
 def searchWithGoogle(text):
+	''' Searching Google for text, and opening the default browser with search results.'''
 	googleUrl= 'https://google.com/search?q='
 	if config.conf["searchWith"]["lang"]== 0:
 		lang= ""
@@ -86,11 +58,57 @@ def searchWithGoogle(text):
 	langParam= f"&lr=lang_{lang}&hr={lang}" if lang else ""
 	webbrowser.open(googleUrl+ text+ langParam)
 
+# Default search engines dict, name and url
+defaultItemsDict= {
+	'Yahoo': 'https://search.yahoo.com/search/?p=',
+	'Bing': 'https://www.bing.com/search?q=',
+	'DuckDuckGo': 'https://duckduckgo.com/?q=',
+	'Youtube': 'http://www.youtube.com/results?search_query='
+}
+
+class MenuHelper:
+	# dictionary of all search engines, name as key and url as value .
+	allItemsDict= None
+	# Default search with menulabels, and the user can change it later from addon setting.
+	defaultMenuItems= [item for item in defaultItemsDict]
+
+	@classmethod
+	def getAllItemsDict(cls):
+		''' Getting ALL items dict, defaultengines dict plus other engines dict
+		other engines dict is fetched from othrEngines.json file in addon.
+		'''
+		path= os.path.join(os.path.dirname(__file__), "..", "data", "otherEngines.json")
+		try:
+			with open(path, encoding= "utf-8") as f:
+				otherItemsDict= json.load(f)
+		except:
+			# If exception happens, otherItemsDict will be equal to empty dictionary.
+			otherItemsDict= {}
+			log.info('Error in reading json file', exc_info=1)
+		finally:
+			cls.allItemsDict= {**otherItemsDict, **defaultItemsDict}
+
+	@classmethod
+	def getItemsToAdd(cls):
+		''' Getting items that may be added to search with menu, to use them in setting panel.'''
+		return [key for key in cls.allItemsDict if key not in cls.getMenuItems()]
+
+	@classmethod
+	def getMenuItems(cls):
+		''' Getting menu items in Search with menu.'''
+		return config.conf["searchWith"]["menuItems"]
+
+	@classmethod
+	def setMenuItems(cls, _list):
+		''' Setting menu items of Search with menu, to make this permanant configuration should be saved.'''
+		config.conf["searchWith"]["menuItems"]= _list
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		MenuHelper.getAllItemsDict()
+		#log.info(f'allItemsDict: {MenuHelper.allItemsDict}')
 		self.virtualMenuActive= False
 		# Menu items, or labels of search engines in virtual menu.
 		self.menuItems= []
@@ -115,7 +133,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.virtualMenuActive= True
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Search With Menu"))
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, f"{self.menuItems[self.index]}")
-			#log.info('Done binding')
 
 	def script_moveOnVirtual(self, gesture):
 		'''Script to help us moving on virtual menu, using up and down arrow.'''
@@ -150,9 +167,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		text= isSelectedText()
 		index= self.index
 		# Get the url of the search engine.
-		url= MenuHelper.allItemsDict[MenuHelper.getMenuItems()[index]]
-		webbrowser.open(url+ text)
-		self.clearVirtual()
+		try:
+			url= MenuHelper.allItemsDict[MenuHelper.getMenuItems()[index]]
+		except KeyError:
+			# Translators: Message displayed if error happens in getting url.
+			message= _("Not able to get {item} url").format(item= MenuHelper.getMenuItems()[index])
+			wx.CallAfter(gui.messageBox, message,
+			# Translators: Title of message box
+			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
+			log.info('Error getting url', exc_info=1)
+		else:
+			webbrowser.open(url+ text)
+		finally:
+			self.clearVirtual()
 
 	def openSearchWithDialog(self):
 		''' Open Search with dialog if no text is selected.'''
@@ -167,12 +194,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_searchWith(self, gesture):
 		text= isSelectedText()
 		if not text:
+			# Open real dialog, with editControl to enter a search query.
 			self.openSearchWithDialog()
 			return
 		scriptCount= scriptHandler.getLastScriptRepeatCount()
 		if scriptCount== 0:
+			# Activating virtual menu.
 			self.activateMenu()
 			return
+		#Otherwise search selected text with Google directly.
 		searchWithGoogle(text)
 		self.clearVirtual()
 
@@ -223,7 +253,8 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu=wx.ListBox(staticMenuSizer.GetStaticBox(), choices= [])
 		staticMenuSizer.Add(self.customMenu)
 		self.customMenu.Set(MenuHelper.getMenuItems())
-		self.customMenu.SetSelection(0)
+		if MenuHelper.getMenuItems():
+			self.customMenu.SetSelection(0)
 
 		# Group of buttons, remove, move up, move down and set default.
 		buttonGroup = guiHelper.ButtonHelper(wx.VERTICAL)
@@ -395,8 +426,17 @@ class OtherEnginesMenu(wx.Menu):
 
 	def onActivate(self, event, label):
 		#log.info(label)
-		url= MenuHelper.allItemsDict[label]
-		webbrowser.open(url+ self.text)
-		import speech
-		speech.cancelSpeech()
-		wx.CallLater(3000, self.parentDialog.Destroy)
+		try:
+			url= MenuHelper.allItemsDict[label]
+		except KeyError:
+			# Translators: Message displayed if error happens in getting url.
+			message= _("Not able to get {item} url").format(item= label)
+			gui.messageBox(message,
+			# Translators: Title of message box.
+			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
+			log.info('Error getting url', exc_info= 1)
+		else:
+			webbrowser.open(url+ self.text)
+			import speech
+			speech.cancelSpeech()
+			wx.CallLater(4000, self.parentDialog.Destroy)
