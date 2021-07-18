@@ -3,6 +3,7 @@
 # Copyright (C) 2021 ibrahim hamadeh
 # This add-on is free software, licensed under the terms of the GNU General Public License (version 2).
 # See the file COPYING for more details.
+# Code to get last spoken text is borrowed from speechHistory addon, thanks to James Scholes, Tyler Spivey and all contributors to that addon.
 
 import api
 import core, ui
@@ -16,12 +17,17 @@ import globalPluginHandler
 import textInfos
 import scriptHandler
 import webbrowser
+import speech
+import speechViewer
+import versionInfo
 from logHandler import log
 import addonHandler
 addonHandler.initTranslation()
 
 #Insure one instance of Search with dialog is active.
 _searchWithDialog= None
+# Build year of NVDA version
+BUILD_YEAR = getattr(versionInfo, 'version_year', 2021)
 
 def isSelectedText():
 	"""this function  specifies if a certain text is selected or not
@@ -113,11 +119,33 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Menu items, or labels of search engines in virtual menu.
 		self.menuItems= []
 		self.index= 0
+		self.lastSpokenText= None
+		self._patch()
 
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(SearchWithPanel)
 
-	def terminate(self):
+	def _patch(self):
+		if BUILD_YEAR >= 2021:
+			self.oldSpeak = speech.speech.speak
+			speech.speech.speak = self.mySpeak
+		else:
+			self.oldSpeak = speech.speak
+			speech.speak = self.mySpeak
+
+	def terminate(self, *args, **kwargs):
+		super().terminate(*args, **kwargs)
+		if BUILD_YEAR >= 2021:
+			speech.speech.speak = self.oldSpeak
+		else:
+			speech.speak = self.oldSpeak
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(SearchWithPanel)
+
+	def mySpeak(self, sequence, *args, **kwargs):
+		self.oldSpeak(sequence, *args, **kwargs)
+		text = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
+		if text.strip():
+			#log.info(f'text: {text}')
+			self.lastSpokenText= text.strip()
 
 	def activateMenu(self):
 		'''Display virtual menu with its menu items.'''
@@ -185,8 +213,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		''' Open Search with dialog if no text is selected.'''
 		global _searchWithDialog
 		if not _searchWithDialog:
+			useLastSpokenAsDefault= config.conf["searchWith"]["useLastSpokenAsDefault"]
 			dialog= SearchWithDialog(gui.mainFrame)
-			dialog.Show()
+			# If useLastSpokenAsDefault= True, the search box value in dialog will default to last spoken text.
+			dialog.postInit(useLastSpoken= useLastSpokenAsDefault, text= self.lastSpokenText)
 			_searchWithDialog= dialog
 		else:
 			_searchWithDialog.Raise()
@@ -287,6 +317,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		# Translators: Label of checkbox to use last spoken ad default query.
 		self.lastSpokenDefault= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Use last spoken as default query"))
 		staticCheckSizer.Add(self.lastSpokenDefault)
+		self.lastSpokenDefault.SetValue(config.conf["searchWith"]["useLastSpokenAsDefault"])
 
 	def onAdd(self, event):
 		#log.info('adding item to  search menu...')
@@ -381,9 +412,14 @@ class SearchWithDialog(wx.Dialog):
 
 		mainSizer.Add(sHelper.sizer, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
+
+	def postInit(self, useLastSpoken= False, text= None):
+		if useLastSpoken and text:
+			self.editControl.SetValue(text)
 		self.editControl.SetFocus()
 		self.CentreOnScreen()
 		self.Raise()
+		self.Show()
 
 	def onOtherEngines(self, event):
 		text= self.editControl.GetValue()
