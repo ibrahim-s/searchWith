@@ -26,13 +26,11 @@ addonHandler.initTranslation()
 
 #Insure one instance of Search with dialog is active.
 _searchWithDialog= None
-# Build year of NVDA version
-BUILD_YEAR = getattr(versionInfo, 'version_year', 2021)
 
 def isSelectedText():
-	"""this function  specifies if a certain text is selected or not
+	'''this function  specifies if a certain text is selected or not
 	and if it is, returns text selected.
-	"""
+	'''
 	obj=api.getFocusObject()
 	treeInterceptor=obj.treeInterceptor
 	if hasattr(treeInterceptor,'TextInfo') and not treeInterceptor.passThrough:
@@ -66,15 +64,15 @@ def searchWithGoogle(text):
 
 # Default search engines dict, name and url
 defaultItemsDict= {
-	'Yahoo': 'https://search.yahoo.com/search/?p=',
-	'Bing': 'https://www.bing.com/search?q=',
-	'DuckDuckGo': 'https://duckduckgo.com/?q=',
-	'Youtube': 'http://www.youtube.com/results?search_query='
+	'Yahoo': 'https://search.yahoo.com/search/?p=%(text)s',
+	'Bing': 'https://www.bing.com/search?q=%(text)s',
+	'DuckDuckGo': 'https://duckduckgo.com/?q=%(text)s',
+	'Youtube': 'http://www.youtube.com/results?search_query=%(text)s'
 }
 
 class MenuHelper:
 	# dictionary of all search engines, name as key and url as value .
-	allItemsDict= None
+	allItemsDict= {}
 	# Default search with menulabels, and the user can change it later from addon setting.
 	defaultMenuItems= [item for item in defaultItemsDict]
 
@@ -109,43 +107,54 @@ class MenuHelper:
 		''' Setting menu items of Search with menu, to make this permanant configuration should be saved.'''
 		config.conf["searchWith"]["menuItems"]= _list
 
+class LastSpoken:
+	''' Helper class that contains the code, to get last spoken text.'''
+	# Build year of NVDA version
+	BUILD_YEAR = getattr(versionInfo, 'version_year', 2021)
+	lastSpokenText= ""
+
+	@classmethod
+	def _patch(cls):
+		if cls.BUILD_YEAR >= 2021:
+			cls.oldSpeak = speech.speech.speak
+			speech.speech.speak = cls.mySpeak
+		else:
+			cls.oldSpeak = speech.speak
+			speech.speak = cls.mySpeak
+
+	@classmethod
+	def terminate(cls):
+		if cls.BUILD_YEAR >= 2021:
+			speech.speech.speak = cls.oldSpeak
+		else:
+			speech.speak = cls.oldSpeak
+
+	@classmethod
+	def mySpeak(cls, sequence, *args, **kwargs):
+		cls.oldSpeak(sequence, *args, **kwargs)
+		text = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
+		if text.strip():
+			cls.lastSpokenText= text.strip()
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
+		# Populating all items dict.
 		MenuHelper.getAllItemsDict()
 		#log.info(f'allItemsDict: {MenuHelper.allItemsDict}')
 		self.virtualMenuActive= False
 		# Menu items, or labels of search engines in virtual menu.
 		self.menuItems= []
 		self.index= 0
-		self.lastSpokenText= None
-		self._patch()
+		LastSpoken._patch()
 
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(SearchWithPanel)
 
-	def _patch(self):
-		if BUILD_YEAR >= 2021:
-			self.oldSpeak = speech.speech.speak
-			speech.speech.speak = self.mySpeak
-		else:
-			self.oldSpeak = speech.speak
-			speech.speak = self.mySpeak
-
 	def terminate(self, *args, **kwargs):
 		super().terminate(*args, **kwargs)
-		if BUILD_YEAR >= 2021:
-			speech.speech.speak = self.oldSpeak
-		else:
-			speech.speak = self.oldSpeak
-			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(SearchWithPanel)
-
-	def mySpeak(self, sequence, *args, **kwargs):
-		self.oldSpeak(sequence, *args, **kwargs)
-		text = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
-		if text.strip():
-			#log.info(f'text: {text}')
-			self.lastSpokenText= text.strip()
+		LastSpoken.terminate()
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(SearchWithPanel)
 
 	def activateMenu(self):
 		'''Display virtual menu with its menu items.'''
@@ -159,6 +168,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.bindGesture('kb:enter', 'activateMenuItem')
 		self.menuItems= MenuHelper.getMenuItems()
 		self.virtualMenuActive= True
+		# Translators: Search with menu title.
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Search With Menu"))
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, f"{self.menuItems[self.index]}")
 
@@ -205,7 +215,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
 			log.info('Error getting url', exc_info=1)
 		else:
-			webbrowser.open(url+ text)
+			webbrowser.open(url%{'text': text})
 		finally:
 			self.clearVirtual()
 
@@ -216,12 +226,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			useLastSpokenAsDefault= config.conf["searchWith"]["useLastSpokenAsDefault"]
 			dialog= SearchWithDialog(gui.mainFrame)
 			# If useLastSpokenAsDefault= True, the search box value in dialog will default to last spoken text.
-			dialog.postInit(useLastSpoken= useLastSpokenAsDefault, text= self.lastSpokenText)
+			dialog.postInit(useLastSpoken= useLastSpokenAsDefault, text= LastSpoken.lastSpokenText)
 			_searchWithDialog= dialog
 		else:
 			_searchWithDialog.Raise()
 
 	def script_searchWith(self, gesture):
+		''' Main script, if text selected opens virtual menu, and if not opens Search with dialog.'''
 		text= isSelectedText()
 		if not text:
 			# Open real dialog, with editControl to enter a search query.
@@ -257,15 +268,16 @@ if not config.conf["searchWith"]["menuItems"]:
 
 #make  SettingsPanel  class
 class SearchWithPanel(gui.SettingsPanel):
-	# Translators: title of the dialog
+	# Translators: title of the panel
 	title= _("Search With")
 
 	def makeSettings(self, sizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=sizer)
 
-		staticMenuSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, "Menu"))
-		# Translators: List of available items to add from.
-		staticMenuSizer.Add(wx.StaticText(staticMenuSizer.GetStaticBox(), label= _("Available items to add from")))
+	# Translators: Label of group related to menu.
+		staticMenuSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("Menu")))
+		# Translators: List of available items to add to menu.
+		staticMenuSizer.Add(wx.StaticText(staticMenuSizer.GetStaticBox(), label= _("Available items to add")))
 		self.availableItems= wx.ListBox(staticMenuSizer.GetStaticBox(), choices= [])
 		staticMenuSizer.Add(self.availableItems)
 		self.availableItems.Set(MenuHelper.getItemsToAdd())
@@ -302,10 +314,18 @@ class SearchWithPanel(gui.SettingsPanel):
 		setDefaultButton.Bind(wx.EVT_BUTTON, self.onSetDefault)
 		sHelper.addItem(buttonGroup)
 
-		# Translators: Languages used in Google search.
-		langs= [_("Browser language and setting"), _("NVDA language"), _("Windows language")]
-		staticCumboSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, "In Google search"))
-		staticCumboSizer.Add(wx.StaticText(staticCumboSizer.GetStaticBox(), label= "Use:"))
+		langs= [
+		# Translators: Option in cumbo box to choose browser setting
+		_("Browser language and setting"), 
+		# Translators: Option in cumbo box to choose NVDA language
+		_("NVDA language"), 
+		# Translators: Option in cumbo box to choose windows language
+		_("Windows language")
+		]
+		# Translators: Label of options in searching google.
+		staticCumboSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("In Google search")))
+		# Translators: Label of static text
+		staticCumboSizer.Add(wx.StaticText(staticCumboSizer.GetStaticBox(), label= _("Use:")))
 		self.langsComboBox= wx.Choice(
 		staticCumboSizer.GetStaticBox(),
 		choices= langs)
@@ -328,7 +348,8 @@ class SearchWithPanel(gui.SettingsPanel):
 		item= self.availableItems.GetStringSelection()
 		self.customMenu.Append(item)
 		self.availableItems.Delete(i)
-		core.callLater(100, ui.message, "Information: Item added")
+		# Translators: Message informing that an item was added
+		core.callLater(100, ui.message, _("Information: Item added"))
 		if numItems== 1:
 			return
 		newIndex= i if i!= numItems-1 else i-1
@@ -343,6 +364,7 @@ class SearchWithPanel(gui.SettingsPanel):
 			return
 		self.customMenu.Delete(i)
 		self.availableItems.Append(item)
+		# Translators: Message informing that an item was removed.
 		core.callLater(100, ui.message, _("Information: item removed"))
 		newIndex= i if i!= numItems-1 else i-1
 		if newIndex< 0:
@@ -359,6 +381,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.Insert(item, i-1)
 		self.customMenu.Delete(i+1)
 		self.customMenu.SetSelection(i-1)
+		# Translators: Message informing that an item was moved up.
 		core.callLater(100, ui.message, _("Information: item moved up"))
 
 	def onMoveDown(self, event):
@@ -371,12 +394,14 @@ class SearchWithPanel(gui.SettingsPanel):
 		self.customMenu.Insert(item, i+2)
 		self.customMenu.Delete(i)
 		self.customMenu.SetSelection(i+1)
+		# Translators: Message informing that an item was moved down.
 		core.callLater(100, ui.message, _("Information: item moved down"))
 
 	def onSetDefault(self, event):
 		''' Setting search with menu to default.'''
 		self.customMenu.Set(MenuHelper.defaultMenuItems)
 		self.customMenu.SetSelection(0)
+		# Translators: Message informing that menu was set to default.
 		core.callLater(100, ui.message, _("Information: Menu set to default"))
 
 	def onSave(self):
@@ -431,7 +456,6 @@ class SearchWithDialog(wx.Dialog):
 		menu= OtherEnginesMenu(self, text)
 		self.PopupMenu(menu, pos)
 		menu.Destroy()
-		#log.info('destroying openWith popup menu')
 
 	def onOk(self, event):
 		text= self.editControl.GetValue()
@@ -451,8 +475,8 @@ class OtherEnginesMenu(wx.Menu):
 	'''
 	def __init__(self, parentDialog, text):
 		super(OtherEnginesMenu, self).__init__()
-		self.text= text
 		self.parentDialog= parentDialog
+		self.text= text
 
 		#Add menu items for search engines in Search With menu
 		for label in MenuHelper.getMenuItems():
@@ -472,7 +496,7 @@ class OtherEnginesMenu(wx.Menu):
 			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
 			log.info('Error getting url', exc_info= 1)
 		else:
-			webbrowser.open(url+ self.text)
+			webbrowser.open(url%{'text': self.text})
 			import speech
 			speech.cancelSpeech()
 			wx.CallLater(4000, self.parentDialog.Destroy)

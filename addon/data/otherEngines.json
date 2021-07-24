@@ -1,6 +1,13 @@
 {
-	"Ask.com": "https://www.ask.com/web?q=",
-	"Github.com": "https://github.com/search?q=",
-	"Archive.org": "https://archive.org/search.php?query=",
-	"BBC.co.uk": "https://www.bbc.co.uk/search?q="
+	"Github.com": "https://github.com/search?q=%(text)s",
+	"Stackoverflow": "https://www.google.com/search?q=%(text)s+site:stackoverflow.com",
+	"Stackexchange": "https://www.google.com/search?q=%(text)s+site:stackexchange.com",
+	"GoogleBooks": "https://www.google.com/search?tbm=bks&q=%(text)s",
+	"GoogleNews": "https://news.google.com/search?q=%(text)s",
+	"GooglePlay": "https://play.google.com/store/search?q=%(text)s",
+	"GoogleMaps": "https://www.google.com/maps/place/%(text)s",
+	"Reddit.com": "https://www.reddit.com/search/?q=%(text)s",
+	"Ask.com": "https://www.ask.com/web?q=%(text)s",
+	"Archive.org": "https://archive.org/search.php?query=%(text)s",
+	"BBC.co.uk": "https://www.bbc.co.uk/search?q=%(text)s"
 }
