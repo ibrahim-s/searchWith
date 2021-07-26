@@ -253,7 +253,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_searchWith.__doc__= _("Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice.")
 
 	__gestures= {
-	'kb:nvda+windows+s': 'searchWith',
+	'kb:nvda+alt+s': 'searchWith',
 	}
 
 #default configuration 

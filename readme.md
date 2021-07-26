@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Version 0.7][1]  
+Download [Version 0.8][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -11,31 +11,31 @@ To search with Google press enter, or tab to search with other engins.
 Or  
 select some text and press once, a menu will be displayed with various search engines to choose from.  
 And while text is selected, you can press the gesture twice to search with Google directly.  
-The Default gesture for the addon is: NVDA+ Windows+ S.  
+The Default gesture for the addon is: NVDA+ Alt+ S.  
 but you can as always add a gesture or change the existed one going to :  
 NVDA menu>preferences>inputGestures>Search With category.  
 
 ## Usage ##
 
 *	If you want to enter a search query, just press the addon gesture  
-*	A dialog will be displayed, with an edit field to enter the search term you want  
-Want to search with Google, just press enter  
+*	A dialog will be displayed, with an edit field to enter the search term.  
+Want to search with Google? just press enter  
 *	Otherwise tab to Other Engines button, and give it a space  
 *	A popup menu will show up, with various search engines to choose.  
 Yahoo, Bing, DuckDuckGo, and Youtube.  
 This is the default menu, and you may modify it from addon's setting panel.  
-*	Anothr way to use the addon, is by selecting some text  
-*	And on Pressing the addon's gesture, or any other you have assigned to it  
-*	A virtual menu will be displayed with various search engines  
+*	Another way to use the addon, is by selecting some text  
+And on Pressing the addon's gesture, or any other you have assigned to it  
+a virtual menu will be displayed with various search engines  
 Either the default menu, or any other you have tailed to your needs.  
 *	Choose one and press enter, the default browser will open displaying search results.  
-*	Or, if you want to search with Google directly  
-*	Press the gesture twice, and you are done.  
+Or, if you want to search with Google directly  
+press the gesture twice, and you are done.  
 *	Want to modify Search with menu?  
 *	Yes you  can do that from the setting panel,  and adjust the menu to fit to your mood and needs.  
 *	You can from there, add to Search with menu, other available search engines  
 *	And you can if you like, remove an item from it, move item up, move item down, or return and set it to default state.  
-*	If you want these modifications to be permanant, you have to save configuration after wards.  
+*	If you want these modifications to be permanent, you have to save configuration after wards.  
 *	Want to search Google using other language options?  
 Go to, Search With category in setting panels  
 From the cumbo box there, you can choose search Google either:  
@@ -64,4 +64,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.7/searchWith-0.7.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.8/searchWith-0.8.nvda-addon

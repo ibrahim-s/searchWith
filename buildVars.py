@@ -30,9 +30,9 @@ To search with Google press enter, or tab to search with other engins.
 Or
 select some text and press once, a menu will be displayed with various search engines to choose from.
 And while text is selected, you can press the gesture twice to search with Google directly.
-The Default gesture for the addon is: NVDA+ Windows+ S."""),
+The Default gesture for the addon is: NVDA+ Alt+ S."""),
 	# version
-	"addon_version": "0.7",
+	"addon_version": "0.8",
 	# Author(s)
 	"addon_author": "ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
