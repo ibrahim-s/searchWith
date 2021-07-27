@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Version 0.8][1]  
+Download [Version 0.9][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -11,9 +11,9 @@ To search with Google press enter, or tab to search with other engins.
 Or  
 select some text and press once, a menu will be displayed with various search engines to choose from.  
 And while text is selected, you can press the gesture twice to search with Google directly.  
-The Default gesture for the addon is: NVDA+ Alt+ S.  
-but you can as always add a gesture or change the existed one going to :  
-NVDA menu>preferences>inputGestures>Search With category.  
+The Default gesture for the addon is: NVDA+ Windows+ S.  
+If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to :  
+NVDA menu>preferences>inputGestures>Search With category.  
 
 ## Usage ##
 
@@ -64,4 +64,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.8/searchWith-0.8.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.9/searchWith-0.9.nvda-addon
