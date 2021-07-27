@@ -12,7 +12,8 @@ Or
 select some text and press once, a menu will be displayed with various search engines to choose from.  
 And while text is selected, you can press the gesture twice to search with Google directly.  
 The Default gesture for the addon is: NVDA+ Windows+ S.  
-If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to :  
+If the keystroke do not work for you, or conflict with other keystroke,  
+you can as always add a gesture or change the existent one going to :  
 NVDA menu>preferences>inputGestures>Search With category.  
 
 ## Usage ##
