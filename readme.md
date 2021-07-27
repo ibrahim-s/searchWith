@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Version 0.9][1]  
+Download [Version 1.0][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -65,4 +65,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v0.9/searchWith-0.9.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.0/searchWith-1.0.nvda-addon
