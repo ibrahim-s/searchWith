@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Version 1.0][1]  
+Download [Stable version][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -9,7 +9,7 @@ Let no text selected, and press the gesture of the addon
 A dialog will be displayed, with an edit box to enter a search query  
 To search with Google press enter, or tab to search with other engins.  
 Or  
-select some text and press once, a menu will be displayed with various search engines to choose from.  
+select some text and press once, a menu will be displayed with various search engines to choose.  
 And while text is selected, you can press the gesture twice to search with Google directly.  
 The Default gesture for the addon is: NVDA+ Windows+ S.  
 If the keystroke do not work for you, or conflict with other keystroke,  
@@ -47,6 +47,10 @@ From the cumbo box there, you can choose search Google either:
 you have the ability to do that, through Use last spoken as default query check box in setting panel.  
 And that's it, hope to search for good and find it, happy searching!  
 
+### Changes for 1.1 ###
+
+*	Add translations for Portuguese (Brazil), Portuguese (Portugal), and Turkish.
+
 ### Changes for 0.7 ###
 
 *	Add more sites that could be added to menu, such as Stackoverflow, Stackexchange, GoogleBooks and others.  
@@ -65,4 +69,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.0/searchWith-1.0.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.1/searchWith-1.1.nvda-addon
