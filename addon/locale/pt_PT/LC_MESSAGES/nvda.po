@@ -15,24 +15,19 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: searchWith.py:172
 msgid "Search With Menu"
 msgstr "Menu do procurar com"
 
-#: searchWith.py:212 searchWith.py:493
 #, python-brace-format
 msgid "Not able to get {item} url"
 msgstr "Não consegue obter o URl do {item}"
 
-#: searchWith.py:215 searchWith.py:496
 msgid "Error Message"
 msgstr "Mensagem de Erro"
 
-#: searchWith.py:251 searchWith.py:272 searchWith.py:418
 msgid "Search With"
 msgstr "Procurar com"
 
-#: searchWith.py:253
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
@@ -41,95 +36,72 @@ msgstr ""
 "houver um texto seleccionado, mostra um menu virtual para escolher o motor "
 "de busca; pressionando duas vezes, pesquisa no google."
 
-#: searchWith.py:278
 msgid "Menu"
 msgstr "Menu"
 
-#: searchWith.py:280
 msgid "Available items to add"
 msgstr "Itens disponíveis para adicionar"
 
-#: searchWith.py:289
 msgid "Add to menu"
 msgstr "Adicionar ao menu"
 
-#: searchWith.py:294
 msgid "Search with menu"
 msgstr "Menu do procurar com"
 
-#: searchWith.py:304
 msgid "Remove"
 msgstr "Apagar"
 
-#: searchWith.py:307
 msgid "Move item up"
 msgstr "Mover item para cima"
 
-#: searchWith.py:310
 msgid "Move item down"
 msgstr "Mover item para baixo"
 
-#: searchWith.py:313
 msgid "Set menu to default"
 msgstr "Definir o menu por defeito"
 
-#: searchWith.py:319
 msgid "Browser language and setting"
 msgstr "Configuração do navegador de idiomas"
 
-#: searchWith.py:321
 msgid "NVDA language"
 msgstr "Idioma do NVDA"
 
-#: searchWith.py:323
 msgid "Windows language"
 msgstr "Idioma do Windows"
 
-#: searchWith.py:326
 msgid "In Google search"
 msgstr "Na pesquisa do Google"
 
-#: searchWith.py:328
 msgid "Use:"
 msgstr "Modo de utilização:"
 
-#: searchWith.py:336
 msgid "In search with dialog"
 msgstr "Em pesquisa com diálogo"
 
-#: searchWith.py:338
 msgid "Use last spoken as default query"
 msgstr "Use a última consulta falada como padrão"
 
-#: searchWith.py:352
 msgid "Information: Item added"
 msgstr "Informação: Item adicionado"
 
-#: searchWith.py:368
 msgid "Information: item removed"
 msgstr "Informação: Item apagado"
 
-#: searchWith.py:385
 msgid "Information: item moved up"
 msgstr "Informação: item movido para cima"
 
-#: searchWith.py:398
 msgid "Information: item moved down"
 msgstr "Informação: item movido para baixo"
 
-#: searchWith.py:405
 msgid "Information: Menu set to default"
 msgstr "Informação: Menu definido como padrão"
 
-#: searchWith.py:425
 msgid "Search with google"
 msgstr "Pesquisar com google"
 
-#: searchWith.py:427
 msgid "Enter a search query"
 msgstr "Introduza uma expressão/termo para pesquisa:"
 
-#: searchWith.py:431
 msgid "Other Engines"
 msgstr "Outros Motores"
 
