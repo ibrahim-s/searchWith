@@ -1,33 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the searchWith package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Procurar com, versão 0.7\n"
-"POT-Creation-Date: 2021-07-25 19:43+0100\n"
-"PO-Revision-Date: 2021-07-25 19:54+0100\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes e Rui Fontes\n"
-"Language: pt_PT\n"
+"Project-Id-Version: searchWith 1.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-08-16 10:46+0000\n"
+"PO-Revision-Date: 2021-08-16 13:19+0200\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ../../../globalPlugins\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Menu do procurar com"
+msgstr "Menú de Search With"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
 msgid "Not able to get {item} url"
-msgstr "Não consegue obter o URl do {item}"
+msgstr "Imposible obtener la url de {item}"
 
 #. Translators: Title of message box
 #. Translators: Title of message box.
 msgid "Error Message"
-msgstr "Mensagem de Erro"
+msgstr "Mensaje de Error"
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -36,108 +38,108 @@ msgstr "Mensagem de Erro"
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Procurar com"
+msgstr "Search With"
 
 #. Translators: Message displayed in input help more.
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Mostra um diálogo de  Pesquisa para introduzir um termo a pesquisar. Se "
-"houver um texto seleccionado, mostra um menu virtual para escolher o motor "
-"de busca; pressionando duas vezes, pesquisa no google."
+"Muestra el diálogo de Search with para introducir una consulta de búsqueda. "
+"Si hay texto seleccionado, muestra un menú virtual al pulsar una vez. Al "
+"pulsar dos veces, busca directamente en Google."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
-msgstr "Menu"
+msgstr "Menú"
 
 #. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "Itens disponíveis para adicionar"
+msgstr "Elementos disponibles para añadir"
 
 #. Translators: Label of add button.
 msgid "Add to menu"
-msgstr "Adicionar ao menu"
+msgstr "Añadir al menú"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Menu do procurar com"
+msgstr "Menú de Search with"
 
 #. Translators: Label of remove button.
 msgid "Remove"
-msgstr "Apagar"
+msgstr "Eliminar"
 
 #. Translators: Label of move up button.
 msgid "Move item up"
-msgstr "Mover item para cima"
+msgstr "Subir elemento"
 
 #. Translators: Label of move down button.
 msgid "Move item down"
-msgstr "Mover item para baixo"
+msgstr "Bajar elemento"
 
 #. Translators: Label of set menu to default button.
 msgid "Set menu to default"
-msgstr "Definir o menu por defeito"
+msgstr "Restablecer menú por defecto"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
-msgstr "Configuração do navegador de idiomas"
+msgstr "Idioma y ajustes del navegador"
 
 #. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
-msgstr "Idioma do NVDA"
+msgstr "Idioma de NVDA"
 
 #. Translators: Option in cumbo box to choose windows language
 msgid "Windows language"
-msgstr "Idioma do Windows"
+msgstr "Idioma de Windows"
 
 #. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "Na pesquisa do Google"
+msgstr "En la búsqueda de Google"
 
 #. Translators: Label of static text
 msgid "Use:"
-msgstr "Modo de utilização:"
+msgstr "Usar:"
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "Em pesquisa com diálogo"
+msgstr "En el diálogo de Search With"
 
 #. Translators: Label of checkbox to use last spoken ad default query.
 msgid "Use last spoken as default query"
-msgstr "Use a última consulta falada como padrão"
+msgstr "Utilizar lo último que se verbalizó como consulta de búsqueda"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
-msgstr "Informação: Item adicionado"
+msgstr "Información: elemento añadido"
 
 #. Translators: Message informing that an item was removed.
 msgid "Information: item removed"
-msgstr "Informação: Item apagado"
+msgstr "Información: elemento eliminado"
 
 #. Translators: Message informing that an item was moved up.
 msgid "Information: item moved up"
-msgstr "Informação: item movido para cima"
+msgstr "Información: elemento subido"
 
 #. Translators: Message informing that an item was moved down.
 msgid "Information: item moved down"
-msgstr "Informação: item movido para baixo"
+msgstr "Información: elemento bajado"
 
 #. Translators: Message informing that menu was set to default.
 msgid "Information: Menu set to default"
-msgstr "Informação: Menu definido como padrão"
+msgstr "Información: menú configurado por defecto"
 
 #. Translators: Label of static text
 msgid "Search with google"
-msgstr "Pesquisar com google"
+msgstr "Buscar con Google"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"
-msgstr "Introduza uma expressão/termo para pesquisa:"
+msgstr "Introduce una consulta de búsqueda"
 
 #. Translators: Label of Other engines button
 msgid "Other Engines"
-msgstr "Outros Motores"
+msgstr "Otros motores"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -153,15 +155,14 @@ msgid ""
 "Google directly.\n"
 "The Default gesture for the addon is: NVDA+ Windows+ S."
 msgstr ""
-
-#~ msgid "No text selected"
-#~ msgstr "Sem texto seleccionado"
-
-#~ msgid ""
-#~ "Open search with menu if pressed once, search with Google directly twice."
-#~ msgstr ""
-#~ "Se pressionado uma vez, abrir o menu de pesquisa. Se pressionar duas, faz "
-#~ "a pesquisa com o google."
-
-#~ msgid "Choose language used in Google search"
-#~ msgstr "Escolher o idioma usado na pesquisa do google"
+"Este complemento te permite buscar texto mediante diversos motores de "
+"búsqueda.\n"
+"Sin texto seleccionado, al pulsar el gesto del complemento,\n"
+"se mostrará un cuadro de diálogo para introducir una consulta de búsqueda.\n"
+"Pulsa intro para buscar con Google, o tabula para elegir otros motores.\n"
+"O\n"
+"Selecciona algo de texto y pulsa el gesto una vez, y se mostrará un menú con "
+"varios motores de búsqueda para elegir.\n"
+"Mientras el texto esté seleccionado, puedes pulsar dos veces el gesto para "
+"buscar directamente con Google.\n"
+"El gesto por defecto del complemento es NVDA+windows+s."
