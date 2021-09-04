@@ -1,34 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the searchWith package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Procurar com, versão 0.7\n"
-"POT-Creation-Date: 2021-07-25 19:43+0100\n"
-"PO-Revision-Date: 2021-08-21 11:21+0100\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
-"com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (21-08-2021)\n"
-"Language: pt_PT\n"
+"Project-Id-Version: searchWith 1.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-08-16 10:46+0000\n"
+"PO-Revision-Date: 2021-08-28 12:03+0700\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ../../../globalPlugins\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Menu do procurar com"
+msgstr "menu tìm kiếm nhanh "
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
 msgid "Not able to get {item} url"
-msgstr "Não consegue obter o URl do {item}"
+msgstr "không thể lấy url trong {item} "
 
 #. Translators: Title of message box
 #. Translators: Title of message box.
 msgid "Error Message"
-msgstr "Mensagem de Erro"
+msgstr "cảnh báo lỗi "
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -37,16 +38,15 @@ msgstr "Mensagem de Erro"
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Procurar com"
+msgstr "tìm kiếm nhanh "
 
 #. Translators: Message displayed in input help more.
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Mostra um diálogo de  Pesquisa para introduzir um termo a pesquisar. Se "
-"houver um texto seleccionado, mostra um menu virtual para escolher o motor "
-"de busca; pressionando duas vezes, pesquisa no google."
+"mở hộp thoại có thể nhập văn bản để tìm kiếm.  nếu có văn bản đang chọn, mở "
+"menu để chọn công cụ khi tìm kiếm. nhấn hai lần, tìm kiếm với google "
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -54,91 +54,91 @@ msgstr "Menu"
 
 #. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "Itens disponíveis para adicionar"
+msgstr "các mục bạn có thể thêm "
 
 #. Translators: Label of add button.
 msgid "Add to menu"
-msgstr "Adicionar ao menu"
+msgstr "Thêm vào menu"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Menu do procurar com"
+msgstr "menu tìm kiếm nhanh "
 
 #. Translators: Label of remove button.
 msgid "Remove"
-msgstr "Apagar"
+msgstr "xóa "
 
 #. Translators: Label of move up button.
 msgid "Move item up"
-msgstr "Mover item para cima"
+msgstr "chuyển mục lên"
 
 #. Translators: Label of move down button.
 msgid "Move item down"
-msgstr "Mover item para baixo"
+msgstr "chuyển mục xuống"
 
 #. Translators: Label of set menu to default button.
 msgid "Set menu to default"
-msgstr "Definir o menu por defeito"
+msgstr "đặt menu này làm mặc định"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
-msgstr "Configuração do navegador de idiomas"
+msgstr "ngôn ngữ của trình duyệt "
 
 #. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
-msgstr "Idioma do NVDA"
+msgstr "ngôn ngữ của nvda "
 
 #. Translators: Option in cumbo box to choose windows language
 msgid "Windows language"
-msgstr "Idioma do Windows"
+msgstr "Ngôn ngữ của Windows"
 
 #. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "Na pesquisa do Google"
+msgstr "trong google tìm kiếm "
 
 #. Translators: Label of static text
 msgid "Use:"
-msgstr "Modo de utilização:"
+msgstr "sử dụng "
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "Em pesquisa com diálogo"
+msgstr ""
 
 #. Translators: Label of checkbox to use last spoken ad default query.
 msgid "Use last spoken as default query"
-msgstr "Use a última consulta falada como padrão"
+msgstr "dùng câu nói cuối cùng để tìm kiếm "
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
-msgstr "Informação: Item adicionado"
+msgstr "Thông tin: đã thêm mục "
 
 #. Translators: Message informing that an item was removed.
 msgid "Information: item removed"
-msgstr "Informação: Item apagado"
+msgstr "Thông tin: đã xóa mục "
 
 #. Translators: Message informing that an item was moved up.
 msgid "Information: item moved up"
-msgstr "Informação: item movido para cima"
+msgstr "Thông tin: đã chuyển mục lên "
 
 #. Translators: Message informing that an item was moved down.
 msgid "Information: item moved down"
-msgstr "Informação: item movido para baixo"
+msgstr "Thông tin: đã chuyển mục xuống "
 
 #. Translators: Message informing that menu was set to default.
 msgid "Information: Menu set to default"
-msgstr "Informação: Menu definido como padrão"
+msgstr "Thông tin: đã đặt Menu  mặc định"
 
 #. Translators: Label of static text
 msgid "Search with google"
-msgstr "Pesquisar com google"
+msgstr "Tìm với google"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"
-msgstr "Introduza uma expressão/termo para pesquisa:"
+msgstr "nhập gì đó để tìm kiếm "
 
 #. Translators: Label of Other engines button
 msgid "Other Engines"
-msgstr "Outros Motores"
+msgstr "dùng công cụ khác "
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -154,27 +154,13 @@ msgid ""
 "Google directly.\n"
 "The Default gesture for the addon is: NVDA+ Windows+ S."
 msgstr ""
-"Este extra ajuda-o a pesquisar texto, através de vários motores de busca.\n"
-"Sem qualquer texto seleccionado, prima o atalho do addon\n"
-"Será mostrado um diálogo, com uma caixa de edição, para introduzir os termos "
-"a pesquisar\n"
-"Para pesquisar com o Google prima \"enter\", ou \"tab\", para pesquisar com "
-"outros motores de busca.\n"
-"Ou\n"
-"seleccione algum texto e pressione o atalho uma vez, será apresentado um "
-"menu com vários motores de busca à escolha.\n"
-"E, depois do texto seleccionado, pode pressionar duas vezes o atalho, para "
-"pesquisar directamente com o Google.\n"
-"O atalho padrão para o addon é: NVDA+ Windows+ S."
-
-#~ msgid "No text selected"
-#~ msgstr "Sem texto seleccionado"
-
-#~ msgid ""
-#~ "Open search with menu if pressed once, search with Google directly twice."
-#~ msgstr ""
-#~ "Se pressionado uma vez, abrir o menu de pesquisa. Se pressionar duas, faz "
-#~ "a pesquisa com o google."
-
-#~ msgid "Choose language used in Google search"
-#~ msgstr "Escolher o idioma usado na pesquisa do google"
+"bổ trợ này giúp bạn tìm kiếm văn bản bằng nhiều công cụ khác nhau .\n"
+"nếu bạn chưa chọn văn bản, mà bạn nhấn phím tắt của bổ trợ n\n"
+"một hộp thoại với một ô nhập liệu sẽ mở để bạn gõ nội dung muốn tìm kiếm \n"
+"để tìm kiếm bằng google chỉ cần bấm enter. nếu bạn muốn sử dụng công cụ tìm "
+"kiếm khác, chỉ cần nhấn tab tới dùng công cụ khác  .\n"
+"Hoặc\n"
+"bạn hãy chọn một vài văn bản. nếu bạn nhấn một lần, một menu sẽ hiện ra các "
+"công cụ tìm kiếm cho bạn chọn .\n"
+"nếu bạn nhấn nhanh 2 lần. sẽ tìm kiếm luôn với google .\n"
+"phím tắt mặc định của bổ trợ là. NVDA+ Windows+ S. ."
