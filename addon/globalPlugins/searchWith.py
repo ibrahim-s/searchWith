@@ -173,7 +173,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, f"{self.menuItems[self.index]}")
 
 	def script_moveOnVirtual(self, gesture):
-		'''Script to help us moving on virtual menu, using up and down arrow.'''
 		#log.info('under script movingOnVirtual')
 		key= gesture.mainKeyName
 		if key in ('leftArrow', 'rightArrow'):
@@ -186,7 +185,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message(f"{self.menuItems[self.index]}")
 
 	def script_closeVirtual(self, gesture):
-		''' Script to close the virtual menu.'''
 		self.clearVirtual()
 		# After destroying virtual menu, the focus object does not announce itself
 		# So we have to do that explicitly.
@@ -200,7 +198,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.index= 0
 
 	def script_activateMenuItem(self, gesture):
-		''' Activating a menu item with enter key.'''
 		#log.info('activating menu item ...')
 		text= isSelectedText()
 		index= self.index
