@@ -1,24 +1,7 @@
----
-autonumber-headings: true
-İextratags: true
-extratags-back: true
-filename: İle Ara
-lang: tr
-mathjax: false
-path: '%USERPROFILE%\documents'
-template: default
-timeGen: 3.900 s
-title: İle Ara 1.0
-toc: false
-...
-
-
 # İle Ara
 
 Yazar: Ibrahim Hamadeh  
-İndir [Kararlı
-sürüm](https://github.com/ibrahim-s/searchWith/releases/download/v1.1/searchWith-1.1.nvda-
-addon)  
+İndir: [Kararlı Sürüm:][1]  
 NVDA uyumluluğu: 2019.3 ve sonrası
 
 Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı olur.  
@@ -63,7 +46,12 @@ Seçim kutusunda Google araması için aşağıdaki seçeneklerden birini seçeb
 Bunu, Ayarlar penceresinde bulunan son konuşulanı varsayılan sorgu olarak kullan onay kutusunu işaretli hale getirerek yapabilirsiniz.
 Bu şekilde rahat arama yapabilmenizi umuyor, mutlu aramalar diliyoruz.
 
-### 1.1 için değişiklikler
+### 1.3 için değişiklikler ###
+
+*	Çeviri sistemi tarafından yerelleştirme güncellemeleri ekleyin.
+
+
+### 1.2 için değişiklikler
 
   *  Portekizce (Brezilya), Portekizce (Portekiz) ve Türkçe için çeviriler eklendi.
 
@@ -83,4 +71,6 @@ Bu şekilde rahat arama yapabilmenizi umuyor, mutlu aramalar diliyoruz.
 
 ### 0.1 için değişiklikler  
 
-  *  İlk sürüm.
+  *  İlk sürüm.  
+
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.3/searchWith-1.3.nvda-addon
