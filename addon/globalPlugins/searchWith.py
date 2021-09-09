@@ -17,6 +17,7 @@ import globalPluginHandler
 import textInfos
 import scriptHandler
 import webbrowser
+import urllib
 import speech
 import speechViewer
 import versionInfo
@@ -60,6 +61,8 @@ def searchWithGoogle(text):
 		lang= lang.split('_')[0] if '_' in lang else lang
 		#log.info(f'winLang: {lang}')
 	langParam= f"&lr=lang_{lang}&hr={lang}" if lang else ""
+	# Escaping special characters in the query string.
+	text= urllib.parse.quote(text)
 	webbrowser.open(googleUrl+ text+ langParam)
 
 # Default search engines dict, name and url
@@ -200,6 +203,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_activateMenuItem(self, gesture):
 		#log.info('activating menu item ...')
 		text= isSelectedText()
+		# Escaping special characters in query string.
+		text= urllib.parse.quote(text)
 		index= self.index
 		# Get the url of the search engine.
 		try:
@@ -493,6 +498,8 @@ class OtherEnginesMenu(wx.Menu):
 			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
 			log.info('Error getting url', exc_info= 1)
 		else:
+		# Escaping special characters in the query string.
+			self.text= urllib.parse.quote(self.text)
 			webbrowser.open(url%{'text': self.text})
 			import speech
 			speech.cancelSpeech()
