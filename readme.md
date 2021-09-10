@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [Development version 1.5][1]  
+Download [version 1.5][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -47,6 +47,10 @@ From the cumbo box there, you can choose search Google either:
 you have the ability to do that, through Use last spoken as default query check box in setting panel.  
 And that's it, hope to search for good and find it, happy searching!  
 
+### Changes for 1.5 ###
+
+*	Fixing a serious bug, by escaping special characters in the query string, before including it in the url.
+
 ### Changes for 1.4 ###
 
 *	Add localization updates .
@@ -75,4 +79,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.5-dev/searchWith-1.5-dev.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.5/searchWith-1.5.nvda-addon
