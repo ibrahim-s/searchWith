@@ -8,28 +8,28 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2021-09-04 14:21+0800\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2021-09-07 00:24+0300\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: 完美很难 <1872265132@qq.com>\n"
+"Last-Translator: Hatoon <h.felemban@hotmail.com>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Search With 菜单"
+msgstr "قائمة البحث باستخدام"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
 msgid "Not able to get {item} url"
-msgstr "无法获取 {item} 网址"
+msgstr "يتعذر الوصول لرابط {item} "
 
 #. Translators: Title of message box
 #. Translators: Title of message box.
 msgid "Error Message"
-msgstr "错误信息"
+msgstr "رسالةُ خطأ"
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -38,107 +38,107 @@ msgstr "错误信息"
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Search With"
+msgstr "البحث باستخدام Search With"
 
 #. Translators: Message displayed in input help more.
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"按一次，如未选择文本，显示搜索对话框，可输入文本进行搜索，如选中文本，显示搜"
-"索菜单；连按两次，使用 Google 搜索。"
+"عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
+"عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
-msgstr "菜单"
+msgstr "قائمة"
 
 #. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "可添加的项目"
+msgstr "العناصر المتوفرة لإضافتها"
 
 #. Translators: Label of add button.
 msgid "Add to menu"
-msgstr "添加到菜单"
+msgstr "إضافة إلى القائمة"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Search with 菜单"
+msgstr "قائمة البحث باستخدام"
 
 #. Translators: Label of remove button.
 msgid "Remove"
-msgstr "移除"
+msgstr "إزالة"
 
 #. Translators: Label of move up button.
 msgid "Move item up"
-msgstr "上移"
+msgstr "تحريك العنصر لأعلى"
 
 #. Translators: Label of move down button.
 msgid "Move item down"
-msgstr "下移"
+msgstr "تحريك العنصر لأسفل"
 
 #. Translators: Label of set menu to default button.
 msgid "Set menu to default"
-msgstr "将菜单设置为默认值"
+msgstr "إعادة ضبط القائمة للوضع الافتراضي"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
-msgstr "浏览器语言设置"
+msgstr "إعدادات ولغة مستعرض الإنترنت"
 
 #. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
-msgstr "NVDA 语言"
+msgstr "لغة NVDA"
 
 #. Translators: Option in cumbo box to choose windows language
 msgid "Windows language"
-msgstr "Windows 语言"
+msgstr "لغة Windows"
 
 #. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "在 Google 搜索中"
+msgstr "في بحث Google"
 
 #. Translators: Label of static text
 msgid "Use:"
-msgstr "用："
+msgstr "استخدِمْ:"
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "在 search with 对话框"
+msgstr "في مربّع حوار البحث باستخدام"
 
 #. Translators: Label of checkbox to use last spoken ad default query.
 msgid "Use last spoken as default query"
-msgstr "使用上次读出的内容作为默认查询"
+msgstr "استخدِم آخر نص منطوق كمصطلح افتراضي للبحث عنه"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
-msgstr "信息：项目已添加"
+msgstr "تنبيه: أُضيف العنصر"
 
 #. Translators: Message informing that an item was removed.
 msgid "Information: item removed"
-msgstr "信息：项目已移除"
+msgstr "تنبيه: العنصر أُزيل"
 
 #. Translators: Message informing that an item was moved up.
 msgid "Information: item moved up"
-msgstr "信息：项目已上移"
+msgstr "تنبيه: العنصر حُرِّكَ لأعلى"
 
 #. Translators: Message informing that an item was moved down.
 msgid "Information: item moved down"
-msgstr "信息：项目已下移"
+msgstr "تنبيه: العنصر حُرِّكَ لأسفل"
 
 #. Translators: Message informing that menu was set to default.
 msgid "Information: Menu set to default"
-msgstr "信息：菜单已设置为默认值"
+msgstr "تنبيه: إعادة ضبط القائمة للوضع الافتراضي"
 
 #. Translators: Label of static text
 msgid "Search with google"
-msgstr "用谷歌搜索"
+msgstr "البحث في Google"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"
-msgstr "输入搜索查询"
+msgstr "أدخِلْ مصطلحًا للبحث عنه"
 
 #. Translators: Label of Other engines button
 msgid "Other Engines"
-msgstr "其他引擎"
+msgstr "محرّكات أخرى"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -153,14 +153,4 @@ msgid ""
 "And while text is selected, you can press the gesture twice to search with "
 "Google directly.\n"
 "The Default gesture for the addon is: NVDA+ Windows+ S."
-msgstr ""
-"此插件可帮助您通过各种搜索引擎搜索文本。\n"
-"不选择任何文本，按下插件的快捷键\n"
-"将显示一个对话框，其中包含一个用于输入搜索查询的编辑框\n"
-"要使用 Google 进行搜索，请输入搜索词后按回车键，也可按 Tab 键选择其他引擎进行"
-"搜索。\n"
-"或者\n"
-"选择一些文本并按一次该快捷键，将显示一个菜单，其中包含各种搜索引擎可供选"
-"择。\n"
-"在选择文本时，您可连按两次该快捷键直接使用 Google 进行搜索。\n"
-"插件的默认快捷键：NVDA+ Windows+ S。"
+msgstr "تساعدُك هذه الإضافة في البحث عن نص عبر محرّكات بحثٍ عديدة."
