@@ -233,8 +233,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			_searchWithDialog.Raise()
 
+	@scriptHandler.script(
+		# Translators: Message displayed in input help mode.
+		description= _("Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice."),
+		gesture= "kb:nvda+windows+s",
+		# Translators: Category of addon in input gestures.
+		category= _("Search With")
+	)
 	def script_searchWith(self, gesture):
-		''' Main script, if text selected opens virtual menu, and if not opens Search with dialog.'''
 		text= isSelectedText()
 		if not text:
 			# Open real dialog, with editControl to enter a search query.
@@ -248,15 +254,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		#Otherwise search selected text with Google directly.
 		searchWithGoogle(text)
 		self.clearVirtual()
-
-	# Translators: Category of addon in input gestures.
-	script_searchWith.category= _("Search With")
-	# Translators: Message displayed in input help more.
-	script_searchWith.__doc__= _("Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice.")
-
-	__gestures= {
-	'kb:nvda+windows+s': 'searchWith',
-	}
 
 #default configuration 
 configspec={
