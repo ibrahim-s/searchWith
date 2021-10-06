@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [version 1.6][1]  
+Download [Development version 1.7][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -43,9 +43,18 @@ From the cumbo box there, you can choose search Google either:
 	1.	Using browser settings and language.  
 	2.	Using NVDA language.  
 	3.	Using windows language.  
-*	Lastly, if you want to have last spoken text as default query in Search with dialog  
-you have the ability to do that, through Use last spoken as default query check box in setting panel.  
+*	Lastly, you have the option to choose the default query in Search with dialog  
+from the Options for default query combo box in setting panel, you can choose either  
+	*	Leave blank
+	*	Use clipboard text
+	*	Use last spoken text
+And if clipboard or last spoken text is chosen, text in search box will be displayed selected, so that you can easily override it.  
 And that's it, hope to search for good and find it, happy searching!  
+
+### Changes for 1.7 ###
+
+*	Make a combo box in addon's setting, to choose an option for default query in search with dialog.  
+*	You can select either Leave blank, Use clipboard text, or Use last spoken text.  
 
 ### Changes for 1.6 ###
 
@@ -86,4 +95,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.6/searchWith-1.6.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.7-dev/searchWith-1.7-dev.nvda-addon

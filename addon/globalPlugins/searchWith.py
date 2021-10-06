@@ -30,7 +30,7 @@ _searchWithDialog= None
 
 def isSelectedText():
 	'''this function  specifies if a certain text is selected or not
-	and if it is, returns text selected.
+		and if it is, returns text selected.
 	'''
 	obj=api.getFocusObject()
 	treeInterceptor=obj.treeInterceptor
@@ -44,6 +44,16 @@ def isSelectedText():
 		return False
 	else:
 		return info.text
+
+def getClipboardText():
+	''' Get clipboard text, and if no text in clipboard, return None.'''
+	try:
+		text = api.getClipData()
+	except:
+		text = None
+	if not text or not isinstance(text,str) or text.isspace():
+		return None
+	return text
 
 def searchWithGoogle(text):
 	''' Searching Google for text, and opening the default browser with search results.'''
@@ -82,7 +92,7 @@ class MenuHelper:
 	@classmethod
 	def getAllItemsDict(cls):
 		''' Getting ALL items dict, defaultengines dict plus other engines dict
-		other engines dict is fetched from othrEngines.json file in addon.
+			other engines dict is fetched from othrEngines.json file in addon.
 		'''
 		path= os.path.join(os.path.dirname(__file__), "..", "data", "otherEngines.json")
 		try:
@@ -107,7 +117,7 @@ class MenuHelper:
 
 	@classmethod
 	def setMenuItems(cls, _list):
-		''' Setting menu items of Search with menu, to make this permanant configuration should be saved.'''
+		''' Setting menu items of Search with menu, to make this permanant, configuration should be saved.'''
 		config.conf["searchWith"]["menuItems"]= _list
 
 class LastSpoken:
@@ -225,10 +235,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		''' Open Search with dialog if no text is selected.'''
 		global _searchWithDialog
 		if not _searchWithDialog:
-			useLastSpokenAsDefault= config.conf["searchWith"]["useLastSpokenAsDefault"]
+			if  config.conf["searchWith"]["useAsDefaultQuery"]== 0:
+				# leave blank is selected as default.
+				text= None
+			elif  config.conf["searchWith"]["useAsDefaultQuery"]== 1:
+				# Clipboard text is selected as  default value.
+				text= getClipboardText()
+			elif config.conf["searchWith"]["useAsDefaultQuery"]== 2:
+				#  Last spoken text is selected as default value.
+				text= LastSpoken.lastSpokenText
 			dialog= SearchWithDialog(gui.mainFrame)
-			# If useLastSpokenAsDefault= True, the search box value in dialog will default to last spoken text.
-			dialog.postInit(useLastSpoken= useLastSpokenAsDefault, text= LastSpoken.lastSpokenText)
+			dialog.postInit(defaultText= text)
 			_searchWithDialog= dialog
 		else:
 			_searchWithDialog.Raise()
@@ -259,7 +276,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 configspec={
 	"menuItems": "list(default=list())",
 	"lang": "integer(default=0)",
-	"useLastSpokenAsDefault": "boolean(default=False)",
+	"useAsDefaultQuery": "integer(default=0)",
 }
 config.conf.spec["searchWith"]= configspec
 if not config.conf["searchWith"]["menuItems"]:
@@ -313,30 +330,36 @@ class SearchWithPanel(gui.SettingsPanel):
 		setDefaultButton.Bind(wx.EVT_BUTTON, self.onSetDefault)
 		sHelper.addItem(buttonGroup)
 
-		langs= [
-		# Translators: Option in cumbo box to choose browser setting
-		_("Browser language and setting"), 
-		# Translators: Option in cumbo box to choose NVDA language
-		_("NVDA language"), 
-		# Translators: Option in cumbo box to choose windows language
-		_("Windows language")
-		]
 		# Translators: Label of options in searching google.
 		staticCumboSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("In Google search")))
+		langs= [
+			# Translators: Option in cumbo box to choose browser setting
+			_("Browser language and setting"), 
+			# Translators: Option in cumbo box to choose NVDA language
+			_("NVDA language"), 
+			# Translators: Option in cumbo box to choose windows language
+			_("Windows language")
+		]
 		# Translators: Label of static text
 		staticCumboSizer.Add(wx.StaticText(staticCumboSizer.GetStaticBox(), label= _("Use:")))
-		self.langsComboBox= wx.Choice(
-		staticCumboSizer.GetStaticBox(),
-		choices= langs)
+		self.langsComboBox= wx.Choice(staticCumboSizer.GetStaticBox(), choices= langs)
 		staticCumboSizer.Add(self.langsComboBox)
 		self.langsComboBox.SetSelection(config.conf["searchWith"]["lang"])
 
 		# Translators: In search with dialog group
-		staticCheckSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("In search with dialog")))
-		# Translators: Label of checkbox to use last spoken ad default query.
-		self.lastSpokenDefault= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Use last spoken as default query"))
-		staticCheckSizer.Add(self.lastSpokenDefault)
-		self.lastSpokenDefault.SetValue(config.conf["searchWith"]["useLastSpokenAsDefault"])
+		staticDefaultQueryComboSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("In search with dialog")))
+		defaultQuery= [
+			# Translators: An option to use for default query.
+			_("Leave Blank"),
+			# Translators: An option to use for default query.
+			_("Use clipboard text"),
+			# Translators: An option to use for default query.
+			_("Use last spoken text")
+		]
+		staticDefaultQueryComboSizer.Add(wx.StaticText(staticDefaultQueryComboSizer.GetStaticBox(), label= _("Options for default query:")))
+		self.defaultQueryCombobox= wx.Choice(staticDefaultQueryComboSizer.GetStaticBox(), choices= defaultQuery)
+		staticDefaultQueryComboSizer.Add(self.defaultQueryCombobox)
+		self.defaultQueryCombobox.SetSelection(config.conf["searchWith"]["useAsDefaultQuery"])
 
 	def onAdd(self, event):
 		#log.info('adding item to  search menu...')
@@ -406,7 +429,7 @@ class SearchWithPanel(gui.SettingsPanel):
 	def onSave(self):
 		config.conf["searchWith"]["menuItems"]= self.customMenu.GetItems()
 		config.conf["searchWith"]["lang"]= self.langsComboBox.GetSelection()
-		config.conf["searchWith"]["useLastSpokenAsDefault"]= self.lastSpokenDefault.GetValue()
+		config.conf["searchWith"]["useAsDefaultQuery"]= self.defaultQueryCombobox.GetSelection()
 
 # Graphical user interface for search with dialog
 # It should open if no text is selected.
@@ -437,9 +460,10 @@ class SearchWithDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
 
-	def postInit(self, useLastSpoken= False, text= None):
-		if useLastSpoken and text:
-			self.editControl.SetValue(text)
+	def postInit(self, defaultText= None):
+		if defaultText:
+			self.editControl.SetValue(defaultText)
+			self.editControl.SelectAll()
 		self.editControl.SetFocus()
 		self.CentreOnScreen()
 		self.Raise()
@@ -470,7 +494,7 @@ class SearchWithDialog(wx.Dialog):
 # Other Engines menu
 class OtherEnginesMenu(wx.Menu):
 	''' The menu that pops up when pressing Other Engines button in Search with dialog
-	items of this menu are the labels of the Search With menu.
+		items of this menu are the labels of the Search With menu.
 	'''
 	def __init__(self, parentDialog, text):
 		super(OtherEnginesMenu, self).__init__()
