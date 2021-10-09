@@ -42,13 +42,39 @@ Seçim kutusunda Google araması için aşağıdaki seçeneklerden birini seçeb
     1.  Tarayıcı ayarlarını ve dilini kullan.
     2.  NVDA dilini kullan.
     3.  Windows dilini kullan.
-  *  Son olarak, İle Ara iletişim kutusunda son konuşulan metnin varsayılan sorgu olarak olmasını istiyorsanız   
-Bunu, Ayarlar penceresinde bulunan son konuşulanı varsayılan sorgu olarak kullan onay kutusunu işaretli hale getirerek yapabilirsiniz.
-Bu şekilde rahat arama yapabilmenizi umuyor, mutlu aramalar diliyoruz.
+*	Son olarak, İle ara iletişim kutusunda varsayılan sorguyu seçme seçeneğiniz vardır.  
+ayar panelindeki Varsayılan sorgu için Seçim kutusundan Dilediğiniz seçeneği seçebilirsiniz.  
+	*	Boş bırak  
+	*	Pano metnini kullan  
+	*	Son konuşulan metni kullan  
+Pano veya son söylenen metin seçilirse, kolayca geçersiz kılabilmeniz için arama kutusundaki metin seçili olarak görüntülenecektir.  
+Bu Şekilde aradığımızı hızlı olarak bulabilmeyi umuyoruz. İyi Aramalar.  
+
+### 1.7 için değişiklikler ###
+
+*	İle Ara iletişim kutusunda varsayılan sorgu için bir seçim kutusu eklendi.  
+*	Boş bırak, Pano metnini kullan veya Son söylenen metni kullan'ı seçebilirsiniz.  
+
+### 1.6 için değişiklikler ###
+
+*	Birkaç yeni site ve arama motoru eklendi:  
+	*	Google Çeviri  
+	*	GitHub'da NVDA Sorunları  
+*	Geleneksel komut dosyası hareketi yolu yerine komut dosyası dekoratörlerini kullanın.  
+
+### 1.5 için değişiklikler ###
+
+*	URL'ye eklemeden önce sorgu dizesindeki özel karakterlerden kaçarak ciddi bir hatayı düzeltme.  
+
+### 1.4 için değişiklikler ###
+
+*	Yerelleştirme güncellemeleri eklendi.  
+*	Komut dosyası işlevleri altındaki bazı belge dizelerini kaldırıldı, giriş hareketlerinde gösterilmeye uygun değil.  
+
 
 ### 1.3 için değişiklikler ###
 
-*	Çeviri sistemi tarafından yerelleştirme güncellemeleri ekleyin.
+*	Çeviri sistemi tarafından yerelleştirme güncellemeleri eklendi.  
 
 
 ### 1.2 için değişiklikler
@@ -73,4 +99,4 @@ Bu şekilde rahat arama yapabilmenizi umuyor, mutlu aramalar diliyoruz.
 
   *  İlk sürüm.  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.3/searchWith-1.3.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.6/searchWith-1.6.nvda-addon

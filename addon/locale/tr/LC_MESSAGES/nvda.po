@@ -5,191 +5,178 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'searchWith' '1.2'\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2021-08-08 13:41+0200\n"
-"PO-Revision-Date: 2021-08-22 23:31+0300\n"
+"Project-Id-Version: 'searchWith' '1.7'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-08 16:34+0300\n"
+"PO-Revision-Date: 2021-10-08 16:34+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.7\n"
 "Language: ar\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Language: Turkish\n"
+"X-Poedit-Country: TURKEY\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
+"X-Poedit-SearchPath-1: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
+"X-Poedit-SearchPath-2: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
 
-#. Translators: Search with menu title.
-#: addon\globalPlugins\searchWith.py:172
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:185
 msgid "Search With Menu"
 msgstr "İle Ara Menü"
 
-#. Translators: Message displayed if error happens in getting url.
-#: addon\globalPlugins\searchWith.py:212
-#: addon\globalPlugins\searchWith.py:493
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:224
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:516
 msgid "Not able to get {item} url"
 msgstr "{Öğe} url'si alınamıyor"
 
-#. Translators: Title of message box
-#. Translators: Title of message box.
-#: addon\globalPlugins\searchWith.py:215
-#: addon\globalPlugins\searchWith.py:496
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:227
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:519
 msgid "Error Message"
 msgstr "Hata mesajı"
 
-#. Translators: Category of addon in input gestures.
-#. Translators: title of the panel
-#. Translators: Title of dialog
-#: addon\globalPlugins\searchWith.py:251
-#: addon\globalPlugins\searchWith.py:272
-#: addon\globalPlugins\searchWith.py:418
-msgid "Search With"
-msgstr "İle Ara"
-
-#. Translators: Message displayed in input help more.
-#: addon\globalPlugins\searchWith.py:253
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:255
 msgid "Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr "Bir arama sorgusu girmek için İle Ara iletişim penceresini görüntüleyin. Metin seçiliiken Kısa yol tuşuna bir defa basılırsa seçim kutusu açılır, iki defa basılırsa Google arama sayfası açılır."
 
-#. Translators: Label of group related to menu.
-#: addon\globalPlugins\searchWith.py:278
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:258
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:288
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:440
+msgid "Search With"
+msgstr "İle Ara"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:294
 msgid "Menu"
 msgstr "Menü"
 
-#. Translators: List of available items to add to menu.
-#: addon\globalPlugins\searchWith.py:280
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:296
 msgid "Available items to add"
 msgstr "Eklenebilir Öğeler"
 
-#. Translators: Label of add button.
-#: addon\globalPlugins\searchWith.py:289
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:305
 msgid "Add to menu"
 msgstr "Menüye ekle"
 
-#. Translators: Search with menu items.
-#: addon\globalPlugins\searchWith.py:294
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:310
 msgid "Search with menu"
 msgstr "İle Ara Menü"
 
-#. Translators: Label of remove button.
-#: addon\globalPlugins\searchWith.py:304
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:320
 msgid "Remove"
 msgstr "Kaldır"
 
-#. Translators: Label of move up button.
-#: addon\globalPlugins\searchWith.py:307
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:323
 msgid "Move item up"
 msgstr "Öğeyi yukarı taşı"
 
-#. Translators: Label of move down button.
-#: addon\globalPlugins\searchWith.py:310
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:326
 msgid "Move item down"
 msgstr "Öğeyi aşağı taşı"
 
-#. Translators: Label of set menu to default button.
-#: addon\globalPlugins\searchWith.py:313
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:329
 msgid "Set menu to default"
 msgstr "Menüyü varsayılana Sıfırla"
 
-#. Translators: Option in cumbo box to choose browser setting
-#: addon\globalPlugins\searchWith.py:319
-msgid "Browser language and setting"
-msgstr "Tarayıcı dili ve ayarı"
-
-#. Translators: Option in cumbo box to choose NVDA language
-#: addon\globalPlugins\searchWith.py:321
-msgid "NVDA language"
-msgstr "NVDA dili"
-
-#. Translators: Option in cumbo box to choose windows language
-#: addon\globalPlugins\searchWith.py:323
-msgid "Windows language"
-msgstr "Windows dili"
-
-#. Translators: Label of options in searching google.
-#: addon\globalPlugins\searchWith.py:326
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:334
 msgid "In Google search"
 msgstr "Google'da ara"
 
-#. Translators: Label of static text
-#: addon\globalPlugins\searchWith.py:328
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:337
+msgid "Browser language and setting"
+msgstr "Tarayıcı dili ve ayarı"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:339
+msgid "NVDA language"
+msgstr "NVDA dili"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:341
+msgid "Windows language"
+msgstr "Windows dili"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:344
 msgid "Use:"
 msgstr "Kullan:"
 
-#. Translators: In search with dialog group
-#: addon\globalPlugins\searchWith.py:336
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:350
 msgid "In search with dialog"
 msgstr "İle Ara Diyaloğunda"
 
-#. Translators: Label of checkbox to use last spoken ad default query.
-#: addon\globalPlugins\searchWith.py:338
-msgid "Use last spoken as default query"
-msgstr "Son konuşulanı varsayılan sorgu olarak kullan"
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:353
+msgid "Leave Blank"
+msgstr "Boş bırak"
 
-#. Translators: Message informing that an item was added
-#: addon\globalPlugins\searchWith.py:352
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:355
+msgid "Use clipboard text"
+msgstr "Pano metnini kullan"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:357
+msgid "Use last spoken text"
+msgstr "Son konuşulan metni kullan"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:359
+msgid "Options for default query:"
+msgstr "Varsayılan sorgu için seçenekler:"
+
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:374
 msgid "Information: Item added"
 msgstr "Bilgi: Öğe eklendi"
 
-#. Translators: Message informing that an item was removed.
-#: addon\globalPlugins\searchWith.py:368
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:390
 msgid "Information: item removed"
 msgstr "Bilgi: öğe kaldırıldı"
 
-#. Translators: Message informing that an item was moved up.
-#: addon\globalPlugins\searchWith.py:385
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:407
 msgid "Information: item moved up"
 msgstr "Bilgi: öğe yukarı taşındı"
 
-#. Translators: Message informing that an item was moved down.
-#: addon\globalPlugins\searchWith.py:398
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:420
 msgid "Information: item moved down"
 msgstr "Bilgi: öğe aşağı taşındı"
 
-#. Translators: Message informing that menu was set to default.
-#: addon\globalPlugins\searchWith.py:405
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:427
 msgid "Information: Menu set to default"
 msgstr "Bilgi: Menü varsayılana sıfırlandı"
 
-#. Translators: Label of static text
-#: addon\globalPlugins\searchWith.py:425
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:447
 msgid "Search with google"
 msgstr "İle Ara google"
 
-#. Translators: Label of text control to enter query.
-#: addon\globalPlugins\searchWith.py:427
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:449
 msgid "Enter a search query"
 msgstr "Bir arama sorgusu girin"
 
-#. Translators: Label of Other engines button
-#: addon\globalPlugins\searchWith.py:431
+#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:453
 msgid "Other Engines"
 msgstr "Diğer Motorlar"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:17
-msgid "searchWith"
-msgstr "İle Ara"
+#~ msgid "searchWith"
+#~ msgstr "İle Ara"
 
-#. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:20
-msgid ""
-"This addon helps you to search text, via various search engines.\n"
-"Let no text selected, and press the gesture of the addon\n"
-"A dialog will be displayed, with an edit box to enter a search query\n"
-"To search with Google press enter, or tab to search with other engins.\n"
-"Or\n"
-"select some text and press once, a menu will be displayed with various search engines to choose from.\n"
-"And while text is selected, you can press the gesture twice to search with Google directly.\n"
-"The Default gesture for the addon is: NVDA+ Windows+ S."
-msgstr ""
-"Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı olur.\n"
-"Hiçbir metnin seçilmesine izin vermeyin ve eklentinin hareketine basın\n"
-"Arama sorgusu girmek için bir düzenleme kutusu içeren bir iletişim kutusu görüntülenecektir\n"
-"Google ile arama yapmak için enter tuşuna veya diğer motorlarla arama yapmak için sekme tuşuna basın.\n"
-"Veya\n"
-"bir metin seçin ve bir kez basın, aralarından seçim yapabileceğiniz çeşitli arama motorlarının bulunduğu bir menü görüntülenecektir.\n"
-"Metin seçiliyken, doğrudan Google ile arama yapmak için harekete iki kez basabilirsiniz.\n"
-"Eklenti için Varsayılan hareket: NVDA+ Windows+ S."
-
+#~ msgid ""
+#~ "This addon helps you to search text, via various search engines.\n"
+#~ "Let no text selected, and press the gesture of the addon\n"
+#~ "A dialog will be displayed, with an edit box to enter a search query\n"
+#~ "To search with Google press enter, or tab to search with other engins.\n"
+#~ "Or\n"
+#~ "select some text and press once, a menu will be displayed with various "
+#~ "search engines to choose from.\n"
+#~ "And while text is selected, you can press the gesture twice to search "
+#~ "with Google directly.\n"
+#~ "The Default gesture for the addon is: NVDA+ Windows+ S."
+#~ msgstr ""
+#~ "Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı "
+#~ "olur.\n"
+#~ "Hiçbir metnin seçilmesine izin vermeyin ve eklentinin hareketine basın\n"
+#~ "Arama sorgusu girmek için bir düzenleme kutusu içeren bir iletişim kutusu "
+#~ "görüntülenecektir\n"
+#~ "Google ile arama yapmak için enter tuşuna veya diğer motorlarla arama "
+#~ "yapmak için sekme tuşuna basın.\n"
+#~ "Veya\n"
+#~ "bir metin seçin ve bir kez basın, aralarından seçim yapabileceğiniz "
+#~ "çeşitli arama motorlarının bulunduğu bir menü görüntülenecektir.\n"
+#~ "Metin seçiliyken, doğrudan Google ile arama yapmak için harekete iki kez "
+#~ "basabilirsiniz.\n"
+#~ "Eklenti için Varsayılan hareket: NVDA+ Windows+ S."
