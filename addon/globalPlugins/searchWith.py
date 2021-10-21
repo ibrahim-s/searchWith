@@ -9,6 +9,7 @@ import api
 import core, ui
 import gui, wx
 import os, json
+from collections import deque
 from gui import guiHelper
 import config
 import queueHandler
@@ -43,7 +44,7 @@ def isSelectedText():
 	if not info or info.isCollapsed:
 		return False
 	else:
-		return info.text
+		return info.text.strip()
 
 def getClipboardText():
 	''' Get clipboard text, and if no text in clipboard, return None.'''
@@ -53,7 +54,7 @@ def getClipboardText():
 		text = None
 	if not text or not isinstance(text,str) or text.isspace():
 		return None
-	return text
+	return text.strip()
 
 def searchWithGoogle(text):
 	''' Searching Google for text, and opening the default browser with search results.'''
@@ -124,7 +125,10 @@ class LastSpoken:
 	''' Helper class that contains the code, to get last spoken text.'''
 	# Build year of NVDA version
 	BUILD_YEAR = getattr(versionInfo, 'version_year', 2021)
-	lastSpokenText= ""
+	# Before before last spoken is needed, in case of searching Google directly for last spoken text
+	# Last spoken will be the first item of menu, and before that search with menu, so we want last spoken before that .
+	# lastSpokenText is a deque, of maximum length of 3.
+	lastSpokenText= deque(maxlen=3)
 
 	@classmethod
 	def _patch(cls):
@@ -147,7 +151,7 @@ class LastSpoken:
 		cls.oldSpeak(sequence, *args, **kwargs)
 		text = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
 		if text.strip():
-			cls.lastSpokenText= text.strip()
+			cls.lastSpokenText.append(text.strip())
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -160,6 +164,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Menu items, or labels of search engines in virtual menu.
 		self.menuItems= []
 		self.index= 0
+		# Text required to search for, either selected, clipboard or last spoken.
+		self.textRequired= None
 		LastSpoken._patch()
 
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(SearchWithPanel)
@@ -212,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_activateMenuItem(self, gesture):
 		#log.info('activating menu item ...')
-		text= isSelectedText()
+		text= self.textRequired
 		# Escaping special characters in query string.
 		text= urllib.parse.quote(text)
 		index= self.index
@@ -243,12 +249,37 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				text= getClipboardText()
 			elif config.conf["searchWith"]["useAsDefaultQuery"]== 2:
 				#  Last spoken text is selected as default value.
-				text= LastSpoken.lastSpokenText
+				text= LastSpoken.lastSpokenText[-1]
 			dialog= SearchWithDialog(gui.mainFrame)
 			dialog.postInit(defaultText= text)
 			_searchWithDialog= dialog
 		else:
 			_searchWithDialog.Raise()
+
+	def searchWithForRequiredText(self, text, type= "selected"):
+		if not text:
+			if type== "selected":
+				# Open real dialog, with editControl to enter a search query.
+				self.openSearchWithDialog()
+				return
+			if type== "clipboard":
+				# Translators: Message displayed if there is no text in clipboard.
+				message= _("No text in clipboard")
+			elif type== "lastSpoken":
+				# Translators: Message displayed if there is no last spoken text.
+				message= _("No last spoken text")
+			ui.message(message)
+			return
+		scriptCount= scriptHandler.getLastScriptRepeatCount()
+		if scriptCount== 0:
+			# Activating virtual menu.
+			self.activateMenu()
+			return
+		#Otherwise search text with Google directly.
+		if type== "lastSpoken":
+			text= LastSpoken.lastSpokenText[0]
+		searchWithGoogle(text)
+		self.clearVirtual()
 
 	@scriptHandler.script(
 		# Translators: Message displayed in input help mode.
@@ -258,25 +289,35 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		category= _("Search With")
 	)
 	def script_searchWith(self, gesture):
-		text= isSelectedText()
-		if not text:
-			# Open real dialog, with editControl to enter a search query.
-			self.openSearchWithDialog()
-			return
-		scriptCount= scriptHandler.getLastScriptRepeatCount()
-		if scriptCount== 0:
-			# Activating virtual menu.
-			self.activateMenu()
-			return
-		#Otherwise search selected text with Google directly.
-		searchWithGoogle(text)
-		self.clearVirtual()
+		self.textRequired= isSelectedText()
+		self.searchWithForRequiredText(self.textRequired)
+
+	@scriptHandler.script(
+		# Translators: Message displayed in input help mode.
+		description= _("Display Search with virtual menu for clipboard text, and pressed twice searches Google directly."),
+		# Translators: Category of addon in input gestures.
+		category= _("Search With")
+	)
+	def script_searchForClipboardText(self, gesture):
+		self.textRequired= getClipboardText()
+		self.searchWithForRequiredText(self.textRequired, type= "clipboard")
+
+	@scriptHandler.script(
+		# Translators: Message displayed in input help mode.
+		description= _("Display Search with virtual menu for last spoken text, and pressed twice searches Google directly."),
+		# Translators: Category of addon in input gestures.
+		category= _("Search With")
+	)
+	def script_searchForLastSpokenText(self, gesture):
+		self.textRequired= LastSpoken.lastSpokenText[-1]
+		self.searchWithForRequiredText(self.textRequired, type= "lastSpoken")
 
 #default configuration 
 configspec={
 	"menuItems": "list(default=list())",
 	"lang": "integer(default=0)",
 	"useAsDefaultQuery": "integer(default=0)",
+	"preserveDataFolder": "boolean(default=False)",
 }
 config.conf.spec["searchWith"]= configspec
 if not config.conf["searchWith"]["menuItems"]:
@@ -356,10 +397,19 @@ class SearchWithPanel(gui.SettingsPanel):
 			# Translators: An option to use for default query.
 			_("Use last spoken text")
 		]
+		# Translators: Label of static text
 		staticDefaultQueryComboSizer.Add(wx.StaticText(staticDefaultQueryComboSizer.GetStaticBox(), label= _("Options for default query:")))
 		self.defaultQueryCombobox= wx.Choice(staticDefaultQueryComboSizer.GetStaticBox(), choices= defaultQuery)
 		staticDefaultQueryComboSizer.Add(self.defaultQueryCombobox)
 		self.defaultQueryCombobox.SetSelection(config.conf["searchWith"]["useAsDefaultQuery"])
+
+		# For advanced users group
+		# Translators: Label of group for advanced users.
+		staticCheckSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("For advanced users")))
+		# Translators: Label of checkbox preserve data folder.
+		self.advancedCheckbox= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Preserve data folder upon installing a new version"))
+		staticCheckSizer.Add(self.advancedCheckbox)
+		self.advancedCheckbox.SetValue(config.conf["searchWith"]["preserveDataFolder"])
 
 	def onAdd(self, event):
 		#log.info('adding item to  search menu...')
@@ -430,6 +480,7 @@ class SearchWithPanel(gui.SettingsPanel):
 		config.conf["searchWith"]["menuItems"]= self.customMenu.GetItems()
 		config.conf["searchWith"]["lang"]= self.langsComboBox.GetSelection()
 		config.conf["searchWith"]["useAsDefaultQuery"]= self.defaultQueryCombobox.GetSelection()
+		config.conf["searchWith"]["preserveDataFolder"]= self.advancedCheckbox.GetValue()
 
 # Graphical user interface for search with dialog
 # It should open if no text is selected.
