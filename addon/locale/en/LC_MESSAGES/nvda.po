@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'searchWith' '1.7'\n"
+"Project-Id-Version: 'searchWith' '1.8-dev'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2021-10-09 14:30+0300\n"
-"PO-Revision-Date: 2021-10-09 14:35+0300\n"
+"POT-Creation-Date: 2021-10-21 13:37+0300\n"
+"PO-Revision-Date: 2021-10-21 13:42+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,23 +19,33 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Search with menu title.
-#: addon\globalPlugins\searchWith.py:185
+#: addon\globalPlugins\searchWith.py:191
 msgid "Search With Menu"
 msgstr ""
 
 #. Translators: Message displayed if error happens in getting url.
-#: addon\globalPlugins\searchWith.py:224 addon\globalPlugins\searchWith.py:516
+#: addon\globalPlugins\searchWith.py:230 addon\globalPlugins\searchWith.py:567
 msgid "Not able to get {item} url"
 msgstr ""
 
 #. Translators: Title of message box
 #. Translators: Title of message box.
-#: addon\globalPlugins\searchWith.py:227 addon\globalPlugins\searchWith.py:519
+#: addon\globalPlugins\searchWith.py:233 addon\globalPlugins\searchWith.py:570
 msgid "Error Message"
 msgstr ""
 
+#. Translators: Message displayed if there is no text in clipboard.
+#: addon\globalPlugins\searchWith.py:267
+msgid "No text in clipboard"
+msgstr ""
+
+#. Translators: Message displayed if there is no last spoken text.
+#: addon\globalPlugins\searchWith.py:270
+msgid "No last spoken text"
+msgstr ""
+
 #. Translators: Message displayed in input help mode.
-#: addon\globalPlugins\searchWith.py:255
+#: addon\globalPlugins\searchWith.py:286
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
@@ -47,137 +57,164 @@ msgstr ""
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
-#: addon\globalPlugins\searchWith.py:258 addon\globalPlugins\searchWith.py:288
-#: addon\globalPlugins\searchWith.py:440 buildVars.py:23
+#: addon\globalPlugins\searchWith.py:289 addon\globalPlugins\searchWith.py:299
+#: addon\globalPlugins\searchWith.py:309 addon\globalPlugins\searchWith.py:329
+#: addon\globalPlugins\searchWith.py:491 buildVars.py:23
 msgid "Search With"
 msgstr ""
 
+#. Translators: Message displayed in input help mode.
+#: addon\globalPlugins\searchWith.py:297
+msgid ""
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+
+#. Translators: Message displayed in input help mode.
+#: addon\globalPlugins\searchWith.py:307
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+
 #. Translators: Label of group related to menu.
-#: addon\globalPlugins\searchWith.py:294
+#: addon\globalPlugins\searchWith.py:335
 msgid "Menu"
 msgstr ""
 
 #. Translators: List of available items to add to menu.
-#: addon\globalPlugins\searchWith.py:296
+#: addon\globalPlugins\searchWith.py:337
 msgid "Available items to add"
 msgstr ""
 
 #. Translators: Label of add button.
-#: addon\globalPlugins\searchWith.py:305
+#: addon\globalPlugins\searchWith.py:346
 msgid "Add to menu"
 msgstr ""
 
 #. Translators: Search with menu items.
-#: addon\globalPlugins\searchWith.py:310
+#: addon\globalPlugins\searchWith.py:351
 msgid "Search with menu"
 msgstr ""
 
 #. Translators: Label of remove button.
-#: addon\globalPlugins\searchWith.py:320
+#: addon\globalPlugins\searchWith.py:361
 msgid "Remove"
 msgstr ""
 
 #. Translators: Label of move up button.
-#: addon\globalPlugins\searchWith.py:323
+#: addon\globalPlugins\searchWith.py:364
 msgid "Move item up"
 msgstr ""
 
 #. Translators: Label of move down button.
-#: addon\globalPlugins\searchWith.py:326
+#: addon\globalPlugins\searchWith.py:367
 msgid "Move item down"
 msgstr ""
 
 #. Translators: Label of set menu to default button.
-#: addon\globalPlugins\searchWith.py:329
+#: addon\globalPlugins\searchWith.py:370
 msgid "Set menu to default"
 msgstr ""
 
 #. Translators: Label of options in searching google.
-#: addon\globalPlugins\searchWith.py:334
+#: addon\globalPlugins\searchWith.py:375
 msgid "In Google search"
 msgstr ""
 
 #. Translators: Option in cumbo box to choose browser setting
-#: addon\globalPlugins\searchWith.py:337
+#: addon\globalPlugins\searchWith.py:378
 msgid "Browser language and setting"
 msgstr ""
 
 #. Translators: Option in cumbo box to choose NVDA language
-#: addon\globalPlugins\searchWith.py:339
+#: addon\globalPlugins\searchWith.py:380
 msgid "NVDA language"
 msgstr ""
 
 #. Translators: Option in cumbo box to choose windows language
-#: addon\globalPlugins\searchWith.py:341
+#: addon\globalPlugins\searchWith.py:382
 msgid "Windows language"
 msgstr ""
 
 #. Translators: Label of static text
-#: addon\globalPlugins\searchWith.py:344
+#: addon\globalPlugins\searchWith.py:385
 msgid "Use:"
 msgstr ""
 
 #. Translators: In search with dialog group
-#: addon\globalPlugins\searchWith.py:350
+#: addon\globalPlugins\searchWith.py:391
 msgid "In search with dialog"
 msgstr ""
 
 #. Translators: An option to use for default query.
-#: addon\globalPlugins\searchWith.py:353
+#: addon\globalPlugins\searchWith.py:394
 msgid "Leave Blank"
 msgstr ""
 
 #. Translators: An option to use for default query.
-#: addon\globalPlugins\searchWith.py:355
+#: addon\globalPlugins\searchWith.py:396
 msgid "Use clipboard text"
 msgstr ""
 
 #. Translators: An option to use for default query.
-#: addon\globalPlugins\searchWith.py:357
+#: addon\globalPlugins\searchWith.py:398
 msgid "Use last spoken text"
 msgstr ""
 
-#: addon\globalPlugins\searchWith.py:359
+#. Translators: Label of static text
+#: addon\globalPlugins\searchWith.py:401
 msgid "Options for default query:"
 msgstr ""
 
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+#: addon\globalPlugins\searchWith.py:408
+msgid "For advanced users"
+msgstr ""
+
+#. Translators: Label of checkbox preserve data folder.
+#: addon\globalPlugins\searchWith.py:410
+msgid "Preserve data folder upon installing a new version"
+msgstr ""
+
 #. Translators: Message informing that an item was added
-#: addon\globalPlugins\searchWith.py:374
+#: addon\globalPlugins\searchWith.py:424
 msgid "Information: Item added"
 msgstr ""
 
 #. Translators: Message informing that an item was removed.
-#: addon\globalPlugins\searchWith.py:390
+#: addon\globalPlugins\searchWith.py:440
 msgid "Information: item removed"
 msgstr ""
 
 #. Translators: Message informing that an item was moved up.
-#: addon\globalPlugins\searchWith.py:407
+#: addon\globalPlugins\searchWith.py:457
 msgid "Information: item moved up"
 msgstr ""
 
 #. Translators: Message informing that an item was moved down.
-#: addon\globalPlugins\searchWith.py:420
+#: addon\globalPlugins\searchWith.py:470
 msgid "Information: item moved down"
 msgstr ""
 
 #. Translators: Message informing that menu was set to default.
-#: addon\globalPlugins\searchWith.py:427
+#: addon\globalPlugins\searchWith.py:477
 msgid "Information: Menu set to default"
 msgstr ""
 
 #. Translators: Label of static text
-#: addon\globalPlugins\searchWith.py:447
+#: addon\globalPlugins\searchWith.py:498
 msgid "Search with google"
 msgstr ""
 
 #. Translators: Label of text control to enter query.
-#: addon\globalPlugins\searchWith.py:449
+#: addon\globalPlugins\searchWith.py:500
 msgid "Enter a search query"
 msgstr ""
 
 #. Translators: Label of Other engines button
-#: addon\globalPlugins\searchWith.py:453
+#: addon\globalPlugins\searchWith.py:504
 msgid "Other Engines"
 msgstr ""
 

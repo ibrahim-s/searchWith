@@ -1,13 +1,13 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [version 1.7][1]  
+Download [Development version 1.8][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
 Let no text selected, and press the gesture of the addon  
 A dialog will be displayed, with an edit box to enter a search query  
-To search with Google press enter, or tab to search with other engins.  
+To search with Google press enter, or tab to search with other engines.  
 Or  
 select some text and press once, a menu will be displayed with various search engines to choose.  
 And while text is selected, you can press the gesture twice to search with Google directly.  
@@ -32,7 +32,11 @@ Either the default menu, or any other you have tailed to your needs.
 *	Choose one and press enter, the default browser will open displaying search results.  
 Or, if you want to search with Google directly  
 press the gesture twice, and you are done.  
-*	Want to modify Search with menu?  
+*	Want to trigger search menu specifically for clipboard or last spoken text?  
+You can from input gestures dialog, assigned a gesture for:  
+	*	Trigger search menu for clipboard text, and pressed twice searches that text by Google directly.  
+	*	Trigger search menu for last spoken text, and pressed twice searches that text by Google directly.  
+*	Now if you ask, can I modify Search with menu?  
 *	Yes you  can do that from the setting panel,  and adjust the menu to fit to your mood and needs.  
 *	You can from there, add to Search with menu, other available search engines  
 *	And you can if you like, remove an item from it, move item up, move item down, or return and set it to default state.  
@@ -43,13 +47,23 @@ From the cumbo box there, you can choose search Google either:
 	1.	Using browser settings and language.  
 	2.	Using NVDA language.  
 	3.	Using windows language.  
-*	Lastly, you have the option to choose the default query in Search with dialog  
+*	Now, you have the option to choose the default query in Search with dialog  
 from the Options for default query combo box in setting panel, you can choose either  
 	*	Leave blank
 	*	Use clipboard text
 	*	Use last spoken text
 And if clipboard or last spoken text is chosen, text in search box will be displayed selected, so that you can easily override it.  
+*	Lastly, especially for advanced users  
+You can by a check box in setting panel, choose if you want to preserve your data folder upon installing a new version.  
+Be aware, choosing that you will not get new search engines, if any were included in the new addon version.  
 And that's it, hope to search for good and find it, happy searching!  
+
+### Changes for 1.8 ###
+
+*	Add a check box in setting panel, to let advanced users preserve their data folder.  
+*	Add two new entries in input gestures:  
+	*	trigger search menu for clipboard text, press twice searches Google directly.  
+	*	Trigger search menu for last spoken text, press twice searches Google directly.  
 
 ### Changes for 1.7 ###
 
@@ -95,4 +109,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.7/searchWith-1.7.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.8-dev/searchWith-1.8-dev.nvda-addon
