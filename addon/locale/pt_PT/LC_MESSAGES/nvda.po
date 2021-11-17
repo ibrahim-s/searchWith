@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Procurar com, versão 0.7\n"
 "POT-Creation-Date: 2021-07-25 19:43+0100\n"
-"PO-Revision-Date: 2021-08-21 11:21+0100\n"
+"PO-Revision-Date: 2021-10-30 22:43+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
 "com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (21-08-2021)\n"
@@ -30,6 +30,23 @@ msgstr "Não consegue obter o URl do {item}"
 msgid "Error Message"
 msgstr "Mensagem de Erro"
 
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr "Sem texto nà área de transferência"
+
+#. Translators: Message displayed if there is no last spoken text.
+msgid "No last spoken text"
+msgstr "Nenhum último texto falado"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"Mostra um diálogo de  Pesquisa para introduzir um termo a pesquisar. Se "
+"houver um texto seleccionado, mostra um menu virtual para escolher o motor "
+"de busca; pressionando duas vezes, pesquisa no google."
+
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
 #. Translators: Title of dialog
@@ -39,14 +56,21 @@ msgstr "Mensagem de Erro"
 msgid "Search With"
 msgstr "Procurar com"
 
-#. Translators: Message displayed in input help more.
+#. Translators: Message displayed in input help mode.
 msgid ""
-"Display Search with dialog to enter a search query. And if text selected, "
-"displays a virtual menu pressed once, searches Google directly pressed twice."
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
 msgstr ""
-"Mostra um diálogo de  Pesquisa para introduzir um termo a pesquisar. Se "
-"houver um texto seleccionado, mostra um menu virtual para escolher o motor "
-"de busca; pressionando duas vezes, pesquisa no google."
+"Mostra menu virtual de Pesquisa para o texto da área de transferência, e, "
+"pressionando duas vezes, pesquisa directamente no Google."
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Mostra menu virtual de Pesquisa para o último texto falado, e, pressionando "
+"duas vezes, pesquisa directamente no Google."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -80,6 +104,10 @@ msgstr "Mover item para baixo"
 msgid "Set menu to default"
 msgstr "Definir o menu por defeito"
 
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "Na pesquisa do Google"
+
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
 msgstr "Configuração do navegador de idiomas"
@@ -92,10 +120,6 @@ msgstr "Idioma do NVDA"
 msgid "Windows language"
 msgstr "Idioma do Windows"
 
-#. Translators: Label of options in searching google.
-msgid "In Google search"
-msgstr "Na pesquisa do Google"
-
 #. Translators: Label of static text
 msgid "Use:"
 msgstr "Modo de utilização:"
@@ -104,9 +128,30 @@ msgstr "Modo de utilização:"
 msgid "In search with dialog"
 msgstr "Em pesquisa com diálogo"
 
-#. Translators: Label of checkbox to use last spoken ad default query.
-msgid "Use last spoken as default query"
-msgstr "Use a última consulta falada como padrão"
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "Deixar em branco"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "Usar texto da área de transferência"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "Utilizar o último texto falado"
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "Opções para a pesquisa padrão:"
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr "Para utilizadores avançados"
+
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr "Conservar pasta de dados ao instalar uma nova versão"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
@@ -134,7 +179,7 @@ msgstr "Pesquisar com google"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"
-msgstr "Introduza uma expressão/termo para pesquisa:"
+msgstr "Introduza uma expressão/termo para pesquisa"
 
 #. Translators: Label of Other engines button
 msgid "Other Engines"
@@ -169,12 +214,6 @@ msgstr ""
 
 #~ msgid "No text selected"
 #~ msgstr "Sem texto seleccionado"
-
-#~ msgid ""
-#~ "Open search with menu if pressed once, search with Google directly twice."
-#~ msgstr ""
-#~ "Se pressionado uma vez, abrir o menu de pesquisa. Se pressionar duas, faz "
-#~ "a pesquisa com o google."
 
 #~ msgid "Choose language used in Google search"
 #~ msgstr "Escolher o idioma usado na pesquisa do google"

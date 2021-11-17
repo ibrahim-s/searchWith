@@ -1,8 +1,8 @@
 # Search With #
 
-*	Autor: Ibrahim Hamadeh
-*	Descargar [versión estable][1]
-*	Compatibilidade con NVDA: 2019.3 en diante
+* Autor: Ibrahim Hamadeh
+* Descargar [versión estable][1]
+* Compatibilidade con NVDA: 2019.3 en diante
 
 Este complemento axúdache a procurar texto, a través de varios motores de
 procura. Non selecciones ningún texto, e preme o xesto do complemento,
@@ -16,84 +16,105 @@ directamente.
 
 O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che funciona, ou fai conflito con outro, podes coma sempre engadir un xesto ou cambiar o existente indo a: menú NVDA>preferencias>xestosDeEntrada>categoría Search With.
 
-## Uso ##
+## Uso
 
-*	Se queres introducir unha procura, simplemente preme o xesto do
-  complemento
-
-amosarase un diálogo, cunha caixa de edición para introducir o termo de
-procura.
-
-*	queres procurar con google? simplemente preme intro
-*	Noutro caso tabula ata o botón Other engines (Outros Motores), e dalle un
+* Se queres introducir unha procura, simplemente preme o xesto do
+  complemento. Amosarase un diálogo, cunha caixa de edición para introducir
+  o termo de procura.
+* Queres procurar con google? simplemente preme intro
+* Noutro caso tabula ata o botón Other engines (Outros Motores), e dalle un
   espazo, amosarase un menú emerxente, con varios motores de procura a
-  escoller.
-
-Yahoo, Bing, DuckDuckGo, e Youtube.
-
-Éste é o menú por defecto, e podes modificalo dende o panel de opcións do
-complemento.
-
-*	Outro xeito de utilizar o complemento, é seleccionando algo de texto.
-
-E ó premer o xestos do complemento, ou calquera outro que lle asignases,
-amosarase un menú virtual con varios motores de procura, xa sexa o menú por
-defecto, ou calquera outro que ordeases de acordo coas túas necesidades.
-
-Escolle un e preme intro, abrirase o navegador por defecto amosando os
-resultados da procura. Ou, se queres procurar con Google directamente, preme
-o xesto dúas veces, e feito.
-
-*	Queres modificar o menú de Search with?
-
-Si podes facelo dende o panel de opcións, e axustar o menú para que se
-adapte á súa persoalidade e necesidades.
-
-Podes dende alí, engadir ó menú de Search with, outros motores de procura
-dispoñibles.
-
-e podes se queres, eliminar un elemento del, mover un elemento arriba, mover
-un elemento abaixo, ou devolver e configurar o menú ó estado predeterminado.
-
-*	Se queres que estas modificacións sexan permanentes, debes gardar a
+  escoller. Yahoo, Bing, DuckDuckGo, e Youtube. Éste é o menú por defecto, e
+  podes modificalo dende o panel de opcións do complemento.
+* Outro xeito de utilizar o complemento, é seleccionando algo de texto. E ó
+  premer o xestos do complemento, ou calquera outro que lle asignases,
+  amosarase un menú virtual con varios motores de procura, xa sexa o menú
+  por defecto, ou calquera outro que ordeases de acordo coas túas
+  necesidades.
+* Escolle un e preme intro, abrirase o navegador por defecto amosando os
+  resultados da procura. Ou, se queres procurar con Google directamente,
+  preme o xesto dúas veces, e feito.
+* Queres lanzar o menú de procura para o portapapeis ou o último texto
+  falado? De acordo, sendo así podes, dende o diálogo de xestos de entrada,
+  asignar un xesto para:
+    * Lanzar o menú de procura para o texto do portapapeis, e premido dúas
+      veces procura ese texto en Google directamente.
+    * Lanzar o menú de procura para o último texto falado, e premido dúas
+      veces procura ese texto en Google directamente.
+* Queres modificar o menú de Search with? Si podes facelo dende o panel de
+  opcións, e axustar o menú para que se adapte á súa persoalidade e
+  necesidades.
+* Podes dende alí, engadir ó menú de Search with, outros motores de procura
+  dispoñibles. E podes se queres, eliminar un elemento del, mover un
+  elemento arriba, mover un elemento abaixo, ou devolver e configurar o menú
+  ó estado predeterminado.
+* Se queres que estas modificacións sexan permanentes, debes gardar a
   configuración logo.
-*	Queres procurar en Google utilizando outras opcións de lingua?
+* Queres procurar en Google utilizando outras opcións de lingua?
+* Entón, vai á categoría Search With nos paneis de opcións, dende a caixa
+  combinada de alí, podes escoller buscar en Google dos seguintes xeitos:
 
-Entón, vai á categoría Search With nos paneis de opcións, dende a caixa
-combinada de alí, podes escoller buscar en Google dos seguintes xeitos:
+    1. Utilizando as opcións e lingua do navegador.
+    2. Utilizando a lingua do NVDA.
+    3. Utilizando a lingua do Windows.
 
-	1.	Utilizando as opcións e lingua do navegador.
-	2.	Utilizando a lingua do NVDA.
-	3.	Utilizando a lingua do Windows.
-*	Por último, se queres ter o último texto falado como procura por defecto
-  no diálogo de Search with, tes a posibilidades de facelo, mediante a caixa
-  de verificación Use last spoken as default query (Utilizar o último falado
-  como procura) no panel de opcións.
+* Aínda máis, tes a opción de escoller a procura por defecto no diálogo de
+  Search with. Dende a caixa combinada de opcións para a procura por defecto
+  no panel de opcións, podes escoller entre
 
-E iso é todo, desexo que procures o ben e o atopes, feliz procura!  
+    * Deixar en Branco
+    * Utilizar texto do portapapeis
+    * Utilizar último texto falado
 
-### Cambios para 1.2 ###
+* E se se escollen o portapapeis ou o último texto falado, o texto na caixa
+  de búsqueda amosarase seleccionado, de xeito que poidas sobrescribilo
+  facilmente.
+* Finalmente, en especial para usuarios avanzados
+* Podes, mediante unha caixa de verificación no panel de opcións, escoller
+  se desexas preservar o teu cartafol de datos cando instales unha nova
+  versión. Ten en conta, escollendo isto non obterás novos motores de
+  procura, se se incluíu algún na nova versión do complemento.
+E iso é todo, desexo que procures o ben e o atopes, feliz procura!
 
-*	engadidos máis sitios que poderían engadirse ó menú, como Stackoverflow,
+### Trocos para 1.8 ###
+
+* Engadida unha caixa de verificación no panel de opcións, para permitir a
+  usuarios avanzados preservar o seu cartafol de datos.
+* Engadidos dous novos elementos nos xestos de entrada:
+    * lanzar menú de procura para o texto do portapapeis, premer dúas veces
+      para procurar en Google directamente.
+    * lanzar menú de procura para o último texto falado, premer dúas veces
+      para procurar en Google directamente.
+
+### Trocos para 1.7
+
+* Feita unha caixa combinada nas opcións do complemento, para escoller unha
+  opción para a procura por defecto no diálogo de Search with.
+* Podes seleccionar entre deixar en blanco, utilizar o texto do portapapeis,
+  ou utilizar o último texto falado.
+
+### Cambios para 1.2
+
+* Engadidos máis sitios que poderían engadirse ó menú, como Stackoverflow,
   Stackexchange, GoogleBooks e outros.
-*	Engadidas as opcións para utilizar o último texto falado como procura por
+* Engadidas as opcións para utilizar o último texto falado como procura por
   defecto, no diálogo de search with.
 
-### Cambios para 0.4 ###
+### Cambios para 0.4
 
-*	Engadido un diálogo se non hai texto seleccionado, para introducir unha
+* Engadido un diálogo se non hai texto seleccionado, para introducir unha
   procura.
-*	Faise posible modificar o menú de Search with dende o panel de opcións,
+* Faise posible modificar o menú de Search with dende o panel de opcións,
   para adaptarse ás necesidades do usuario.
 
-### Cambios para 0.3   ###
+### Cambios para 0.3
 
-*	Engadido panel de opción, dando maiores opcións de lingua na busca de
+* Engadido panel de opción, dando maiores opcións de lingua na busca de
   Google.
 
-### Cambios para 0.1 ###
+### Cambios para 0.1
 
-*	Versión inicial
+* Versión inicial
 
 [[!tag dev stable]]
 

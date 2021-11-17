@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2021-09-07 00:24+0300\n"
+"PO-Revision-Date: 2021-10-16 07:12+0300\n"
+"Last-Translator: Hatoon <h.felemban@hotmail.com>\n"
+"Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Hatoon <h.felemban@hotmail.com>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
@@ -31,6 +31,23 @@ msgstr "يتعذر الوصول لرابط {item} "
 msgid "Error Message"
 msgstr "رسالةُ خطأ"
 
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr ""
+
+#. Translators: Message displayed if there is no last spoken text.
+#, fuzzy
+msgid "No last spoken text"
+msgstr "استخدِم آخر نص منطوق "
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
+"عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
+
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
 #. Translators: Title of dialog
@@ -40,10 +57,20 @@ msgstr "رسالةُ خطأ"
 msgid "Search With"
 msgstr "البحث باستخدام Search With"
 
-#. Translators: Message displayed in input help more.
+#. Translators: Message displayed in input help mode.
+#, fuzzy
 msgid ""
-"Display Search with dialog to enter a search query. And if text selected, "
-"displays a virtual menu pressed once, searches Google directly pressed twice."
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
+"عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
+
+#. Translators: Message displayed in input help mode.
+#, fuzzy
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
 msgstr ""
 "عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
 "عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
@@ -80,6 +107,10 @@ msgstr "تحريك العنصر لأسفل"
 msgid "Set menu to default"
 msgstr "إعادة ضبط القائمة للوضع الافتراضي"
 
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "في بحث Google"
+
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
 msgstr "إعدادات ولغة مستعرض الإنترنت"
@@ -92,10 +123,6 @@ msgstr "لغة NVDA"
 msgid "Windows language"
 msgstr "لغة Windows"
 
-#. Translators: Label of options in searching google.
-msgid "In Google search"
-msgstr "في بحث Google"
-
 #. Translators: Label of static text
 msgid "Use:"
 msgstr "استخدِمْ:"
@@ -104,9 +131,30 @@ msgstr "استخدِمْ:"
 msgid "In search with dialog"
 msgstr "في مربّع حوار البحث باستخدام"
 
-#. Translators: Label of checkbox to use last spoken ad default query.
-msgid "Use last spoken as default query"
-msgstr "استخدِم آخر نص منطوق كمصطلح افتراضي للبحث عنه"
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "أُتركه فارغا"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "إستخدِم النص الموجود في الحافِظة"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "استخدِم آخر نص منطوق "
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "خَيارات النص الإفتراضي للبحث:"
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr ""
+
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr ""
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"

@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
 "PO-Revision-Date: 2021-08-28 12:03+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
 
 #. Translators: Search with menu title.
@@ -31,6 +31,23 @@ msgstr "không thể lấy url trong {item} "
 msgid "Error Message"
 msgstr "cảnh báo lỗi "
 
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr ""
+
+#. Translators: Message displayed if there is no last spoken text.
+#, fuzzy
+msgid "No last spoken text"
+msgstr "dùng câu nói cuối cùng để tìm kiếm "
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"mở hộp thoại có thể nhập văn bản để tìm kiếm.  nếu có văn bản đang chọn, mở "
+"menu để chọn công cụ khi tìm kiếm. nhấn hai lần, tìm kiếm với google "
+
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
 #. Translators: Title of dialog
@@ -40,10 +57,20 @@ msgstr "cảnh báo lỗi "
 msgid "Search With"
 msgstr "tìm kiếm nhanh "
 
-#. Translators: Message displayed in input help more.
+#. Translators: Message displayed in input help mode.
+#, fuzzy
 msgid ""
-"Display Search with dialog to enter a search query. And if text selected, "
-"displays a virtual menu pressed once, searches Google directly pressed twice."
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"mở hộp thoại có thể nhập văn bản để tìm kiếm.  nếu có văn bản đang chọn, mở "
+"menu để chọn công cụ khi tìm kiếm. nhấn hai lần, tìm kiếm với google "
+
+#. Translators: Message displayed in input help mode.
+#, fuzzy
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
 msgstr ""
 "mở hộp thoại có thể nhập văn bản để tìm kiếm.  nếu có văn bản đang chọn, mở "
 "menu để chọn công cụ khi tìm kiếm. nhấn hai lần, tìm kiếm với google "
@@ -80,6 +107,10 @@ msgstr "chuyển mục xuống"
 msgid "Set menu to default"
 msgstr "đặt menu này làm mặc định"
 
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "trong google tìm kiếm "
+
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
 msgstr "ngôn ngữ của trình duyệt "
@@ -92,10 +123,6 @@ msgstr "ngôn ngữ của nvda "
 msgid "Windows language"
 msgstr "Ngôn ngữ của Windows"
 
-#. Translators: Label of options in searching google.
-msgid "In Google search"
-msgstr "trong google tìm kiếm "
-
 #. Translators: Label of static text
 msgid "Use:"
 msgstr "sử dụng "
@@ -104,9 +131,32 @@ msgstr "sử dụng "
 msgid "In search with dialog"
 msgstr ""
 
-#. Translators: Label of checkbox to use last spoken ad default query.
-msgid "Use last spoken as default query"
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr ""
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr ""
+
+#. Translators: An option to use for default query.
+#, fuzzy
+msgid "Use last spoken text"
 msgstr "dùng câu nói cuối cùng để tìm kiếm "
+
+#. Translators: Label of static text
+#, fuzzy
+msgid "Options for default query:"
+msgstr "dùng câu nói cuối cùng để tìm kiếm "
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr ""
+
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr ""
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"

@@ -1,165 +1,214 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the searchWith package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'searchWith' '1.8'\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-23 13:15+0300\n"
-"PO-Revision-Date: 2021-10-23 13:32+0300\n"
-"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
-"Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Project-Id-Version: searchWith 1.7\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-10-15 19:20+0000\n"
+"PO-Revision-Date: 2021-10-30 09:26+0300\n"
+"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
+"Language-Team: \n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
-"Language: ar\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Language: Turkish\n"
-"X-Poedit-Country: TURKEY\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
-"X-Poedit-SearchPath-1: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
-"X-Poedit-SearchPath-2: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
+"X-Generator: Poedit 3.0\n"
 
+#. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "İle Ara Menü"
+msgstr "ile Ara menüsü"
 
+#. Translators: Message displayed if error happens in getting url.
+#, python-brace-format
 msgid "Not able to get {item} url"
-msgstr "{Öğe} url'si alınamıyor"
+msgstr "{item} URL'si alınamıyor"
 
+#. Translators: Title of message box
+#. Translators: Title of message box.
 msgid "Error Message"
 msgstr "Hata mesajı"
 
+#. Translators: Message displayed if there is no text in clipboard.
 msgid "No text in clipboard"
 msgstr "Panoda metin yok"
 
+#. Translators: Message displayed if there is no last spoken text.
 msgid "No last spoken text"
 msgstr "Son konuşulan metin yok"
 
-msgid "Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice."
-msgstr "Bir arama sorgusu girmek için İle Ara iletişim penceresini görüntüleyin. Metin seçiliiken Kısa yol tuşuna bir defa basılırsa seçim kutusu açılır, iki defa basılırsa Google arama sayfası açılır."
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"Bir arama sorgusu girilmesi için ile ara iletişim kutusunu aç. Bir metin "
+"seçiliyse bir kez basılırsa ile ara menüsünü göster, iki kez basılırsa "
+"doğrudan google ile ara."
 
+#. Translators: Category of addon in input gestures.
+#. Translators: title of the panel
+#. Translators: Title of dialog
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
 msgstr "İle Ara"
 
-msgid "Display Search with virtual menu for clipboard text, and pressed twice searches Google directly."
-msgstr "Pano metni için  ile Ara sanal menüsünü görüntüleyin ve iki kez basıldığında doğrudan Google'da arama yapın."
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Panodaki metin için ile ara menüsünü göster, iki kez basılırsa doğrudan "
+"google ile ara."
 
-msgid "Display Search with virtual menu for last spoken text, and pressed twice searches Google directly."
-msgstr "Son konuşulan metin için  ile Ara sanal menüsünü görüntüleyin ve iki kez basıldığında doğrudan Google'da arama yapın."
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Son söylenen için ile ara menüsünü göster, iki kez basılırsa doğrudan google "
+"ile ara."
 
+#. Translators: Label of group related to menu.
 msgid "Menu"
 msgstr "Menü"
 
+#. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "Eklenebilir Öğeler"
+msgstr "Eklenebilecek mevcut öğeler"
 
+#. Translators: Label of add button.
 msgid "Add to menu"
 msgstr "Menüye ekle"
 
+#. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "İle Ara Menü"
+msgstr "İle ara menüsü"
 
+#. Translators: Label of remove button.
 msgid "Remove"
 msgstr "Kaldır"
 
+#. Translators: Label of move up button.
 msgid "Move item up"
 msgstr "Öğeyi yukarı taşı"
 
+#. Translators: Label of move down button.
 msgid "Move item down"
 msgstr "Öğeyi aşağı taşı"
 
+#. Translators: Label of set menu to default button.
 msgid "Set menu to default"
-msgstr "Menüyü varsayılana Sıfırla"
+msgstr "Menüyü varsayılana ayarla"
 
+#. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "Google'da ara"
+msgstr "Google ile ara"
 
+#. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
 msgstr "Tarayıcı dili ve ayarı"
 
+#. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
 msgstr "NVDA dili"
 
+#. Translators: Option in cumbo box to choose windows language
 msgid "Windows language"
 msgstr "Windows dili"
 
+#. Translators: Label of static text
 msgid "Use:"
 msgstr "Kullan:"
 
+#. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "İle Ara Diyaloğunda"
+msgstr "İle ara iletişim kutusunda"
 
+#. Translators: An option to use for default query.
 msgid "Leave Blank"
 msgstr "Boş bırak"
 
+#. Translators: An option to use for default query.
 msgid "Use clipboard text"
 msgstr "Pano metnini kullan"
 
+#. Translators: An option to use for default query.
 msgid "Use last spoken text"
-msgstr "Son konuşulan metni kullan"
+msgstr "Son söylenen metni kullan"
 
+#. Translators: Label of static text
 msgid "Options for default query:"
 msgstr "Varsayılan sorgu için seçenekler:"
 
+#. For advanced users group
+#. Translators: Label of group for advanced users.
 msgid "For advanced users"
 msgstr "İleri düzey kullanıcılar için"
 
+#. Translators: Label of checkbox preserve data folder.
 msgid "Preserve data folder upon installing a new version"
-msgstr "Yeni bir sürüm yükledikten sonra veri klasörünü koru"
+msgstr "Yeni bir sürümü yüklerken veri klasörünü koru"
 
+#. Translators: Message informing that an item was added
 msgid "Information: Item added"
 msgstr "Bilgi: Öğe eklendi"
 
+#. Translators: Message informing that an item was removed.
 msgid "Information: item removed"
 msgstr "Bilgi: öğe kaldırıldı"
 
+#. Translators: Message informing that an item was moved up.
 msgid "Information: item moved up"
 msgstr "Bilgi: öğe yukarı taşındı"
 
+#. Translators: Message informing that an item was moved down.
 msgid "Information: item moved down"
 msgstr "Bilgi: öğe aşağı taşındı"
 
+#. Translators: Message informing that menu was set to default.
 msgid "Information: Menu set to default"
 msgstr "Bilgi: Menü varsayılana sıfırlandı"
 
+#. Translators: Label of static text
 msgid "Search with google"
-msgstr "İle Ara google"
+msgstr "google ile ara"
 
+#. Translators: Label of text control to enter query.
 msgid "Enter a search query"
 msgstr "Bir arama sorgusu girin"
 
+#. Translators: Label of Other engines button
 msgid "Other Engines"
 msgstr "Diğer Motorlar"
 
-#~ msgid "searchWith"
-#~ msgstr "İle Ara"
-
-#~ msgid ""
-#~ "This addon helps you to search text, via various search engines.\n"
-#~ "Let no text selected, and press the gesture of the addon\n"
-#~ "A dialog will be displayed, with an edit box to enter a search query\n"
-#~ "To search with Google press enter, or tab to search with other engins.\n"
-#~ "Or\n"
-#~ "select some text and press once, a menu will be displayed with various "
-#~ "search engines to choose from.\n"
-#~ "And while text is selected, you can press the gesture twice to search "
-#~ "with Google directly.\n"
-#~ "The Default gesture for the addon is: NVDA+ Windows+ S."
-#~ msgstr ""
-#~ "Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı "
-#~ "olur.\n"
-#~ "Hiçbir metnin seçilmesine izin vermeyin ve eklentinin hareketine basın\n"
-#~ "Arama sorgusu girmek için bir düzenleme kutusu içeren bir iletişim kutusu "
-#~ "görüntülenecektir\n"
-#~ "Google ile arama yapmak için enter tuşuna veya diğer motorlarla arama "
-#~ "yapmak için sekme tuşuna basın.\n"
-#~ "Veya\n"
-#~ "bir metin seçin ve bir kez basın, aralarından seçim yapabileceğiniz "
-#~ "çeşitli arama motorlarının bulunduğu bir menü görüntülenecektir.\n"
-#~ "Metin seçiliyken, doğrudan Google ile arama yapmak için harekete iki kez "
-#~ "basabilirsiniz.\n"
-#~ "Eklenti için Varsayılan hareket: NVDA+ Windows+ S."
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon helps you to search text, via various search engines.\n"
+"Let no text selected, and press the gesture of the addon\n"
+"A dialog will be displayed, with an edit box to enter a search query\n"
+"To search with Google press enter, or tab to search with other engins.\n"
+"Or\n"
+"select some text and press once, a menu will be displayed with various "
+"search engines to choose from.\n"
+"And while text is selected, you can press the gesture twice to search with "
+"Google directly.\n"
+"The Default gesture for the addon is: NVDA+ Windows+ S."
+msgstr ""
+"Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı "
+"olur.\n"
+"Hiç bir metin seçmeksizin eklenti kısayoluna basın\n"
+"Arama sorgusu girmek için bir yazı alanı içeren iletişim kutusu açılacak\n"
+"Google ile arama yapmak için enter'a, diğer motorlarla arama yapmak için "
+"sekmeye basın.\n"
+"ya da\n"
+"bir metin seçin ve ilgili tuşa bir kez basın, aralarından seçim "
+"yapabileceğiniz çeşitli arama motorları ile bir menü gösterilecek.\n"
+"Metin seçiliyken, doğrudan Google ile arama yapmak için tuşa iki kez "
+"basabilirsiniz.\n"
+"Eklenti için Varsayılan Kısayol tuşu: NVDA+ Windows+ S."

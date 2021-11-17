@@ -5,12 +5,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'searchWith' '0.6'\n"
+"Project-Id-Version: 'searchWith'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2021-07-26 04:13+0800\n"
-"PO-Revision-Date: 2021-07-28 11:55+0800\n"
+"POT-Creation-Date: 2021-10-28 14:35+0800\n"
+"PO-Revision-Date: 2021-10-28 14:40+0800\n"
 "Last-Translator: \n"
-"Language-Team: \n"
+"Language-Team: cary-rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,22 @@ msgstr "无法获取 {item} 网址"
 msgid "Error Message"
 msgstr "错误信息"
 
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr "剪贴板中没有文本"
+
+#. Translators: Message displayed if there is no last spoken text.
+msgid "No last spoken text"
+msgstr "没有最后依次朗读的文本"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"显示一个对话框输入关键词搜索。如果选中了文本，按依次显示一个虚拟菜单，连按两"
+"次直接使用 Google 搜索。"
+
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
 #. Translators: Title of dialog
@@ -40,13 +56,17 @@ msgstr "错误信息"
 msgid "Search With"
 msgstr "快捷搜索"
 
-#. Translators: Message displayed in input help more.
+#. Translators: Message displayed in input help mode.
 msgid ""
-"Display Search with dialog to enter a search query. And if text selected, "
-"displays a virtual menu pressed once, searches Google directly pressed twice."
-msgstr ""
-"显示一个对话框输入关键词搜索。如果选中了文本，按依次显示一个虚拟菜单，连按两"
-"次直接使用 Google 搜索。"
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr "针对剪贴板中的文本弹出搜索引擎菜单，连按两次使用 Google 搜索。"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr "针对最后依次朗读的文本弹出搜索引擎菜单，连按两次使用 Google 搜索。"
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -80,6 +100,10 @@ msgstr "下移(&N)"
 msgid "Set menu to default"
 msgstr "恢复默认菜单(&D)"
 
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "Google 搜索 "
+
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
 msgstr "浏览器语言"
@@ -92,10 +116,6 @@ msgstr "NVDA 语言"
 msgid "Windows language"
 msgstr "Windows 语言"
 
-#. Translators: Label of options in searching google.
-msgid "In Google search"
-msgstr "Google 搜索 "
-
 #. Translators: Label of static text
 msgid "Use:"
 msgstr "使用："
@@ -104,9 +124,30 @@ msgstr "使用："
 msgid "In search with dialog"
 msgstr "对话框搜索"
 
-#. Translators: Label of checkbox to use last spoken ad default query.
-msgid "Use last spoken as default query"
-msgstr "使用最后依次朗读的文本作为默认搜索关键词"
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "留空"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "使用剪贴板中的文本"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "使用最后依次朗读的文本"
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "默认搜索关键词："
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr "针对高级用户"
+
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr "安装新版时保留数据目录"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"

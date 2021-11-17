@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: searchWith\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2021-08-23 09:23+0200\n"
-"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"PO-Revision-Date: 2021-10-31 16:59+0200\n"
+"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,23 @@ msgstr "Kohteen {item} URL-osoitetta ei saatu"
 msgid "Error Message"
 msgstr "Virhe"
 
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr "Ei tekstiä leikepöydällä"
+
+#. Translators: Message displayed if there is no last spoken text.
+msgid "No last spoken text"
+msgstr "Ei viimeksi puhuttua tekstiä"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"Näyttää Hae hakukoneella -valintaikkunan, johon voidaan kirjoittaa "
+"hakukysely. Jos tekstiä on valittuna, näyttää kerran painettaessa "
+"virtuaalisen valikon tai kahdesti painettaessa hakee suoraan Googlella."
+
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
 #. Translators: Title of dialog
@@ -41,14 +58,21 @@ msgstr "Virhe"
 msgid "Search With"
 msgstr "Hae hakukoneella"
 
-#. Translators: Message displayed in input help more.
+#. Translators: Message displayed in input help mode.
 msgid ""
-"Display Search with dialog to enter a search query. And if text selected, "
-"displays a virtual menu pressed once, searches Google directly pressed twice."
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
 msgstr ""
-"Näyttää Hae hakukoneella -valintaikkunan, johon voidaan kirjoittaa "
-"hakukysely. Jos tekstiä on valittuna, näyttää kerran painettaessa "
-"virtuaalisen valikon tai kahdesti painettaessa hakee suoraan Googlella."
+"Näyttää Hae hakukoneella -virtuaalivalikon leikepöydän tekstille tai hakee "
+"kahdesti painettaessa suoraan Googlella."
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Näyttää Hae hakukoneella -virtuaalivalikon viimeksi puhutulle tekstille tai "
+"hakee kahdesti painettaessa suoraan Googlella."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -82,21 +106,21 @@ msgstr "Siirrä alas"
 msgid "Set menu to default"
 msgstr "Palauta valikon oletuskohteet"
 
-#. Translators: Option in cumbo box to choose browser setting
-msgid "Browser language and setting"
-msgstr "Selaimen kieli"
-
-#. Translators: Option in cumbo box to choose NVDA language
-msgid "NVDA language"
-msgstr "NVDA:n kieli"
-
-#. Translators: Option in cumbo box to choose windows language
-msgid "Windows language"
-msgstr "Windowsin kieli"
-
 #. Translators: Label of options in searching google.
 msgid "In Google search"
 msgstr "Google-haussa"
+
+#. Translators: Option in cumbo box to choose browser setting
+msgid "Browser language and setting"
+msgstr "Selaimen kieltä"
+
+#. Translators: Option in cumbo box to choose NVDA language
+msgid "NVDA language"
+msgstr "NVDA:n kieltä"
+
+#. Translators: Option in cumbo box to choose windows language
+msgid "Windows language"
+msgstr "Windowsin kieltä"
 
 #. Translators: Label of static text
 msgid "Use:"
@@ -106,9 +130,30 @@ msgstr "Käytä:"
 msgid "In search with dialog"
 msgstr "Hae hakukoneella -valintaikkunassa"
 
-#. Translators: Label of checkbox to use last spoken ad default query.
-msgid "Use last spoken as default query"
-msgstr "Käytä viimeksi puhuttua tekstiä oletuskyselynä"
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "Jätä tyhjäksi"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "Käytä leikepöydän tekstiä"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "Käytä viimeksi puhuttua tekstiä"
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "Oletuskyselyn vaihtoehdot:"
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr "Edistyneille käyttäjille"
+
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr "Säilytä datakansio uutta versiota asennettaessa"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
