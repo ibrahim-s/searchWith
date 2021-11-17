@@ -24,157 +24,114 @@ msgstr ""
 "X-Poedit-SearchPath-1: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
 "X-Poedit-SearchPath-2: C:\\Users\\ITU\\AppData\\Roaming\\nvda\\addons\\searchWith\\globalPlugins\n"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:191
 msgid "Search With Menu"
 msgstr "İle Ara Menü"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:230
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:567
 msgid "Not able to get {item} url"
 msgstr "{Öğe} url'si alınamıyor"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:233
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:570
 msgid "Error Message"
 msgstr "Hata mesajı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:267
 msgid "No text in clipboard"
 msgstr "Panoda metin yok"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:270
 msgid "No last spoken text"
 msgstr "Son konuşulan metin yok"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:286
 msgid "Display Search with dialog to enter a search query. And if text selected, displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr "Bir arama sorgusu girmek için İle Ara iletişim penceresini görüntüleyin. Metin seçiliiken Kısa yol tuşuna bir defa basılırsa seçim kutusu açılır, iki defa basılırsa Google arama sayfası açılır."
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:289
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:299
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:309
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:329
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:491
 msgid "Search With"
 msgstr "İle Ara"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:297
 msgid "Display Search with virtual menu for clipboard text, and pressed twice searches Google directly."
 msgstr "Pano metni için  ile Ara sanal menüsünü görüntüleyin ve iki kez basıldığında doğrudan Google'da arama yapın."
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:307
 msgid "Display Search with virtual menu for last spoken text, and pressed twice searches Google directly."
 msgstr "Son konuşulan metin için  ile Ara sanal menüsünü görüntüleyin ve iki kez basıldığında doğrudan Google'da arama yapın."
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:335
 msgid "Menu"
 msgstr "Menü"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:337
 msgid "Available items to add"
 msgstr "Eklenebilir Öğeler"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:346
 msgid "Add to menu"
 msgstr "Menüye ekle"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:351
 msgid "Search with menu"
 msgstr "İle Ara Menü"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:361
 msgid "Remove"
 msgstr "Kaldır"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:364
 msgid "Move item up"
 msgstr "Öğeyi yukarı taşı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:367
 msgid "Move item down"
 msgstr "Öğeyi aşağı taşı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:370
 msgid "Set menu to default"
 msgstr "Menüyü varsayılana Sıfırla"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:375
 msgid "In Google search"
 msgstr "Google'da ara"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:378
 msgid "Browser language and setting"
 msgstr "Tarayıcı dili ve ayarı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:380
 msgid "NVDA language"
 msgstr "NVDA dili"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:382
 msgid "Windows language"
 msgstr "Windows dili"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:385
 msgid "Use:"
 msgstr "Kullan:"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:391
 msgid "In search with dialog"
 msgstr "İle Ara Diyaloğunda"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:394
 msgid "Leave Blank"
 msgstr "Boş bırak"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:396
 msgid "Use clipboard text"
 msgstr "Pano metnini kullan"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:398
 msgid "Use last spoken text"
 msgstr "Son konuşulan metni kullan"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:401
 msgid "Options for default query:"
 msgstr "Varsayılan sorgu için seçenekler:"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:408
 msgid "For advanced users"
 msgstr "İleri düzey kullanıcılar için"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:410
 msgid "Preserve data folder upon installing a new version"
 msgstr "Yeni bir sürüm yükledikten sonra veri klasörünü koru"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:424
 msgid "Information: Item added"
 msgstr "Bilgi: Öğe eklendi"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:440
 msgid "Information: item removed"
 msgstr "Bilgi: öğe kaldırıldı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:457
 msgid "Information: item moved up"
 msgstr "Bilgi: öğe yukarı taşındı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:470
 msgid "Information: item moved down"
 msgstr "Bilgi: öğe aşağı taşındı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:477
 msgid "Information: Menu set to default"
 msgstr "Bilgi: Menü varsayılana sıfırlandı"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:498
 msgid "Search with google"
 msgstr "İle Ara google"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:500
 msgid "Enter a search query"
 msgstr "Bir arama sorgusu girin"
 
-#: C:\Users\ITU\AppData\Roaming\nvda\addons\searchWith\globalPlugins/searchWith.py:504
 msgid "Other Engines"
 msgstr "Diğer Motorlar"
 
