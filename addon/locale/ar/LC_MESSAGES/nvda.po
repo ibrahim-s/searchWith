@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2021-10-16 07:12+0300\n"
+"PO-Revision-Date: 2021-11-24 02:58+0200\n"
 "Last-Translator: Hatoon <h.felemban@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -33,12 +33,11 @@ msgstr "رسالةُ خطأ"
 
 #. Translators: Message displayed if there is no text in clipboard.
 msgid "No text in clipboard"
-msgstr ""
+msgstr "ليس هناك نص في الحافِظة"
 
 #. Translators: Message displayed if there is no last spoken text.
-#, fuzzy
 msgid "No last spoken text"
-msgstr "استخدِم آخر نص منطوق "
+msgstr "لا يُوجد آخر نص منطوق "
 
 #. Translators: Message displayed in input help mode.
 msgid ""
@@ -58,22 +57,19 @@ msgid "Search With"
 msgstr "البحث باستخدام Search With"
 
 #. Translators: Message displayed in input help mode.
-#, fuzzy
 msgid ""
 "Display Search with virtual menu for clipboard text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
-"عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
+"عرض قائمة البحث الإفتراضية للنص الموجود في الحافِظة, و بالضغط مرتين يبحث في "
+"جوجل مباشرة."
 
 #. Translators: Message displayed in input help mode.
-#, fuzzy
 msgid ""
 "Display Search with virtual menu for last spoken text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
-"عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
+"عرض قائمة البحث الإفتراضية لآخِر نص منطوق, و بالضغط مرتين يبحث في جوجل مباشرة."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -113,7 +109,7 @@ msgstr "في بحث Google"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
-msgstr "إعدادات ولغة مستعرض الإنترنت"
+msgstr "إعدادات ولغة المتصفح"
 
 #. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
@@ -150,11 +146,11 @@ msgstr "خَيارات النص الإفتراضي للبحث:"
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
-msgstr ""
+msgstr "خاص بالمستخدمين المُحترفين"
 
 #. Translators: Label of checkbox preserve data folder.
 msgid "Preserve data folder upon installing a new version"
-msgstr ""
+msgstr "المُحافَظة على ملف البيانات عندَ تثبيت إصدار جديد"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
@@ -196,9 +192,15 @@ msgid ""
 "A dialog will be displayed, with an edit box to enter a search query\n"
 "To search with Google press enter, or tab to search with other engins.\n"
 "Or\n"
-"select some text and press once, a menu will be displayed with various "
-"search engines to choose from.\n"
+"select some text and press once, a menu will be displayed with various search "
+"engines to choose from.\n"
 "And while text is selected, you can press the gesture twice to search with "
 "Google directly.\n"
 "The Default gesture for the addon is: NVDA+ Windows+ S."
-msgstr "تساعدُك هذه الإضافة في البحث عن نص عبر محرّكات بحثٍ عديدة."
+msgstr ""
+"تساعدُك هذه الإضافة في البحث عن نص عبر محرّكات بحثٍ عديدة.\vتأكد مِن أنهُ ليس هناك "
+"نص مُحدد, و اضغط اختصار الإضافة\vستظهر مُحاوَرة, مع مربع بحث لإدخال مُصطلح البحث"
+"\vإذا أردتَ البحث في جوجل إضغط إنتر, أو تحرك بالتاب لاختيار مُحركات بحث أُخرى."
+"\vأو\vحدِّد نص معين و اضغط مرة واحدة, و سيتم عرض قائمة مع العديد مِن محركات "
+"البحث للإختيار مِن بينِها.\vو في حالةْ وجود نص مُحدد, يُمكنك الضغط مرتين للبحث في "
+"جوجل مباشرة.\vالإختصار الإفتراضي للإضافة هو: NVDA+Windows+S."
