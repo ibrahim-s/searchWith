@@ -12,6 +12,7 @@ import os, json
 from collections import deque
 from gui import guiHelper
 import config
+import globalVars
 import queueHandler
 import languageHandler
 import globalPluginHandler
@@ -23,6 +24,7 @@ import speech
 import speechViewer
 import versionInfo
 from logHandler import log
+
 import addonHandler
 addonHandler.initTranslation()
 
@@ -39,7 +41,7 @@ def isSelectedText():
 		obj=treeInterceptor
 	try:
 		info=obj.makeTextInfo(textInfos.POSITION_SELECTION)
-	except (RuntimeError, NotImplementedError):
+	except (RuntimeError, NotImplementedError, LookupError):
 		info=None
 	if not info or info.isCollapsed:
 		return False
@@ -153,6 +155,12 @@ class LastSpoken:
 		if text.strip():
 			cls.lastSpokenText.append(text.strip())
 
+def disableInSecureMode(decoratedCls):
+	if globalVars.appArgs.secure:
+		return globalPluginHandler.GlobalPlugin
+	return decoratedCls
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
