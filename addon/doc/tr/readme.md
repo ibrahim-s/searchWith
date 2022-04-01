@@ -75,6 +75,12 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
   motorlarının listenize eklenmeyeceğini unutmayın.
 Ve işte bu, iyi şeyler aramanızı ve bulmanızı umuyoruz, mutlu aramalar!
 
+### Changes for 2.0 ###
+
+* Disable the addon in secure mode.
+* Update last tested version to 2022.1, to comply with recent addon api
+  version.
+
 ### 1.8 için değişiklikler ###
 
 * İleri düzey kullanıcıların veri klasörlerini korumalarına izin vermek için

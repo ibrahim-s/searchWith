@@ -75,6 +75,12 @@ El gesto predeterminado del complemento es: NVDA+windows+s. Si el atajo no te fu
   teniendo marcada esta casilla.
 Y esto es todo, espero que encuentres lo que buscas, ¡feliz búsqueda!
 
+### Cambios para 2.0 ###
+
+* El complemento se deshabilita en modo seguro.
+* Se actualiza la última versión probada a la 2022.1 para cumplir con la API
+  de complementos más reciente.
+
 ### Cambios para 1.8 ###
 
 * Se añade una casilla de verificación en el panel de opciones para permitir

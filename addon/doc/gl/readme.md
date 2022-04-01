@@ -21,7 +21,7 @@ O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che
 * Se queres introducir unha procura, simplemente preme o xesto do
   complemento. Amosarase un diálogo, cunha caixa de edición para introducir
   o termo de procura.
-* Queres procurar con google? simplemente preme intro
+* Queres procurar con google? simplemente preme intro.
 * Noutro caso tabula ata o botón Other engines (Outros Motores), e dalle un
   espazo, amosarase un menú emerxente, con varios motores de procura a
   escoller. Yahoo, Bing, DuckDuckGo, e Youtube. Éste é o menú por defecto, e
@@ -76,6 +76,12 @@ O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che
   procura, se se incluíu algún na nova versión do complemento.
 E iso é todo, desexo que procures o ben e o atopes, feliz procura!
 
+### Trocos para 2.0 ###
+
+* Deshabilitar o complemento en modo seguro.
+* Actualizar última versión probada 2022.1, para aliñarse coa versión
+  recente da API de complementos.
+
 ### Trocos para 1.8 ###
 
 * Engadida unha caixa de verificación no panel de opcións, para permitir a
@@ -83,7 +89,7 @@ E iso é todo, desexo que procures o ben e o atopes, feliz procura!
 * Engadidos dous novos elementos nos xestos de entrada:
     * lanzar menú de procura para o texto do portapapeis, premer dúas veces
       para procurar en Google directamente.
-    * lanzar menú de procura para o último texto falado, premer dúas veces
+    * Lanzar menú de procura para o último texto falado, premer dúas veces
       para procurar en Google directamente.
 
 ### Trocos para 1.7
