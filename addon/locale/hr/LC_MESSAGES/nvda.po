@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2021-11-08 02:01+0100\n"
+"PO-Revision-Date: 2022-04-24 00:54+0200\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Traži s izbornikom"
+msgstr "Izbornik za Traži pomoću"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
@@ -45,8 +45,8 @@ msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Prikaz pretrage s dijaloškim okvirom za unos upita za pretraživanje. Ako je "
-"tekst odabran, prikazuje virtualni izbornik kad se pritisne jednom, "
+"Prikaz dijaloškog okvira „Traži pomoću” za unos upita za pretraživanje. Ako "
+"je tekst odabran, prikazuje virtualni izbornik kad se pritisne jednom, "
 "pretražuje Google izravno kad se pritisne dvaput."
 
 #. Translators: Category of addon in input gestures.
@@ -56,7 +56,7 @@ msgstr ""
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Traži sa"
+msgstr "Traži pomoću"
 
 #. Translators: Message displayed in input help mode.
 msgid ""
@@ -88,7 +88,7 @@ msgstr "Dodaj u izbornik"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Traži s izbornikom"
+msgstr "Traži pomoću izbornika"
 
 #. Translators: Label of remove button.
 msgid "Remove"
@@ -128,7 +128,7 @@ msgstr "Koristi:"
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "U pretrazi s dijalogom"
+msgstr "U pretrazi pomoću dijaloga"
 
 #. Translators: An option to use for default query.
 msgid "Leave Blank"
@@ -205,7 +205,7 @@ msgstr ""
 "Nemoj odabrati nikoji tekst i pritisni gestu dodatka\n"
 "Prikazat će se dijaloški okvir s okvirom za uređivanje za unos upita za "
 "pretraživanje\n"
-"Za pretraživanje s Googleom pritisni tipku enter ili tabulator za "
+"Za pretraživanje pomoću Googlea pritisni tipku enter ili tabulator za "
 "pretraživanje s drugim tražilicama.\n"
 "Ili\n"
 "odaberi neki tekst i pritisni jednom. Prikazat će se izbornik s raznim "
