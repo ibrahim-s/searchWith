@@ -1,53 +1,52 @@
-# Croatian translation for searchWith.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the searchWith package.
-# Translators:
-# Milo Ivir <mail@milotype.de>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2022-04-24 00:54+0200\n"
-"Language: hr\n"
+"PO-Revision-Date: 2022-04-10 10:57+0200\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Izbornik za Traži pomoću"
+msgstr "Menü über Suchen Mit"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
 msgid "Not able to get {item} url"
-msgstr "Nije moguće dobiti {item} url"
+msgstr "Die URL {item} konnte nicht abgerufen werden"
 
 #. Translators: Title of message box
 #. Translators: Title of message box.
 msgid "Error Message"
-msgstr "Poruka greške"
+msgstr "Fehlermeldung"
 
 #. Translators: Message displayed if there is no text in clipboard.
 msgid "No text in clipboard"
-msgstr "Nema teksta u međuspremniku"
+msgstr "Kein Text in der Zwischenablage"
 
 #. Translators: Message displayed if there is no last spoken text.
 msgid "No last spoken text"
-msgstr "Nema zadnjeg izgovorenog teksta"
+msgstr "Kein zuletzt gesprochener Text"
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Prikaz dijaloškog okvira „Traži pomoću” za unos upita za pretraživanje. Ako "
-"je tekst odabran, prikazuje virtualni izbornik kad se pritisne jednom, "
-"pretražuje Google izravno kad se pritisne dvaput."
+"Zeigt die Suche mit Dialog zur Eingabe einer Suchanfrage an und wenn Text "
+"ausgewählt wurde, zeigt es bei einmal drücken ein virtuelles Menü an, bei "
+"zweimal drücken wird bei Google direkt gesucht."
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -56,136 +55,136 @@ msgstr ""
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Traži pomoću"
+msgstr "Suchen Mit"
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with virtual menu for clipboard text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Prikaz pretrage s virtualnim izbornikom za tekst međuspremnika. Dvaput "
-"pritisnuto pretražuje izravno Google."
+"Zeigt die Suche mit virtuellem Menü für Text in der Zwischenablage an, und "
+"bei zweimaligem Drücken wird direkt bei Google gesucht."
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with virtual menu for last spoken text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Prikaz pretrage s virtualnim izbornikom za izgovoreni tekst. Dvaput "
-"pritisnuto pretražuje izravno Google."
+"Zeigt die Suche mit virtuellem Menü für den zuletzt gesprochenen Text an, "
+"und bei zweimaligem Drücken wird direkt bei Google gesucht."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
-msgstr "Izbornik"
+msgstr "Menü"
 
 #. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "Dostupni elementi za dodavanje"
+msgstr "Verfügbare Einträge zum Hinzufügen"
 
 #. Translators: Label of add button.
 msgid "Add to menu"
-msgstr "Dodaj u izbornik"
+msgstr "Zum Menü hinzufügen"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Traži pomoću izbornika"
+msgstr "Menü über Suchen Mit"
 
 #. Translators: Label of remove button.
 msgid "Remove"
-msgstr "Ukloni"
+msgstr "Entfernen"
 
 #. Translators: Label of move up button.
 msgid "Move item up"
-msgstr "Premjesti element prema gore"
+msgstr "Eintrag nach oben verschieben"
 
 #. Translators: Label of move down button.
 msgid "Move item down"
-msgstr "Premjesti element prema dolje"
+msgstr "Eintrag nach unten verschieben"
 
 #. Translators: Label of set menu to default button.
 msgid "Set menu to default"
-msgstr "Postavi standardni izbornik"
+msgstr "Menü auf Standard einstellen"
 
 #. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "U Google pretrazi"
+msgstr "Bei Google suchen"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
-msgstr "Jezik preglednika i postavka"
+msgstr "Sprache und Einstellung des Browsers"
 
 #. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
-msgstr "Jezik NVDA čitača"
+msgstr "NVDA-Sprache"
 
 #. Translators: Option in cumbo box to choose windows language
 msgid "Windows language"
-msgstr "Jezik Windowsa"
+msgstr "Windows-Sprache"
 
 #. Translators: Label of static text
 msgid "Use:"
-msgstr "Koristi:"
+msgstr "Verwenden:"
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "U pretrazi pomoću dijaloga"
+msgstr "Im Dialogfeld Suchen Mit"
 
 #. Translators: An option to use for default query.
 msgid "Leave Blank"
-msgstr "Ostavi prazno"
+msgstr "Leer lassen"
 
 #. Translators: An option to use for default query.
 msgid "Use clipboard text"
-msgstr "Koristi tekst međuspremnika"
+msgstr "Text aus der zwischenablage verwenden"
 
 #. Translators: An option to use for default query.
 msgid "Use last spoken text"
-msgstr "Koristi zadnji izgovoreni tekst"
+msgstr "Den zuletzt gesprochenen Text verwenden"
 
 #. Translators: Label of static text
 msgid "Options for default query:"
-msgstr "Opcije za standardni upit:"
+msgstr "Optionen für die Standardabfrage:"
 
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
-msgstr "Za napredne korisnike"
+msgstr "Für fortgeschrittene Benutzer"
 
 #. Translators: Label of checkbox preserve data folder.
 msgid "Preserve data folder upon installing a new version"
-msgstr "Sačuvaj mapu podataka nakon instaliranja nove verzije"
+msgstr "Daten im Ordner bei der Installation einer neuen Version beibehalten"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
-msgstr "Informacija: element dodan"
+msgstr "Information: Eintrag hinzugefügt"
 
 #. Translators: Message informing that an item was removed.
 msgid "Information: item removed"
-msgstr "Informacija: element uklonjen"
+msgstr "Information: Eintrag entfernt"
 
 #. Translators: Message informing that an item was moved up.
 msgid "Information: item moved up"
-msgstr "Informacija: element premješten prema gore"
+msgstr "Information: Eintrag nach oben verschoben"
 
 #. Translators: Message informing that an item was moved down.
 msgid "Information: item moved down"
-msgstr "Informacija: element premješten prema dolje"
+msgstr "Information: Eintrag nach unten verschoben"
 
 #. Translators: Message informing that menu was set to default.
 msgid "Information: Menu set to default"
-msgstr "Informacije: Izbornik postavljen na standardne vrijednosti"
+msgstr "Information: Menü auf Standard eingestellt"
 
 #. Translators: Label of static text
 msgid "Search with google"
-msgstr "Traži pomoću Googlea"
+msgstr "Mit Google suchen"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"
-msgstr "Upiši upit pretrage"
+msgstr "Geben Sie eine Suchanfrage ein"
 
 #. Translators: Label of Other engines button
 msgid "Other Engines"
-msgstr "Druge tražilice"
+msgstr "Weitere Suchanbieter"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -201,15 +200,17 @@ msgid ""
 "Google directly.\n"
 "The Default gesture for the addon is: NVDA+ Windows+ S."
 msgstr ""
-"Ovaj dodatak pomaže u pretraživanju teksta putem raznih tražilica.\n"
-"Nemoj odabrati nikoji tekst i pritisni gestu dodatka\n"
-"Prikazat će se dijaloški okvir s okvirom za uređivanje za unos upita za "
-"pretraživanje\n"
-"Za pretraživanje pomoću Googlea pritisni tipku enter ili tabulator za "
-"pretraživanje s drugim tražilicama.\n"
-"Ili\n"
-"odaberi neki tekst i pritisni jednom. Prikazat će se izbornik s raznim "
-"tražilicama koje možeš izabrati.\n"
-"Kad je tekst odabran, možeš dvaput pritisnuti gestu za izravno pretraživanje "
-"s Googleom.\n"
-"Standardna gesta za dodatak je: NVDA+ Windows+ S."
+"Diese Erweiterung hilft Ihnen bei der Suche nach Text, über verschiedene "
+"Suchmaschinen.\n"
+"Lassen Sie keinen Text ausgewählt und drücken Sie den Tastenbefehl der "
+"Erweiterung.\n"
+"Es wird ein Dialog mit einem Eingabefeld angezeigt, in das Sie eine "
+"Suchanfrage eingeben können.\n"
+"Um mit Google zu suchen, drücken Sie Enter, oder Tab, um mit anderen "
+"Suchmaschinen zu suchen.\n"
+"Oder:\n"
+"Wählen Sie einen Text aus und drücken Sie einmal, dann wird ein Menü mit "
+"verschiedenen Suchmaschinen angezeigt, aus denen Sie wählen können.\n"
+"Und während der Text ausgewählt ist, können Sie den Tastenbefehl zweimal "
+"drücken, um direkt mit Google zu suchen.\n"
+"Der Standard-Tastenbefehl für die Erweiterung lautet: NVDA+Windows+S."
