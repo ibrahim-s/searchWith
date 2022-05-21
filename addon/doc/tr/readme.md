@@ -1,7 +1,7 @@
 # İle Ara
 
 Yazar: Ibrahim Hamadeh  
-İndir: [Kararlı Sürüm:][1]  
+[2.1 sürümünü indirin][1]  
 NVDA uyumluluğu: 2019.3 ve sonrası
 
 Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı olur.  
@@ -31,6 +31,8 @@ Ya varsayılan menü ya da ihtiyaçlarınıza göre sıraladığınız herhangi 
   *  Birini seçin ve enter tuşuna basın, varsayılan tarayıcı arama sonuçlarını görüntüleyerek açılacaktır.  
 Veya doğrudan Google ile arama yapmak istiyorsanız  
 Kısa yol tuşlarına iki defa peş peşe basmanız yeterli olacaktır.
+	*	Pano metni için arama menüsünü tetikleyin, iki kez basıldığında, bu metni doğrudan Google tarafından arar.  
+	*	Son konuşulan metin için arama menüsünü tetikleyin, iki kez basıldığında, bu metni doğrudan Google tarafından arar.  
   *  Arama menüsünü değiştirmek ister misiniz?
   *  Evet, bunu ayar panelinden yapabilir ve menüyü ruh halinize ve ihtiyaçlarınıza göre ayarlayabilirsiniz.
   *  Oradan, Diğer arama motorlarını menüye ekleyebilirsiniz.
@@ -52,6 +54,10 @@ Pano veya son söylenen metin seçilirse, kolayca geçersiz kılabilmeniz için 
 Ayar panelindeki bir onay kutusundan, yeni bir sürüm yükledikten sonra veri klasörünüzü korumak isteyip istemediğinizi seçebilirsiniz.
 Yeni eklenti sürümüne dahil edilmişse, yeni arama motorları almayacağınızı seçerek unutmayın.
 Ve işte bu kadar, iyiyi aramayı ve bulmayı umuyoruz, mutlu aramalar!  
+
+### 2.1 için değişiklikler ###
+
+*	Yardım ve dil dosyaları güncellendi.
 
 ### 2.0 için değişiklikler ###
 
@@ -118,4 +124,4 @@ Ve işte bu kadar, iyiyi aramayı ve bulmayı umuyoruz, mutlu aramalar!
 
   *  İlk sürüm.  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v1.6/searchWith-1.6.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v2.1/searchWith-2.1.nvda-addon

@@ -1,7 +1,7 @@
 # Search With #
 
 Author: Ibrahim Hamadeh  
-Download [version 2.0][1]  
+Download [version 2.1][1]  
 NVDA compatibility: 2019.3 and beyond  
 
 This addon helps you to search text, via various search engines.  
@@ -57,6 +57,10 @@ And if clipboard or last spoken text is chosen, text in search box will be displ
 You can through a check box in setting panel, choose if you want to preserve your data folder upon installing a new version.  
 Be aware, choosing that you will not get new search engines, if any were included in the new addon version.  
 And that's it, hope to search for good and find it, happy searching!  
+
+### Changes for 2.1 ###
+
+*	Add localization and documentation updates.
 
 ### Changes for 2.0 ###
 
@@ -118,4 +122,4 @@ And that's it, hope to search for good and find it, happy searching!
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v2.0/searchWith-2.0.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/v2.1/searchWith-2.1.nvda-addon
