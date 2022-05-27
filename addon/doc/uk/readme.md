@@ -15,84 +15,90 @@
 системи. Щоб шукати виділений текст безпосередньо в Google, натисніть цю
 комбінацію двічі.
 
-The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
+Початковий жест для додатка: NVDA+Windows+S. Якщо натискання клавіші не працює або конфліктує з іншими комбінаціями клавіш, ви можете, як завжди, додати жест або змінити вже наявний, перейшовши до: меню NVDA>налаштування>Жести вводу>категорія «Пошук за допомогою».
 
 ## Використання
 
-* If you want to enter a search query, just press the addon gesture. A
-  dialog will be displayed, with an edit field to enter the search term.
-* Want to search with Google? just press enter.
-* Otherwise tab to Other Engines button, and give it a space, a popup menu
-  will show up, with various search engines to choose. Yahoo, Bing,
-  DuckDuckGo, and Youtube. This is the default menu, and you may modify it
-  from addon's setting panel.
-* Another way to use the addon, is by selecting some text. And on Pressing
-  the addon's gesture, or any other you have assigned to it, a virtual menu
-  will be displayed with various search engines, either the default menu, or
-  any other you have tailed to your needs.
+* Якщо ви бажаєте ввести пошуковий запит, просто натисніть жест
+  додатка. Після цього відкриється діалог із полем редагування для введення
+  пошукового запиту.
+* Хочете шукати за допомогою google? Просто натисніть enter.
+* В іншому випадку, перейдіть клавішею tab до кнопки «Інші системи» й
+  натисніть пробіл, після чого з’явиться виринаюче меню з вибором різних
+  пошукових систем. Yahoo, Bing, DuckDuckGo і Youtube. Це стандартне меню,
+  але ви можете змінити його в панелі налаштувань.
+* Інший спосіб використання додатка – виділення тексту. А при натисканні
+  жесту додатка або будь-якого іншого, який ви йому призначите,
+  відобразиться віртуальне меню з різними пошуковими системами, або основне
+  меню, або будь-яке інше, яке ви підберете для ваших потреб.
 * Виберіть одну з них і натисніть клавішу enter, відкриється основний
   браузер з результатами пошуку. або, якщо ви хочете здійснювати пошук
   безпосередньо в Google, натисніть жест двічі, і все готово.
-* Want to trigger search menu specifically for clipboard or last spoken
-  text? OK, then you can from input gestures dialog, assigned a gesture for:
-    * Trigger search menu for clipboard text, and pressed twice searches
-      that text by Google directly.
-    * Trigger search menu for last spoken text, and pressed twice searches
-      that text by Google directly.
-* Want to modify Search with menu? Yes you can do that from the setting
-  panel, and adjust the menu to fit to your mood and needs.
-* You can from there, add to Search with menu, other available search
-  engines. And you can if you like, remove an item from it, move item up,
-  move item down, or return and set menu to default state.
+* Хочете викликати меню пошуку спеціально для буфера обміну чи останнього
+  вимовленого тексту? Добре, тоді ви можете в діалозі «Жести вводу»
+  призначити жест для:
+    * Викликає меню для пошуку тексту з буфера обміну, а при подвійному
+      натисканні шукає його безпосередньо в Google.
+    * Викликає меню для пошуку останнього вимовленого тексту, а при
+      подвійному натисканні шукає його безпосередньо в Google.
+* Бажаєте змінити меню «Пошуку за допомогою»? Так, ви можете зробити це в
+  панелі налаштувань і налаштувати меню відповідно до свого настрою й
+  потреб.
+* Звідти ви можете додати в меню «Пошуку за допомогою» інші доступні
+  пошукові системи. І ви можете, якщо хочете, видалити з нього елемент,
+  перемістити елемент вгору, перемістити елемент вниз або повернути меню до
+  початкового стану.
 * Якщо ви хочете, щоб ці зміни були постійними, вам потрібно зберегти
   конфігурацію після внесених змін.
 * Хочете шукати в Google, використовуючи інші мовні параметри?
 * Потім перейдіть до категорії «Пошук за допомогою» в панелі налаштувань, у
   вікні зі списком ви можете вибрати пошук у Google:
 
-    1. Використовувати налаштування браузера та мови.
+    1. Використовувати налаштування і мову браузера.
     2. Використовувати мову NVDA.
     3. Використовувати мову Windows.
 
-* Moreover, you have the option to choose the default query in Search with
-  dialog. From the Options for default query combo box in setting panel, you
-  can choose either
+* Крім того, у вас є можливість вибрати основний запит у діалозі «Пошуку за
+  допомогою». У комбінованому списку «Параметри основного запиту» в панелі
+  налаштувань ви можете вибрати будь-який
 
-    * Leave blank
-    * Use clipboard text
-    * Use last spoken text
+    * Залишити порожнім
+    * Використати текст з буфера обміну
+    * Використати останній вимовлений текст
 
-* And if clipboard or last spoken text is chosen, text in search box will be
-  displayed selected, so that you can easily override it.
-* Lastly, especially for advanced users
-* You can through a check box in setting panel, choose if you want to
-  preserve your data folder upon installing a new version. Be aware,
-  choosing that you will not get new search engines, if any were included in
-  the new addon version.
-And that's it, hope to search for good and find it, happy searching!
+* І якщо вибрано буфер обміну або останній вимовлений текст, текст у вікні
+  пошуку буде відображатися виділеним, щоб ви могли легко замінити його.
+* Нарешті, особливо для досвідчених користувачів
+* Ви можете за допомогою прапорця в панелі налаштувань вибрати, чи хочете
+  зберегти свою папку з даними після встановлення нової версії. Майте на
+  увазі, що, позначивши цей прапорець, ви не отримаєте нових пошукових
+  систем, якщо такі були включені в нову версію додатка.
+Ось і все, сподіваюся, ви  будете шукати добро і знайдете його, щасливого
+пошуку!
 
-### Changes for 2.0 ###
+### Зміни у версії 2.0 ###
 
-* Disable the addon in secure mode.
-* Update last tested version to 2022.1, to comply with recent addon api
-  version.
+* У захищеному режимі додаток вимкнено.
+* Оновлено востаннє протестовану версію до 2022.1, щоб відповідати
+  сумісності з найновішим API додатків.
 
-### Changes for 1.8 ###
+### Зміни у версії 1.8 ###
 
-* Add a check box in setting panel, to let advanced users preserve their
-  data folder.
-* Add two new entries in input gestures:
-    * trigger search menu for clipboard text, press twice searches Google
-      directly.
-    * Trigger search menu for last spoken text, press twice searches Google
-      directly.
+* У панель налаштувань додано прапорець, який дозволяє досвідченим
+  користувачам зберігати папку з даними.
+* Додано два нові записи у жести вводу:
+    * викликає меню для пошуку тексту з буфера обміну, подвійне натискання
+      шукає його безпосередньо в Google.
+    * Викликає меню для пошуку останнього вимовленого тексту, подвійне
+      натискання шукає його безпосередньо в Google.
 
-### Changes for 1.7
+### Зміни у версії 1.7
 
-* Make a combo box in addon's setting, to choose an option for default query
-  in search with dialog.
-* You can select either Leave blank, Use clipboard text, or Use last spoken
-  text.
+* У налаштуваннях додатка додано комбінований список, щоб вибрати основний
+  параметр поведінки під час відкриття діалогу для введення пошукового
+  запиту.
+* Ви можете вибрати або залишити порожнім, або використати текст із буфера
+  обміну, або використати останній вимовлений текст.
 
 ### Зміни у версії 1.2
 
@@ -105,8 +111,8 @@ And that's it, hope to search for good and find it, happy searching!
 
 * Додано діалог для введення пошукового запиту в разі, якщо немає виділеного
   дексту.
-* Make possible to modify Search with menu from setting panel, to fit to
-  user needs.
+* Надано можливість змінювати пошук за допомогою меню на панелі налаштувань,
+  відповідно до потреб користувачів.
 
 ### Зміни у версії 0.3
 
