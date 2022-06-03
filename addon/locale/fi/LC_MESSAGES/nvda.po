@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: searchWith\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2022-04-10 14:42+0200\n"
+"PO-Revision-Date: 2022-05-30 18:03+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Haku-valikko"
+msgstr "Hae hakukoneella -valikko"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
@@ -45,9 +45,9 @@ msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Näyttää Haku-valintaikkunan, johon voidaan kirjoittaa hakukysely. Jos "
-"tekstiä on valittuna, näyttää kerran painettaessa virtuaalisen valikon tai "
-"kahdesti painettaessa hakee suoraan Googlella."
+"Näyttää Hae hakukoneella -valintaikkunan, johon voidaan kirjoittaa "
+"hakukysely. Jos tekstiä on valittuna, näyttää kerran painettaessa "
+"virtuaalisen valikon tai kahdesti painettaessa hakee suoraan Googlella."
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -56,23 +56,23 @@ msgstr ""
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Haku"
+msgstr "Hae hakukoneella"
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with virtual menu for clipboard text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Näyttää Haku-virtuaalivalikon leikepöydän tekstille tai hakee kahdesti "
-"painettaessa suoraan Googlella."
+"Näyttää Hae hakukoneella -virtuaalivalikon leikepöydän tekstille tai hakee "
+"kahdesti painettaessa suoraan Googlella."
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with virtual menu for last spoken text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Näyttää Haku-virtuaalivalikon viimeksi puhutulle tekstille tai hakee "
-"kahdesti painettaessa suoraan Googlella."
+"Näyttää Hae hakukoneella -virtuaalivalikon viimeksi puhutulle tekstille tai "
+"hakee kahdesti painettaessa suoraan Googlella."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -88,7 +88,7 @@ msgstr "Lisää valikkoon"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Haku-valikko"
+msgstr "Hae hakukoneella -valikko"
 
 #. Translators: Label of remove button.
 msgid "Remove"
@@ -128,7 +128,7 @@ msgstr "Käytä:"
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "Haku-valintaikkunassa"
+msgstr "Hae hakukoneella -valintaikkunassa"
 
 #. Translators: An option to use for default query.
 msgid "Leave Blank"
@@ -202,14 +202,14 @@ msgid ""
 "The Default gesture for the addon is: NVDA+ Windows+ S."
 msgstr ""
 "Tämän lisäosan avulla voit hakea tietoa eri hakukoneilla.\n"
-"Jos tekstiä ei ole valittuna, paina määritettyä lisäosan syötekomentoa.\n"
+"Jos tekstiä ei ole valittuna, paina määritettyä lisäosan näppäinkomentoa.\n"
 "Hakukentän sisältävä valintaikkuna näytetään, johon voidaan kirjoittaa "
 "haluttu hakukysely\n"
 "Hae Googlella painamalla Enteriä tai Sarkainta käyttääksesi muita "
 "hakukoneita.\n"
 "Vaihtoehtoisesti:\n"
-"Valitse tekstiä ja paina syötekomentoa kerran, jolloin avautuu valikko, "
+"Valitse tekstiä ja paina näppäinkomentoa kerran, jolloin avautuu valikko, "
 "josta voit valita haluamasi hakukoneen.\n"
 "Kun tekstiä on valittuna, voit hakea suoraan Googlella painamalla "
-"syötekomentoa kahdesti.\n"
-"Lisäosan oletusarvoinen syötekomento on NVDA+Win+S."
+"näppäinkomentoa kahdesti.\n"
+"Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S."
