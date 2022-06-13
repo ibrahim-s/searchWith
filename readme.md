@@ -1,8 +1,9 @@
 # Search With #
 
-Author: Ibrahim Hamadeh  
-Download [version 2.1][1]  
-NVDA compatibility: 2019.3 and beyond  
+*	Author: Ibrahim Hamadeh
+*	Download [Stable version 2.1][1]
+*	Download [Development version 2.1][2]
+*	NVDA compatibility: 2019.3 and beyond
 
 This addon helps you to search text, via various search engines.  
 Let no text selected, and press the gesture of the addon  
@@ -123,3 +124,5 @@ And that's it, hope to search for good and find it, happy searching!
 *	Initial version  
 
 [1]: https://github.com/ibrahim-s/searchWith/releases/download/v2.1/searchWith-2.1.nvda-addon
+
+[2]: https://github.com/ibrahim-s/searchWith/releases/download/v2.1-dev/searchWith-2.1-dev.nvda-addon

@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'searchWith' '1.2'\n"
+"Project-Id-Version: 'searchWith' '2.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2021-08-15 11:10+0300\n"
-"PO-Revision-Date: 2021-08-15 11:14+0300\n"
+"POT-Creation-Date: 2022-06-10 14:25+0300\n"
+"PO-Revision-Date: 2022-06-10 14:34+0300\n"
 "Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
 "Language-Team: Alex Yeshanu <eshanuap@gmail.com>\n"
 "Language: ru\n"
@@ -17,22 +17,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../../../globalPlugins\n"
-"X-Poedit-SearchPath-0: searchWith.py\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: globalPlugins\n"
+"X-Poedit-SearchPath-1: installTasks.py\n"
 
+#: globalPlugins/searchWith.py:199
 msgid "Search With Menu"
 msgstr "Меню Search With"
 
+#: globalPlugins/searchWith.py:238 globalPlugins/searchWith.py:575
 #, python-brace-format
 msgid "Not able to get {item} url"
 msgstr "Невозможно получить ссылку {item}"
 
+#: globalPlugins/searchWith.py:241 globalPlugins/searchWith.py:578
 msgid "Error Message"
 msgstr "Сообщение об ошибке"
 
-msgid "Search With"
-msgstr "Search With"
+#: globalPlugins/searchWith.py:275
+msgid "No text in clipboard"
+msgstr "Нет текста в буфере обмена"
 
+#: globalPlugins/searchWith.py:278
+msgid "No last spoken text"
+msgstr "Нет последнего произнесённого текста"
+
+#: globalPlugins/searchWith.py:294
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
@@ -41,72 +51,137 @@ msgstr ""
 "текст, нажатие один раз показывает виртуальное меню с выбором поисковика, "
 "нажатие дважды ищет с Google напрямую."
 
+#: globalPlugins/searchWith.py:297 globalPlugins/searchWith.py:307
+#: globalPlugins/searchWith.py:317 globalPlugins/searchWith.py:337
+#: globalPlugins/searchWith.py:499
+msgid "Search With"
+msgstr "Search With"
+
+#: globalPlugins/searchWith.py:305
+msgid ""
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Показывает виртуальное меню для текста из буфера обмена, нажатие дважды ищет "
+"с Google напрямую."
+
+#: globalPlugins/searchWith.py:315
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Показывает виртуальное меню для последнего произнесённого текста, нажатие "
+"дважды ищет с Google напрямую."
+
+#: globalPlugins/searchWith.py:343
 msgid "Menu"
 msgstr "Меню"
 
+#: globalPlugins/searchWith.py:345
 msgid "Available items to add"
 msgstr "Доступные &элементы для добавления"
 
+#: globalPlugins/searchWith.py:354
 msgid "Add to menu"
 msgstr "&Добавить в меню"
 
+#: globalPlugins/searchWith.py:359
 msgid "Search with menu"
 msgstr "&Меню Search with"
 
+#: globalPlugins/searchWith.py:369
 msgid "Remove"
 msgstr "&Удалить"
 
+#: globalPlugins/searchWith.py:372
 msgid "Move item up"
 msgstr "Переместить &выше"
 
+#: globalPlugins/searchWith.py:375
 msgid "Move item down"
 msgstr "Переместить &ниже"
 
+#: globalPlugins/searchWith.py:378
 msgid "Set menu to default"
 msgstr "&Сбросить по умолчанию"
 
-msgid "Browser language and setting"
-msgstr "Язык браузера"
-
-msgid "NVDA language"
-msgstr "Язык NVDA"
-
-msgid "Windows language"
-msgstr "Язык Windows"
-
+#: globalPlugins/searchWith.py:383
 msgid "In Google search"
 msgstr "В поиске Google"
 
+#: globalPlugins/searchWith.py:386
+msgid "Browser language and setting"
+msgstr "Язык браузера"
+
+#: globalPlugins/searchWith.py:388
+msgid "NVDA language"
+msgstr "Язык NVDA"
+
+#: globalPlugins/searchWith.py:390
+msgid "Windows language"
+msgstr "Язык Windows"
+
+#: globalPlugins/searchWith.py:393
 msgid "Use:"
 msgstr "&Использовать:"
 
+#: globalPlugins/searchWith.py:399
 msgid "In search with dialog"
 msgstr "В диалоге Search with"
 
-msgid "Use last spoken as default query"
-msgstr "Использовать &последнее произнесённое как запрос по умолчанию"
+#: globalPlugins/searchWith.py:402
+msgid "Leave Blank"
+msgstr "Оставить поле пустым"
 
+#: globalPlugins/searchWith.py:404
+msgid "Use clipboard text"
+msgstr "Использовать текст из буфера обмена"
+
+#: globalPlugins/searchWith.py:406
+msgid "Use last spoken text"
+msgstr "Использовать &последний произнесённый текст"
+
+#: globalPlugins/searchWith.py:409
+msgid "Options for default query:"
+msgstr "Параметры для запроса по умолчанию:"
+
+#: globalPlugins/searchWith.py:416
+msgid "For advanced users"
+msgstr "Для продвинутых пользователей"
+
+#: globalPlugins/searchWith.py:418
+msgid "Preserve data folder upon installing a new version"
+msgstr "Сохранить папку данных при установке новой версии"
+
+#: globalPlugins/searchWith.py:432
 msgid "Information: Item added"
 msgstr "Информация: элемент добавлен"
 
+#: globalPlugins/searchWith.py:448
 msgid "Information: item removed"
 msgstr "Информация: элемент удалён"
 
+#: globalPlugins/searchWith.py:465
 msgid "Information: item moved up"
 msgstr "Информация: элемент перемещён выше"
 
+#: globalPlugins/searchWith.py:478
 msgid "Information: item moved down"
 msgstr "Информация: элемент перемещён ниже"
 
+#: globalPlugins/searchWith.py:485
 msgid "Information: Menu set to default"
 msgstr "Информация: Меню сброшено по умолчанию"
 
+#: globalPlugins/searchWith.py:506
 msgid "Search with google"
 msgstr "Поиск google"
 
+#: globalPlugins/searchWith.py:508
 msgid "Enter a search query"
 msgstr "Введите запрос для поиска"
 
+#: globalPlugins/searchWith.py:512
 msgid "Other Engines"
 msgstr "Другие поисковики"
 
