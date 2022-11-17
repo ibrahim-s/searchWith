@@ -5,21 +5,22 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: searchWith 1.7\n"
+"Project-Id-Version: searchWith 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-10-15 19:20+0000\n"
-"PO-Revision-Date: 2021-10-30 09:26+0300\n"
-"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
-"Language-Team: \n"
-"Language: tr\n"
+"PO-Revision-Date: 2022-10-11 14:54+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "ile Ara menüsü"
+msgstr "İle Ara menüsü"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
@@ -176,7 +177,7 @@ msgstr "Bilgi: Menü varsayılana sıfırlandı"
 
 #. Translators: Label of static text
 msgid "Search with google"
-msgstr "google ile ara"
+msgstr "Google ile ara"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"

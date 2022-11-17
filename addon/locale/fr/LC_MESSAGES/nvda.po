@@ -5,49 +5,48 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: searchWith\n"
+"Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2022-05-30 18:03+0200\n"
-"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
-"Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
-"Language: fi\n"
+"PO-Revision-Date: 2022-11-08 12:16+0100\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
-msgstr "Hae hakukoneella -valikko"
+msgstr "Menu Search With"
 
 #. Translators: Message displayed if error happens in getting url.
 #, python-brace-format
 msgid "Not able to get {item} url"
-msgstr "Kohteen {item} URL-osoitetta ei saatu"
+msgstr "Impossible d'obtenir l'URL de {item}"
 
 #. Translators: Title of message box
 #. Translators: Title of message box.
 msgid "Error Message"
-msgstr "Virhe"
+msgstr "Message d'erreur"
 
 #. Translators: Message displayed if there is no text in clipboard.
 msgid "No text in clipboard"
-msgstr "Ei tekstiä leikepöydällä"
+msgstr "Aucun texte dans le presse-papiers"
 
 #. Translators: Message displayed if there is no last spoken text.
 msgid "No last spoken text"
-msgstr "Ei viimeksi puhuttua tekstiä"
+msgstr "Aucun dernier texte annoncé"
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Näyttää Hae hakukoneella -valintaikkunan, johon voidaan kirjoittaa "
-"hakukysely. Jos tekstiä on valittuna, näyttää kerran painettaessa "
-"virtuaalisen valikon tai kahdesti painettaessa hakee suoraan Googlella."
+"Affiche la boîte de dialogue Search With pour entrer une requête de "
+"recherche. Si du texte est sélectionné, un appui affiche un menu virtuel. "
+"Deux appuis recherche directement avec Google."
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -56,136 +55,137 @@ msgstr ""
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Search With"
-msgstr "Hae hakukoneella"
+msgstr "Search With"
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with virtual menu for clipboard text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Näyttää Hae hakukoneella -virtuaalivalikon leikepöydän tekstille tai hakee "
-"kahdesti painettaessa suoraan Googlella."
+"Affiche le menu virtuel Search with pour le texte du presse-papiers, deux "
+"appuis recherche directement sur Google."
 
 #. Translators: Message displayed in input help mode.
 msgid ""
 "Display Search with virtual menu for last spoken text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Näyttää Hae hakukoneella -virtuaalivalikon viimeksi puhutulle tekstille tai "
-"hakee kahdesti painettaessa suoraan Googlella."
+"Affiche le menu virtuel Search with pour le dernier texte annoncé, deux "
+"appuis recherche directement sur Google."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
-msgstr "Valikko"
+msgstr "Menu"
 
 #. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "Lisättävät kohteet"
+msgstr "Éléments disponibles à ajouter"
 
 #. Translators: Label of add button.
 msgid "Add to menu"
-msgstr "Lisää valikkoon"
+msgstr "Ajouter au menu"
 
 #. Translators: Search with menu items.
 msgid "Search with menu"
-msgstr "Hae hakukoneella -valikko"
+msgstr "Menu Search with"
 
 #. Translators: Label of remove button.
 msgid "Remove"
-msgstr "Poista"
+msgstr "Supprimer"
 
 #. Translators: Label of move up button.
 msgid "Move item up"
-msgstr "Siirrä ylös"
+msgstr "Déplacer l'élément vers le haut"
 
 #. Translators: Label of move down button.
 msgid "Move item down"
-msgstr "Siirrä alas"
+msgstr "Déplacer l'élément vers le bas"
 
 #. Translators: Label of set menu to default button.
 msgid "Set menu to default"
-msgstr "Palauta valikon oletuskohteet"
+msgstr "Rétablir le menu par défaut"
 
 #. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "Google-haussa"
+msgstr "Dans la recherche Google"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
-msgstr "Selaimen kieltä"
+msgstr "Langue et paramètres du navigateur"
 
 #. Translators: Option in cumbo box to choose NVDA language
 msgid "NVDA language"
-msgstr "NVDA:n kieltä"
+msgstr "Langue de NVDA"
 
 #. Translators: Option in cumbo box to choose windows language
 msgid "Windows language"
-msgstr "Windowsin kieltä"
+msgstr "Langue de Windows"
 
 #. Translators: Label of static text
 msgid "Use:"
-msgstr "Käytä:"
+msgstr "Utiliser :"
 
 #. Translators: In search with dialog group
 msgid "In search with dialog"
-msgstr "Hae hakukoneella -valintaikkunassa"
+msgstr "Dans la fenêtre Search with"
 
 #. Translators: An option to use for default query.
 msgid "Leave Blank"
-msgstr "Jätä tyhjäksi"
+msgstr "Laisser vide"
 
 #. Translators: An option to use for default query.
 msgid "Use clipboard text"
-msgstr "Käytä leikepöydän tekstiä"
+msgstr "Utiliser le texte du presse-papiers"
 
 #. Translators: An option to use for default query.
 msgid "Use last spoken text"
-msgstr "Käytä viimeksi puhuttua tekstiä"
+msgstr "Utiliser le dernier texte annoncé"
 
 #. Translators: Label of static text
 msgid "Options for default query:"
-msgstr "Oletuskyselyn vaihtoehdot:"
+msgstr "Options pour la requête par défaut :"
 
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
-msgstr "Kokeneille käyttäjille"
+msgstr "Pour les utilisateurs avancés"
 
 #. Translators: Label of checkbox preserve data folder.
 msgid "Preserve data folder upon installing a new version"
-msgstr "Säilytä datakansio uutta versiota asennettaessa"
+msgstr ""
+"Conserver le dossier de données lors de l'installation d'une nouvelle version"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
-msgstr "Kohde lisätty"
+msgstr "Information : élément ajouté"
 
 #. Translators: Message informing that an item was removed.
 msgid "Information: item removed"
-msgstr "Kohde poistettu"
+msgstr "Information : élément supprimé"
 
 #. Translators: Message informing that an item was moved up.
 msgid "Information: item moved up"
-msgstr "Kohde siirretty ylös"
+msgstr "Information : élément déplacé vers le haut"
 
 #. Translators: Message informing that an item was moved down.
 msgid "Information: item moved down"
-msgstr "Kohde siirretty alas"
+msgstr "Information : élément déplacé vers le bas"
 
 #. Translators: Message informing that menu was set to default.
 msgid "Information: Menu set to default"
-msgstr "Valikon oletuskohteet palautettu"
+msgstr "Information : Menu par défaut rétabli"
 
 #. Translators: Label of static text
 msgid "Search with google"
-msgstr "Hae Googlella"
+msgstr "Rechercher avec google"
 
 #. Translators: Label of text control to enter query.
 msgid "Enter a search query"
-msgstr "Kirjoita hakukysely"
+msgstr "Entrez une requête de recherche"
 
 #. Translators: Label of Other engines button
 msgid "Other Engines"
-msgstr "Muut hakukoneet"
+msgstr "Autres moteurs de recherche"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -201,15 +201,16 @@ msgid ""
 "Google directly.\n"
 "The Default gesture for the addon is: NVDA+ Windows+ S."
 msgstr ""
-"Tämän lisäosan avulla voit hakea tietoa eri hakukoneilla.\n"
-"Jos tekstiä ei ole valittuna, paina määritettyä lisäosan näppäinkomentoa.\n"
-"Hakukentän sisältävä valintaikkuna näytetään, johon voidaan kirjoittaa "
-"haluttu hakukysely\n"
-"Hae Googlella painamalla Enteriä tai Sarkainta käyttääksesi muita "
-"hakukoneita.\n"
-"Vaihtoehtoisesti:\n"
-"Valitse tekstiä ja paina näppäinkomentoa kerran, jolloin avautuu valikko, "
-"josta voit valita haluamasi hakukoneen.\n"
-"Kun tekstiä on valittuna, voit hakea suoraan Googlella painamalla "
-"näppäinkomentoa kahdesti.\n"
-"Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S."
+"Cette extension vous aide à rechercher du texte, via divers moteurs de "
+"recherche.\n"
+"Avec aucun texte sélectionné, appuyez sur le geste de l'addon\n"
+"Une boîte de dialogue s'affiche, avec une zone d'édition pour entrer une "
+"requête de recherche\n"
+"Pour effectuer une recherche avec Google, appuyez sur Entrée ou sur la "
+"touche de tabulation pour effectuer une recherche avec d'autres moteurs.\n"
+"Ou\n"
+"sélectionnez du texte et appuyez une fois, un menu s'affichera avec "
+"différents moteurs de recherche parmi lesquels choisir.\n"
+"Et lorsque le texte est sélectionné, vous pouvez appuyer deux fois sur le "
+"geste pour rechercher directement avec Google.\n"
+"Le geste par défaut pour l'extension est : NVDA+ Windows+ S."

@@ -1,63 +1,65 @@
-# Haku #
+# Hae hakukoneella #
 
 * Tekijä: Ibrahim Hamadeh
 * Lataa [vakaa versio][1]
 * Yhteensopivuus: NVDA 2019.3 ja uudemmat
 
 Tämän lisäosan avulla voit suorittaa hakuja eri hakukoneilla. Kun tekstiä ei
-ole valittuna, paina lisäosalle määritettyä syötekomentoa, joka avaa
+ole valittuna, paina lisäosalle määritettyä näppäinkomentoa, joka avaa
 valintaikkunan, jossa olevaan muokkausruutuun voit kirjoittaa haluamasi
 hakukyselyn. Hae Googlella painamalla enteriä tai Sarkainta valitaksesi
 jonkin muun hakukoneen.
 
-Jos haluat hakea valittua tekstiä, paina kerran lisäosan syötekomentoa, joka
-avaa valintaikkunan, josta voit valita haluamasi hakukoneen. Voit
+Jos haluat hakea valittua tekstiä, paina kerran lisäosan näppäinkomentoa,
+joka avaa valintaikkunan, josta voit valita haluamasi hakukoneen. Voit
 halutessasi etsiä valittua tekstiä myös suoraan Googlella painamallla
-syötekomentoa kahdesti.
+näppäinkomentoa kahdesti.
 
-Lisäosan oletusarvoinen syötekomento on NVDA+Win+S. Mikäli tämä näppäinkomento ei toimi tai on ristiriidassa jonkin muun näppäinkomennon kanssa, voit lisätä uuden syötekomennon tai muuttaa oletusarvoista avaamalla NVDA-valikon, menemällä Asetukset-alivalikkoon ja valitsemalla Syötekomennot-vaihtoehdon ja sitten Haku-kategorian.
+Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S. Mikäli tämä näppäinkomento ei toimi tai on ristiriidassa jonkin muun näppäinkomennon kanssa, voit lisätä uuden näppäinkomennon tai muuttaa oletusarvoista avaamalla NVDA-valikon, menemällä Asetukset-alivalikkoon ja valitsemalla Näppäinkomennot-vaihtoehdon ja sitten Hae hakukoneella -kategorian.
 
 ## Käyttö
 
-* Paina lisäosan syötekomentoa, jos haluat suorittaa haun. Näyttöön avautuu
+* Suorita haku painamalla lisäosan näppäinkomentoa. Näyttöön avautuu
   valintaikkuna, jossa on muokkauskenttä hakukyselyn kirjoittamista varten.
-* Hae Googlella painamalla Enteriä.
+* Haluatko hakea Googlella? Se onnistuu painamalla Enteriä.
 * Muutoin paina Sarkainta kunnes tulet Muut hakukoneet -painikkeen kohdalle
   ja paina siinä Väli-näppäintä. Näkyviin tulee ponnahdusikkuna, jossa on
-  valittavissa eri hakukoneita: Yahoo, Bing, DuckDuckGo ja YouTube. Tämä on
-  oletusarvoinen valikko, mutta voit muokata sitä lisäosan asetuspaneelista.
-* Toinen lisäosan käyttötapa on valita ensin tekstiä, painaa lisäosan
-  oletusarvoista tai itse määrittämääsi syötekomentoa, a virtual menu will
-  be displayed with various search engines, either the default menu, or any
-  other you have tailed to your needs.
-* Valitse haluamasi ja paina Enteriä. Tämän jälkeen avautuu oletusselain,
-  jossa hakutulokset näytetään. Mikäli haluat etsiä suoraan Googlella, paina
-  syötekomentoa kahdesti.
+  valittavissa eri hakukoneita: Yahoo, Bing, DuckDuckGo ja YouTube. Nämä
+  ovat oletusarvoisia vaihtoehtoja, mutta voit muokata valikon sisältöä
+  lisäosan asetuspaneelista.
+* Toinen lisäosan käyttötapa on valita ensin tekstiä ja painaa sitten
+  lisäosan oletusarvoista tai itse määrittämääsi näppäinkomentoa, joka avaa
+  eri hakukonevaihtoehtoja sisältävän (joko oletusarvoisen tai itse
+  muokkaamasi) virtuaalisen valikon.
+* Valitse haluamasi vaihtoehto ja paina Enteriä. Tämän jälkeen avautuu
+  oletusselain, jossa hakutulokset näytetään. Mikäli haluat etsiä suoraan
+  Googlella, paina näppäinkomentoa kahdesti.
 * Haluatko avata valikon, jossa voit suorittaa haun leikepöydällä olevalle
   tai viimeksi puhutulle tekstille? Se onnistuu määrittämällä
-  Syötekomennot-valintaikkunasta syötekomennot seuraaville komennoille:
+  Näppäinkomennot-valintaikkunasta näppäinkomennot seuraaville komennoille:
     * Avaa kerran painettaessa valikon, jossa voit suorittaa haun
       leikepöydällä olevalle tekstille tai kahdesti painettaessa suoran
       Google-haun.
     * Avaa kerran painettaessa valikon, jossa voit suorittaa haun viimeksi
       puhutulle tekstille tai kahdesti painettaessa suoran Google-haun.
-* Haluatko muokata Haku-valikkoa? Voit tehdä sen asetuspaneelista.
+* Haluatko muokata Hae hakukoneella -valikkoa? Voit tehdä sen
+  asetuspaneelista.
 * Sieltä voit lisätä muita käytettävissä olevia hakukoneita, poistaa niitä,
   siirtää kohteen valikossa ylös- tai alaspäin tai palauttaa valikon
   oletustilaan.
 * Asetukset on tallennettava tekemiesi muokkausten jälkeen, mikäli haluat
   niiden olevan pysyviä.
 * Haluatko hakea Googlesta muita kielivaihtoehtoja käyttäen?
-* Siirry asetuspaneelin Haku-kategoriaan ja valitse siellä olevasta
-  yhdistelmäruudusta, miten Google-haut suoritetaan:
+* Siirry asetuspaneelin Hae hakukoneella -kategoriaan ja valitse siellä
+  olevasta yhdistelmäruudusta, miten Google-haut suoritetaan:
 
     1. Selaimen asetuksia ja kieltä käyttäen.
     2. NVDA:n kieltä käyttäen.
     3. Windowsin kieltä käyttäen.
 
-* Haku-valintaikkunassa on lisäksi mahdollista valita oletuskysely. Voit
-  valita asetuspaneelin Oletuskysely-yhdistelmäruudusta jonkin seuraavista
-  vaihtoehdoista:
+* Hae hakukoneella -valintaikkunassa on lisäksi mahdollista valita
+  oletuskysely. Voit valita asetuspaneelin Oletuskysely-yhdistelmäruudusta
+  jonkin seuraavista vaihtoehdoista:
 
     * Jätä tyhjäksi
     * Käytä leikepöydän tekstiä
@@ -81,8 +83,8 @@ Siinä kaikki. Toivottavasti löydät etsimäsi.
 ### Muutokset versiossa 1.8 ###
 
 * Asetuspaneeliin lisätty valintaruutu, jonka avulla kokeneet käyttäjät
-  voivat säilyttää data-kansioidensa sisällön.
-* Syötekomennot-valintaikkunaan lisätty kaksi uutta kohdetta:
+  voivat säilyttää data-kansionsa sisällön.
+* Näppäinkomennot-valintaikkunaan lisätty kaksi uutta kohdetta:
     * Avaa kerran painettaessa valikon, jossa voit suorittaa haun
       leikepöydällä olevalle tekstille tai kahdesti painettaessa suoran
       Google-haun.
@@ -92,7 +94,7 @@ Siinä kaikki. Toivottavasti löydät etsimäsi.
 ### Muutokset versiossa 1.7
 
 * Lisäosan asetuksiin lisätty yhdistelmäruutu, josta on mahdollista valita
-  Haku-valintaikkunassa käytettävä oletuskysely.
+  Hae hakukoneella -valintaikkunassa käytettävä oletuskysely.
 * Käytettävissä ovat vaihtoehdot "Jätä tyhjäksi", "Käytä leikepöydän
   tekstiä" ja "Käytä viimeksi puhuttua tekstiä".
 
@@ -101,14 +103,14 @@ Siinä kaikki. Toivottavasti löydät etsimäsi.
 * Lisätty enemmän Haku-valikkoon lisättäviä hakukoneita, kuten
   Stackoverflow, Stackexchange, Google Kirjat sekä muita.
 * Lisätty vaihtoehto viimeksi puhutun tekstin käyttämiseen oletuskyselynä
-  Haku-valintaikkunassa.
+  Hae hakukoneella -valintaikkunassa.
 
 ### Muutokset versiossa 0.4
 
 * Lisätty valintaikkuna, joka avautuu hakukyselyn kirjoittamista varten, jos
   tekstiä ei ole valittu.
-* Asetuspaneeliin lisätty mahdollisuus Haku-valikon muokkaamiseen käyttäjän
-  tarpeita vastaavaksi.
+* Asetuspaneeliin lisätty mahdollisuus Hae hakukoneella -valikon
+  muokkaamiseen käyttäjän tarpeita vastaavaksi.
 
 ### Muutokset versiossa 0.3
 
