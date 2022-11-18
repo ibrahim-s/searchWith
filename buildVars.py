@@ -32,7 +32,7 @@ select some text and press once, a menu will be displayed with various search en
 And while text is selected, you can press the gesture twice to search with Google directly.
 The Default gesture for the addon is: NVDA+ Windows+ S."""),
 	# version
-	"addon_version": "2.1-dev",
+	"addon_version": "2.2",
 	# Author(s)
 	"addon_author": "ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
