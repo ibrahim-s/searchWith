@@ -1,17 +1,18 @@
 # installTasks.py
 # Copyright 2021 Ibrahim Hamadeh , released under GPL2.0
-# required to preserve data folder, mainly for advanced users. 
+# required to preserve data mainly for advanced users. 
 
 import os
 import config
-import shutil
+import json
 from logHandler import log
 
+
 def onInstall():
-	# path of data folder in previously installed version.
-	src= os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'searchWith', 'data')
-	# path of data folder in the pending install version.
-	dest= os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data')
+	# path of data in previously installed version.
+	src= os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'searchWith', 'data', 'otherEngines.json')
+	# path of data in the pending install version.
+	dest= os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', 'otherEngines.json')
 
 	try:
 		preserve= config.conf["searchWith"]["preserveDataFolder"]
@@ -21,10 +22,16 @@ def onInstall():
 	else:
 		# when we ininstall the addon, configuration stays.
 		# So we should make sure that a previous version exist.
-		if preserve and os.path.isdir(src):
-			# The user wants to preserve data folder.
+		if preserve and os.path.exists(src):
+			# The user wants to preserve data
 			try:
-				shutil.rmtree(dest, ignore_errors=True)
-				shutil.copytree(src, dest)
-			except :
-				log.info("Error trying to preserve data folder", exc_info= True)
+				with open(src, 'r', encoding='utf-8') as s, open(dest, 'r', encoding='utf-8') as d:
+					src_Data = json.load(s)
+					dest_Data = json.load(d)
+				# Merge dictionaries, but keep user data, while updating newly added entries
+				merge_Data={**dest_Data, **src_Data}
+				# Just save the merged dictionary
+				with open(dest, 'w', encoding='utf-8') as f:
+					json.dump(merge_Data, f, indent=4, sort_keys=False, ensure_ascii=False)
+			except:
+				log.error("Error trying to preserve data", exc_info= True)
