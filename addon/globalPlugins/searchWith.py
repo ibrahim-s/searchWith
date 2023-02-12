@@ -325,7 +325,7 @@ configspec={
 	"menuItems": "list(default=list())",
 	"lang": "integer(default=0)",
 	"useAsDefaultQuery": "integer(default=0)",
-	"preserveDataFolder": "boolean(default=False)",
+	"preserveDataFolder": "boolean(default=True)",
 }
 config.conf.spec["searchWith"]= configspec
 if not config.conf["searchWith"]["menuItems"]:
@@ -414,8 +414,8 @@ class SearchWithPanel(gui.SettingsPanel):
 		# For advanced users group
 		# Translators: Label of group for advanced users.
 		staticCheckSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("For advanced users")))
-		# Translators: Label of checkbox preserve data folder.
-		self.advancedCheckbox= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Preserve data folder upon installing a new version"))
+		# Translators: Label of checkbox preserve data.
+		self.advancedCheckbox= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Preserve data upon installing a new version"))
 		staticCheckSizer.Add(self.advancedCheckbox)
 		self.advancedCheckbox.SetValue(config.conf["searchWith"]["preserveDataFolder"])
 
