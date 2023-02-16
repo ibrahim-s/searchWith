@@ -32,7 +32,7 @@ select some text and press once, a menu will be displayed with various search en
 And while text is selected, you can press the gesture twice to search with Google directly.
 The Default gesture for the addon is: NVDA+ Windows+ S."""),
 	# version
-	"addon_version": "2.2",
+	"addon_version": "2.3",
 	# Author(s)
 	"addon_author": "ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
@@ -42,7 +42,7 @@ The Default gesture for the addon is: NVDA+ Windows+ S."""),
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": "2019.3.0",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2022.1.0",
+	"addon_lastTestedNVDAVersion": "2023.1.0",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!

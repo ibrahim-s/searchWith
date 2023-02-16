@@ -1,5 +1,5 @@
 # installTasks.py
-# Copyright 2021 Ibrahim Hamadeh , released under GPL2.0
+# Copyright 2021 Ibrahim Hamadeh , cary-rowen, released under GPL2.0
 # required to preserve data mainly for advanced users. 
 
 import os
@@ -28,6 +28,9 @@ def onInstall():
 				with open(src, 'r', encoding='utf-8') as s, open(dest, 'r', encoding='utf-8') as d:
 					src_Data = json.load(s)
 					dest_Data = json.load(d)
+				#if the two dictionaries are similar we return early
+				if src_Data == dest_Data:
+					return
 				# Merge dictionaries, but keep user data, while updating newly added entries
 				merge_Data={**dest_Data, **src_Data}
 				# Just save the merged dictionary
