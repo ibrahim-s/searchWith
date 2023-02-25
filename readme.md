@@ -2,6 +2,7 @@
 
 *	Author: Ibrahim Hamadeh
 *	Download [Stable version 2.3][1]
+*	Download [Development version 2.3][2]
 *	NVDA compatibility: 2019.3 and beyond
 
 This addon helps you to search text, via various search engines.  
@@ -129,3 +130,5 @@ but the new entries in the new version, will be merged and added to your old dat
 *	Initial version  
 
 [1]: https://github.com/ibrahim-s/searchWith/releases/download/v2.3/searchWith-2.3.nvda-addon
+
+[2]: https://github.com/ibrahim-s/searchWith/releases/download/v2.3-dev/searchWith-2.3-dev.nvda-addon
