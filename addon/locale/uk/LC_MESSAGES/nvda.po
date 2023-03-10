@@ -150,8 +150,9 @@ msgstr "Параметри для основного пошукового зап
 msgid "For advanced users"
 msgstr "Для досвідчених користувачів"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
+#. Translators: Label of checkbox preserve data.
+#, fuzzy
+msgid "Preserve data upon installing a new version"
 msgstr "Зберегти папку з даними після встановлення нової версії"
 
 #. Translators: Message informing that an item was added

@@ -70,11 +70,19 @@ O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che
   de búsqueda amosarase seleccionado, de xeito que poidas sobrescribilo
   facilmente.
 * Finalmente, en especial para usuarios avanzados
-* Podes, mediante unha caixa de verificación no panel de opcións, escoller
-  se desexas preservar o teu cartafol de datos cando instales unha nova
-  versión. Ten en conta, escollendo isto non obterás novos motores de
-  procura, se se incluíu algún na nova versión do complemento.
+* You can through a check box in setting panel, choose if you want to
+  preserve your data folder upon installing a new version. And this means
+  that your data will be sustained, but added to it the newly entries in the
+  new version.
+
 E iso é todo, desexo que procures o ben e o atopes, feliz procura!
+
+### Changes for 2.3 ###
+
+* Now choosing to preserve data from setting panel, does not means that you
+  will not get the new data entries, but the new entries in the new version,
+  will be merged and added to your old data file.
+* Update last tested version to 2023.1 to comply with NVDA version 2023.1.
 
 ### Trocos para 2.0 ###
 

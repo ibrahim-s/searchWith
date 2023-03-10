@@ -69,12 +69,20 @@ Domyślnym gestem dla dodatku jest: NVDA+ Windows+ S. Jeśli naciśnięcie nie d
   wyszukiwania zostanie wyświetlony zaznaczony, dzięki czemu można go łatwo
   zastąpić.
 * Wreszcie, szczególnie dla zaawansowanych użytkowników
-* Możesz za pomocą pola wyboru w panelu ustawień wybrać, czy chcesz zachować
-  folder danych po zainstalowaniu nowej wersji. Pamiętaj, wybierając, że nie
-  otrzymasz nowych wyszukiwarek, jeśli jakieś zostały zawarte w nowej wersji
-  dodatku.
+* You can through a check box in setting panel, choose if you want to
+  preserve your data folder upon installing a new version. And this means
+  that your data will be sustained, but added to it the newly entries in the
+  new version.
+
 I to wszystko, mam nadzieję szukać dobra i znaleźć je, szczęśliwe
 poszukiwania!
+
+### Changes for 2.3 ###
+
+* Now choosing to preserve data from setting panel, does not means that you
+  will not get the new data entries, but the new entries in the new version,
+  will be merged and added to your old data file.
+* Update last tested version to 2023.1 to comply with NVDA version 2023.1.
 
 ### Zmiany dla wersji 2.0 ###
 

@@ -69,12 +69,20 @@
 * І якщо вибрано буфер обміну або останній вимовлений текст, текст у вікні
   пошуку буде відображатися виділеним, щоб ви могли легко замінити його.
 * Нарешті, особливо для досвідчених користувачів
-* Ви можете за допомогою прапорця в панелі налаштувань вибрати, чи хочете
-  зберегти свою папку з даними після встановлення нової версії. Майте на
-  увазі, що, позначивши цей прапорець, ви не отримаєте нових пошукових
-  систем, якщо такі були включені в нову версію додатка.
+* You can through a check box in setting panel, choose if you want to
+  preserve your data folder upon installing a new version. And this means
+  that your data will be sustained, but added to it the newly entries in the
+  new version.
+
 Ось і все, сподіваюся, ви  будете шукати добро і знайдете його, щасливого
 пошуку!
+
+### Changes for 2.3 ###
+
+* Now choosing to preserve data from setting panel, does not means that you
+  will not get the new data entries, but the new entries in the new version,
+  will be merged and added to your old data file.
+* Update last tested version to 2023.1 to comply with NVDA version 2023.1.
 
 ### Зміни у версії 2.0 ###
 

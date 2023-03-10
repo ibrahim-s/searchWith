@@ -69,10 +69,18 @@ Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S. Mikäli tämä näppäi
   hakukentän teksti näytetään valittuna, jotta voit helposti korvata sen.
 * Lopuksi erityisesti kokeneille käyttäjille
 * Voit valita asetuspaneelissa olevalla valintaruudulla, haluatko säilyttää
-  lisäosan data-kansion sisällön uutta versiota asennettaessa. Huomaa, että
-  jos valitset säilyttämisen, et saa uusia hakukoneita, jos niitä
-  sisällytettiin uuteen lisäosaversioon.
+  lisäosan datakansion sisällön uutta versiota asennettaessa. Jos valitset
+  säilyttämisen, uuden version päivitetyt tiedot lisätään vanhaan
+  datatiedostoon.
+
 Siinä kaikki. Toivottavasti löydät etsimäsi.
+
+### Muutokset versiossa 2.3 ###
+
+* Kun asetuspaneelista valitaan tietojen säilyttäminen, uuden version
+  päivitetyt tiedot yhdistetään ja lisätään  vanhaan datatiedostoon.
+* Viimeisin testattu versio päivitetty 2023.1:ksi, jotta se vastaa NVDA:n
+  versiota 2023.1.
 
 ### Muutokset versiossa 2.0 ###
 

@@ -151,8 +151,9 @@ msgstr "Varsayılan sorgu için seçenekler:"
 msgid "For advanced users"
 msgstr "İleri düzey kullanıcılar için"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
+#. Translators: Label of checkbox preserve data.
+#, fuzzy
+msgid "Preserve data upon installing a new version"
 msgstr "Yeni bir sürümü yüklerken veri klasörünü koru"
 
 #. Translators: Message informing that an item was added

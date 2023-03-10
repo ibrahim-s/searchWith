@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'searchWith'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-10-28 14:35+0800\n"
-"PO-Revision-Date: 2021-10-28 14:40+0800\n"
+"PO-Revision-Date: 2023-02-25 18:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: cary-rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
@@ -23,6 +23,7 @@ msgid "Search With Menu"
 msgstr "搜索菜单"
 
 #. Translators: Message displayed if error happens in getting url.
+#, python-brace-format
 msgid "Not able to get {item} url"
 msgstr "无法获取 {item} 网址"
 
@@ -102,7 +103,7 @@ msgstr "恢复默认菜单(&D)"
 
 #. Translators: Label of options in searching google.
 msgid "In Google search"
-msgstr "Google 搜索 "
+msgstr "Google 搜索"
 
 #. Translators: Option in cumbo box to choose browser setting
 msgid "Browser language and setting"
@@ -145,9 +146,9 @@ msgstr "默认搜索关键词："
 msgid "For advanced users"
 msgstr "针对高级用户"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
-msgstr "安装新版时保留数据目录"
+#. Translators: Label of checkbox preserve data.
+msgid "Preserve data upon installing a new version"
+msgstr "安装新版时保留数据"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
