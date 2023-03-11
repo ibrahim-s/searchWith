@@ -149,8 +149,9 @@ msgstr "Opções para a pesquisa padrão:"
 msgid "For advanced users"
 msgstr "Para utilizadores avançados"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
+#. Translators: Label of checkbox preserve data.
+#, fuzzy
+msgid "Preserve data upon installing a new version"
 msgstr "Conservar pasta de dados ao instalar uma nova versão"
 
 #. Translators: Message informing that an item was added

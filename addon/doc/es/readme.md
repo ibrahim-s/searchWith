@@ -70,10 +70,20 @@ El gesto predeterminado del complemento es: NVDA+windows+s. Si el atajo no te fu
   reemplazarlo con facilidad.
 * Finalmente, y en especial para usuarios avanzados
 * Mediante una casilla de verificación en el panel de opciones, puedes
-  elegir preservar tu carpeta de datos al instalar una nueva versión. Ten en
-  cuenta que si se incluyeran nuevos motores de búsqueda, no los obtendrías
-  teniendo marcada esta casilla.
+  elegir preservar tu carpeta de datos al instalar una nueva versión. Esto
+  significa que tus datos se conservarán, y se añadirán los nuevos datos
+  incluidos en la actualización.
+
 Y esto es todo, espero que encuentres lo que buscas, ¡feliz búsqueda!
+
+### Cambios para 2.3 ###
+
+* Ahora, al elegir preservar los datos desde el panel de opciones, no se
+  dejarán de agregar las nuevas entradas de datos en futuras
+  actualizaciones. En su lugar, se fusionarán con las existentes en el
+  antiguo fichero de datos.
+* Se actualiza la última versión probada a la 2023.1 para para cumplir con
+  NVDA 2023.1.
 
 ### Cambios para 2.0 ###
 

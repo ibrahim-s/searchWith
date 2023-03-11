@@ -74,12 +74,20 @@ Der Standard-Tastenbefehl für die Erweiterung lautet: NVDA+Windows+S. Wenn der 
   ist, wird der Text im Suchfeld markiert angezeigt, so dass Sie ihn leicht
   überschreiben können.
 * Und schließlich, insbesondere für fortgeschrittene Benutzer
-* Sie können über ein Kontrollkästchen im Einstellungsfenster auswählen, ob
-  Sie Ihren Datenordner bei der Installation einer neuen Version beibehalten
-  möchten. Beachten Sie, dass Sie keine neuen Suchmaschinen erhalten, wenn
-  welche in der neuen Version der Erweiterung enthalten sind.
+* You can through a check box in setting panel, choose if you want to
+  preserve your data folder upon installing a new version. And this means
+  that your data will be sustained, but added to it the newly entries in the
+  new version.
+
 Und das war's, ich hoffe, Sie suchen und finden das Gute, viel Spaß beim
 Suchen!
+
+### Changes for 2.3 ###
+
+* Now choosing to preserve data from setting panel, does not means that you
+  will not get the new data entries, but the new entries in the new version,
+  will be merged and added to your old data file.
+* Update last tested version to 2023.1 to comply with NVDA version 2023.1.
 
 ### Änderungen in 2.0 ###
 

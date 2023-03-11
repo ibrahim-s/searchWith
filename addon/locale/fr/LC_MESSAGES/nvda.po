@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2022-11-08 12:16+0100\n"
+"PO-Revision-Date: 2023-02-27 10:53+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
 
 #. Translators: Search with menu title.
@@ -150,8 +150,8 @@ msgstr "Options pour la requête par défaut :"
 msgid "For advanced users"
 msgstr "Pour les utilisateurs avancés"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
+#. Translators: Label of checkbox preserve data.
+msgid "Preserve data upon installing a new version"
 msgstr ""
 "Conserver le dossier de données lors de l'installation d'une nouvelle version"
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: searchWith\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2022-05-30 18:03+0200\n"
+"PO-Revision-Date: 2023-02-25 10:41+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -151,9 +151,9 @@ msgstr "Oletuskyselyn vaihtoehdot:"
 msgid "For advanced users"
 msgstr "Kokeneille käyttäjille"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
-msgstr "Säilytä datakansio uutta versiota asennettaessa"
+#. Translators: Label of checkbox preserve data.
+msgid "Preserve data upon installing a new version"
+msgstr "Säilytä data uutta versiota asennettaessa"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"

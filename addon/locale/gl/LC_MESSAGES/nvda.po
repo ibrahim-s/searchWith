@@ -150,8 +150,9 @@ msgstr "Opcións para a consulta por defecto:"
 msgid "For advanced users"
 msgstr "Para usuarios avanzados"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
+#. Translators: Label of checkbox preserve data.
+#, fuzzy
+msgid "Preserve data upon installing a new version"
 msgstr "Preservar cartafol de datos ó instalar unha nova versión"
 
 #. Translators: Message informing that an item was added
