@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the searchWith package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: searchWith 1.8\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-10-29 19:20+0000\n"
+"PO-Revision-Date: 2022-05-24 10:51+0300\n"
+"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. Translators: Search with menu title.
+msgid "Search With Menu"
+msgstr "Меню «Пошуку за допомогою»"
+
+#. Translators: Message displayed if error happens in getting url.
+#, python-brace-format
+msgid "Not able to get {item} url"
+msgstr "Не можу отримати URL  {item}"
+
+#. Translators: Title of message box
+#. Translators: Title of message box.
+msgid "Error Message"
+msgstr "Повідомлення про помилку"
+
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr "Немає тексту в буфері обміну"
+
+#. Translators: Message displayed if there is no last spoken text.
+msgid "No last spoken text"
+msgstr "Немає останнього вимовленого тексту"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"Показує діалог «Пошуку за допомогою» для введення пошукового запиту. За "
+"наявності виділеного тексту при одноразовому натисканні показує віртуальне "
+"меню, а при подвійному шукає виділений текст безпосередньо в Google."
+
+#. Translators: Category of addon in input gestures.
+#. Translators: title of the panel
+#. Translators: Title of dialog
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Search With"
+msgstr "пошук за допомогою"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Показує віртуальне меню «Пошуку за допомогою» для тексту з буфера обміну, а "
+"при подвійному натисканні шукає його безпосередньо в Google."
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Показує віртуальне меню «Пошуку за допомогою» для останнього вимовленого "
+"тексту, а при подвійному натисканні шукає його безпосередньо в Google."
+
+#. Translators: Label of group related to menu.
+msgid "Menu"
+msgstr "Меню"
+
+#. Translators: List of available items to add to menu.
+msgid "Available items to add"
+msgstr "Доступні елементи для додавання"
+
+#. Translators: Label of add button.
+msgid "Add to menu"
+msgstr "Додати в меню"
+
+#. Translators: Search with menu items.
+msgid "Search with menu"
+msgstr "Меню «Пошуку за допомогою»"
+
+#. Translators: Label of remove button.
+msgid "Remove"
+msgstr "Видалити"
+
+#. Translators: Label of move up button.
+msgid "Move item up"
+msgstr "Перемістити елемент вгору"
+
+#. Translators: Label of move down button.
+msgid "Move item down"
+msgstr "Перемістити елемент вниз"
+
+#. Translators: Label of set menu to default button.
+msgid "Set menu to default"
+msgstr "Повернути меню до початкового стану"
+
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "Для пошуку в Google"
+
+#. Translators: Option in cumbo box to choose browser setting
+msgid "Browser language and setting"
+msgstr "Налаштування й мову браузера"
+
+#. Translators: Option in cumbo box to choose NVDA language
+msgid "NVDA language"
+msgstr "Мову NVDA"
+
+#. Translators: Option in cumbo box to choose windows language
+msgid "Windows language"
+msgstr "Мову Windows"
+
+#. Translators: Label of static text
+msgid "Use:"
+msgstr "Використати:"
+
+#. Translators: In search with dialog group
+msgid "In search with dialog"
+msgstr "Для діалогу «Пошуку за допомогою»"
+
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "Залишити порожнім"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "Використати текст з буфера обміну"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "Використати останній вимовлений текст"
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "Параметри для основного пошукового запиту:"
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr "Для досвідчених користувачів"
+
+#. Translators: Label of checkbox preserve data.
+#, fuzzy
+msgid "Preserve data upon installing a new version"
+msgstr "Зберегти папку з даними після встановлення нової версії"
+
+#. Translators: Message informing that an item was added
+msgid "Information: Item added"
+msgstr "Інформація: елемент додано"
+
+#. Translators: Message informing that an item was removed.
+msgid "Information: item removed"
+msgstr "Інформація: елемент видалено"
+
+#. Translators: Message informing that an item was moved up.
+msgid "Information: item moved up"
+msgstr "Інформація: елемент переміщено вгору"
+
+#. Translators: Message informing that an item was moved down.
+msgid "Information: item moved down"
+msgstr "Інформація: елемент переміщено вниз"
+
+#. Translators: Message informing that menu was set to default.
+msgid "Information: Menu set to default"
+msgstr "Інформація: меню повернено до початкового стану"
+
+#. Translators: Label of static text
+msgid "Search with google"
+msgstr "Пошук за допомогою google"
+
+#. Translators: Label of text control to enter query.
+msgid "Enter a search query"
+msgstr "Введіть пошуковий запит"
+
+#. Translators: Label of Other engines button
+msgid "Other Engines"
+msgstr "Інші системи"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon helps you to search text, via various search engines.\n"
+"Let no text selected, and press the gesture of the addon\n"
+"A dialog will be displayed, with an edit box to enter a search query\n"
+"To search with Google press enter, or tab to search with other engins.\n"
+"Or\n"
+"select some text and press once, a menu will be displayed with various "
+"search engines to choose from.\n"
+"And while text is selected, you can press the gesture twice to search with "
+"Google directly.\n"
+"The Default gesture for the addon is: NVDA+ Windows+ S."
+msgstr ""
+"Цей додаток використовується для пошуку тексту за допомогою різних пошукових "
+"систем.\n"
+"Навіть, якщо не буде виділено жодного тексту, після натискання жесту "
+"додатка\n"
+"Відкриється діалог з полем редагування для введення пошукового запиту\n"
+"Для пошуку за допомогою Google натисніть клавішу enter, а для пошуку за "
+"допомогою інших систем натисніть клавішу tab.\n"
+"Або\n"
+"виділіть будь-який текст і натисніть один раз, після чого з’явиться меню з "
+"можливістю вибрати різні пошукові системи.\n"
+"Щоб шукати виділений текст безпосередньо в Google, натисніть цю комбінацію "
+"двічі.\n"
+"Початковий жест для додатка: NVDA+Windows+S."
