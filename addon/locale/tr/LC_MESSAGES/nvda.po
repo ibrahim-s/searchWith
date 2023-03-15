@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the searchWith package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: searchWith 2.1\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-10-15 19:20+0000\n"
-"PO-Revision-Date: 2022-10-11 14:54+0300\n"
+"Project-Id-Version: 'İle Ara 2.4'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2023-02-22 20:49+0200\n"
+"PO-Revision-Date: 2023-03-12 12:45+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
 msgstr "İle Ara menüsü"
 
 #. Translators: Message displayed if error happens in getting url.
-#, python-brace-format
 msgid "Not able to get {item} url"
 msgstr "{item} URL'si alınamıyor"
 
@@ -46,8 +46,8 @@ msgid ""
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
 "Bir arama sorgusu girilmesi için ile ara iletişim kutusunu aç. Bir metin "
-"seçiliyse bir kez basılırsa ile ara menüsünü göster, iki kez basılırsa "
-"doğrudan google ile ara."
+"seçili olduğunda bir kez basılırsa ile ara menüsünü göster, iki kez "
+"basılırsa doğrudan google ile ara."
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -71,8 +71,8 @@ msgid ""
 "Display Search with virtual menu for last spoken text, and pressed twice "
 "searches Google directly."
 msgstr ""
-"Son söylenen için ile ara menüsünü göster, iki kez basılırsa doğrudan google "
-"ile ara."
+"Son konuşulan için ile ara menüsünü göster, iki kez basılırsa doğrudan "
+"google ile ara."
 
 #. Translators: Label of group related to menu.
 msgid "Menu"
@@ -80,7 +80,7 @@ msgstr "Menü"
 
 #. Translators: List of available items to add to menu.
 msgid "Available items to add"
-msgstr "Eklenebilecek mevcut öğeler"
+msgstr "Eklenebilir öğeler"
 
 #. Translators: Label of add button.
 msgid "Add to menu"
@@ -136,11 +136,11 @@ msgstr "Boş bırak"
 
 #. Translators: An option to use for default query.
 msgid "Use clipboard text"
-msgstr "Pano metnini kullan"
+msgstr "Panodaki metni kullan"
 
 #. Translators: An option to use for default query.
 msgid "Use last spoken text"
-msgstr "Son söylenen metni kullan"
+msgstr "Son konuşulan metni kullan"
 
 #. Translators: Label of static text
 msgid "Options for default query:"
@@ -152,9 +152,8 @@ msgid "For advanced users"
 msgstr "İleri düzey kullanıcılar için"
 
 #. Translators: Label of checkbox preserve data.
-#, fuzzy
 msgid "Preserve data upon installing a new version"
-msgstr "Yeni bir sürümü yüklerken veri klasörünü koru"
+msgstr "Yeni bir sürüm yüklerken veri klasörünü koru"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
@@ -204,13 +203,14 @@ msgid ""
 msgstr ""
 "Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı "
 "olur.\n"
-"Hiç bir metin seçmeksizin eklenti kısayoluna basın\n"
-"Arama sorgusu girmek için bir yazı alanı içeren iletişim kutusu açılacak\n"
-"Google ile arama yapmak için enter'a, diğer motorlarla arama yapmak için "
-"sekmeye basın.\n"
-"ya da\n"
-"bir metin seçin ve ilgili tuşa bir kez basın, aralarından seçim "
-"yapabileceğiniz çeşitli arama motorları ile bir menü gösterilecek.\n"
-"Metin seçiliyken, doğrudan Google ile arama yapmak için tuşa iki kez "
+"Hiçbir metin seçili değilken eklentinin kısa yoluna basın\n"
+"Arama sorgusu girmek için bir yazma alanı içeren iletişim kutusu "
+"görüntülenecektir.\n"
+"Google ile arama yapmak için enter'a veya diğer motorlarla arama yapmak için "
+"sekme tuşuna basın.\n"
+"Veya\n"
+"metin seçin ve bir kez basın, aralarından seçim yapabileceğiniz çeşitli "
+"arama motorları ile bir menü görüntülenecektir.\n"
+"Metin seçiliyken, doğrudan Google ile arama yapmak için harekete iki kez "
 "basabilirsiniz.\n"
-"Eklenti için Varsayılan Kısayol tuşu: NVDA+ Windows+ S."
+"Eklenti için varsayılan kısayol: NVDA+ Windows+ S."
