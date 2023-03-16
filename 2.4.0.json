@@ -1,9 +1,9 @@
 {
 	"addonId": "searchWith",
 	"displayName": "Search With",
-	"URL": "",
+	"URL": "https://github.com/ibrahim-s/searchWith/releases/download/2.4/searchWith-2.4.nvda-addon",
 	"description": "This addon helps you to search text, via various search engines.\nLet no text selected, and press the gesture of the addon\nA dialog will be displayed, with an edit box to enter a search query\nTo search with Google press enter, or tab to search with other engins.\nOr\nselect some text and press once, a menu will be displayed with various search engines to choose from.\nAnd while text is selected, you can press the gesture twice to search with Google directly.\nThe Default gesture for the addon is: NVDA+ Windows+ S.",
-	"sha256": "4f96e128f0d08e8febc6cc97fb1a5afaac12775caab783d0ce83b2ed3d36546f",
+	"sha256": "81f388622e0c26ed80ee04f2adf4e484e6524a2aa3c1ba69b15ab0aa88b7e49e",
 	"homepage": "https://addons.nvda-project.org/addons/searchWith.en.html",
 	"addonVersionName": "2.4",
 	"addonVersionNumber": {
