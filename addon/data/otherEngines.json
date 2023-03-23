@@ -7,6 +7,7 @@
 	"GoogleNews": "https://news.google.com/search?q=%(text)s",
 	"GooglePlay": "https://play.google.com/store/search?q=%(text)s",
 	"GoogleMaps": "https://www.google.com/maps/place/%(text)s",
+	"GoogleScholar": "https://scholar.google.com/scholar?q=%(text)s",
 	"NVDAIssuesOnGitHub": "https://github.com/nvaccess/nvda/issues/%(text)s",
 	"Reddit.com": "https://www.reddit.com/search/?q=%(text)s",
 	"Ask.com": "https://www.ask.com/web?q=%(text)s",

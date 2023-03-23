@@ -16,7 +16,7 @@ def _(arg):
 # Add-on information variables
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
-	"addon_name": "searchwith",
+	"addon_name": "searchWith",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
@@ -32,7 +32,7 @@ select some text and press once, a menu will be displayed with various search en
 And while text is selected, you can press the gesture twice to search with Google directly.
 The Default gesture for the addon is: NVDA+ Windows+ S."""),
 	# version
-	"addon_version": "2.4",
+	"addon_version": "2.5",
 	# Author(s)
 	"addon_author": "ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
