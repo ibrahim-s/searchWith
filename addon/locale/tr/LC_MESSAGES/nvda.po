@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: searchWith 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-10-15 19:20+0000\n"
-"PO-Revision-Date: 2022-10-11 14:54+0300\n"
+"PO-Revision-Date: 2023-05-01 21:27+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
@@ -152,7 +152,6 @@ msgid "For advanced users"
 msgstr "İleri düzey kullanıcılar için"
 
 #. Translators: Label of checkbox preserve data.
-#, fuzzy
 msgid "Preserve data upon installing a new version"
 msgstr "Yeni bir sürümü yüklerken veri klasörünü koru"
 

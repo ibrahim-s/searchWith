@@ -18,7 +18,7 @@ bir kez bastığınızda liste gösterilecektir.
 
 Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu hareket sizin için çalışmıyor veya başka bir eklenti ile çakışıyorsa, NVDA menüsü>tercihler>Girdi Hareketleri>İle Ara kategorisine giderek bu hareketi değiştirebilirsiniz.
 
-## kullanım
+## Kullanım
 
 * Bir arama sorgusu girmek istediğinizde eklenti hareketine basmanız
   yeterlidir. Arama terimini girebileceğiniz yazma alanına odaklı bir
@@ -50,7 +50,7 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
   varsayılan duruma getirebilirsiniz.
 * Yaptığınız ayarın kalıcı olması için sonrasında NVDA konfigürasyonunu
   kaydettiğinizden emin olun.
-* Diğer dil seçeneklerini kullanarak Google'da arama yapmak isterseniz:
+* Diğer dillerde Google'da arama yapmak ister misiniz?
 * Ardından, ayar panelinde Şununla Ara kategorisine gidin, oradaki Google'da
   ara seçim kutusundan kulllanılmasını istediğiniz dili seçebilirsiniz:
 
@@ -69,32 +69,32 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
 * Pano veya son konuşulan metin seçilirse, ilgili metin arama kutusuna
   kendiliğinden eklenecektir. Böylece hızlıca arama yapabilirsiniz.
 * Son olarak, özellikle ileri düzey kullanıcılar için
-* You can through a check box in setting panel, choose if you want to
-  preserve your data folder upon installing a new version. And this means
-  that your data will be sustained, but added to it the newly entries in the
-  new version.
+* Ayar panelindeki bir onay kutusu aracılığıyla, yeni bir sürüm yükledikten
+  sonra veri klasörünüzü korumak isteyip istemediğinizi seçebilirsiniz. Bu
+  da verilerinizin korunacağı, ancak yeni sürümde yeni girdilerin ekleneceği
+  anlamına gelir.
 
 Ve işte bu, iyi şeyler aramanızı ve bulmanızı umuyoruz, mutlu aramalar!
 
-### Changes for 2.3 ###
+### 2.3 için değişiklikler ###
 
-* Now choosing to preserve data from setting panel, does not means that you
-  will not get the new data entries, but the new entries in the new version,
-  will be merged and added to your old data file.
-* Update last tested version to 2023.1 to comply with NVDA version 2023.1.
+* Şimdi ayar panelinden verileri korumayı seçmek, yeni veri girişlerini
+  almayacağınız anlamına gelmez, ancak yeni sürümdeki yeni girişler
+  birleştirilecek ve eski veri dosyanıza eklenecektir.
+* NVDA sürüm 2023.1 ile uyumlu hale gelecek şekilde güncellendi.
 
-### Changes for 2.0 ###
+### 2.0 için değişiklikler ###
 
-* Disable the addon in secure mode.
-* Update last tested version to 2022.1, to comply with recent addon api
-  version.
+* Eklenti güvenli modda devre dışı bırakıldı.
+* Son test edilen sürüm 2022.1'e güncellendi ve en son Eklenti api sürümüyle
+  uyumlu hale getirildi.
 
 ### 1.8 için değişiklikler ###
 
 * İleri düzey kullanıcıların veri klasörlerini korumalarına izin vermek için
   ayar paneline bir onay kutusu eklendi.
 * Girdi hareketlerine iki yeni komut eklendi:
-    * Panodaki metin için arama menüsünü açar. İki kez basılırsa metin
+    * panodaki metin için arama menüsünü açar. İki kez basılırsa metin
       doğrudan Google'da aranır.
     * Son söylenen için arama menüsünü açar. İki kez basılırsa metin
       doğrudan Google'da aranır.
