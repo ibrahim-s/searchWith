@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2021-10-20 11:07+0100\n"
+"PO-Revision-Date: 2023-05-12 09:35+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language: it\n"
@@ -34,7 +34,7 @@ msgstr "Messaggio di errore"
 
 #. Translators: Message displayed if there is no text in clipboard.
 msgid "No text in clipboard"
-msgstr ""
+msgstr "Nessun testo negli appunti"
 
 #. Translators: Message displayed if there is no last spoken text.
 #, fuzzy
@@ -157,11 +157,13 @@ msgstr "Opzioni per la query predefinita:"
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
-msgstr ""
+msgstr "Per utenti avanzati"
 
-#. Translators: Label of checkbox preserve data folder.
-msgid "Preserve data folder upon installing a new version"
+#. Translators: Label of checkbox preserve data.
+#, fuzzy
+msgid "Preserve data upon installing a new version"
 msgstr ""
+"Conserva la cartella dei dati durante l'installazione di una nuova versione"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
