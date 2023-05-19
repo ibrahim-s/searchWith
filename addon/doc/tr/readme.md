@@ -60,7 +60,7 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
 
 * Son olarak, İle ara iletişim kutusunda varsayılan sorguyu seçme
   seçeneğiniz vardır. ayar panelindeki Varsayılan sorgu için Seçim
-  kutusundan Dilediğiniz seçeneği seçebilirsiniz.
+  kutusundan Dilediğiniz seçeneği seçebilirsiniz
 
     * Boş bırak
     * Pano metnini kullan
