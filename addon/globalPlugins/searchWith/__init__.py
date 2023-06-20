@@ -23,6 +23,7 @@ import urllib
 import speech
 import speechViewer
 import versionInfo
+from .deepL import deepLLanguages
 from logHandler import log
 
 import addonHandler
@@ -78,6 +79,20 @@ def searchWithGoogle(text):
 	text= urllib.parse.quote(text)
 	webbrowser.open(googleUrl+ text+ langParam)
 
+def useTranslateEngine(name, url, text):
+	''' Using either GoogleTranslate or DeepLTranslator to translate the text. 
+		@name: the name of translate engine
+	'''
+	if name== "GoogleTranslate":
+		lang= config.conf["searchWith"]["googleTranslateLang"]
+		lang= lang if lang != "Windows" else languageHandler.getWindowsLanguage()
+	elif name== "DeepL Translator":
+		lang= config.conf["searchWith"]["deepLTranslateLang"]
+	targetLanguage= lang if '_' not in lang else lang.split('_')[0]
+	#fullUrl = url%{'text': text, 'tl': targetLanguage}
+	webbrowser.open(url%{'text': text, 'tl': targetLanguage})
+		#log.info(f'fullUrl: {fullUrl}')
+
 # Default search engines dict, name and url
 defaultItemsDict= {
 	'Yahoo': 'https://search.yahoo.com/search/?p=%(text)s',
@@ -97,7 +112,7 @@ class MenuHelper:
 		''' Getting ALL items dict, defaultengines dict plus other engines dict
 			other engines dict is fetched from othrEngines.json file in addon.
 		'''
-		path= os.path.join(os.path.dirname(__file__), "..", "data", "otherEngines.json")
+		path= os.path.join(os.path.dirname(__file__), "..", "..", "data", "otherEngines.json")
 		try:
 			with open(path, encoding= "utf-8") as f:
 				otherItemsDict= json.load(f)
@@ -183,9 +198,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		LastSpoken.terminate()
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(SearchWithPanel)
 
-	def activateMenu(self):
+	def showVirtualMenu(self):
 		'''Display virtual menu with its menu items.'''
-		#log.info('activating virtual menu ...')
+		#log.info('displaying virtual menu ...')
 		if self.virtualMenuActive:
 			return
 		#log.info('binding gestures for virtual menu...')
@@ -241,7 +256,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
 			log.info('Error getting url', exc_info=1)
 		else:
-			webbrowser.open(url%{'text': text})
+			engineName= MenuHelper.getMenuItems()[index]
+			if engineName in ("GoogleTranslate", "DeepL Translator"):
+				useTranslateEngine(engineName, url, text)
+			else:
+				webbrowser.open(url%{'text': text})
 		finally:
 			self.clearVirtual()
 
@@ -281,7 +300,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		scriptCount= scriptHandler.getLastScriptRepeatCount()
 		if scriptCount== 0:
 			# Activating virtual menu.
-			self.activateMenu()
+			self.showVirtualMenu()
 			return
 		#Otherwise search text with Google directly.
 		if type== "lastSpoken":
@@ -325,7 +344,9 @@ configspec={
 	"menuItems": "list(default=list())",
 	"lang": "integer(default=0)",
 	"useAsDefaultQuery": "integer(default=0)",
-	"preserveDataFolder": "boolean(default=True)",
+	"googleTranslateLang": "string(default='Windows')",
+	"deepLTranslateLang": "string(default='en')",
+	"preserveDataFolder": "boolean(default=False)",
 }
 config.conf.spec["searchWith"]= configspec
 if not config.conf["searchWith"]["menuItems"]:
@@ -389,6 +410,7 @@ class SearchWithPanel(gui.SettingsPanel):
 			# Translators: Option in cumbo box to choose windows language
 			_("Windows language")
 		]
+
 		# Translators: Label of static text
 		staticCumboSizer.Add(wx.StaticText(staticCumboSizer.GetStaticBox(), label= _("Use:")))
 		self.langsComboBox= wx.Choice(staticCumboSizer.GetStaticBox(), choices= langs)
@@ -405,17 +427,32 @@ class SearchWithPanel(gui.SettingsPanel):
 			# Translators: An option to use for default query.
 			_("Use last spoken text")
 		]
+
 		# Translators: Label of static text
 		staticDefaultQueryComboSizer.Add(wx.StaticText(staticDefaultQueryComboSizer.GetStaticBox(), label= _("Options for default query:")))
 		self.defaultQueryCombobox= wx.Choice(staticDefaultQueryComboSizer.GetStaticBox(), choices= defaultQuery)
 		staticDefaultQueryComboSizer.Add(self.defaultQueryCombobox)
 		self.defaultQueryCombobox.SetSelection(config.conf["searchWith"]["useAsDefaultQuery"])
 
+		# Translators: Label of options to choose target language for translation engines.
+		staticTranslationEnginesSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("Translation engines")))
+		self.availableLanguages = languageHandler.getAvailableLanguages(presentational=True)
+		googleChoices = [x[1] for x in self.availableLanguages]
+		deepLChoices = [x[1] for x in deepLLanguages]
+		sizer1= gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
+		# Translators: Label of combo box for google translate.
+		self.googleTranslateComboBox = sizer1.addLabeledControl(_("Target language for google translate:"), wx.Choice, choices= googleChoices)
+		sizer2 = gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
+		# Translators: Label of combo box for deepL translate.
+		self.deepLTranslateComboBox= sizer2.addLabeledControl(_("Target language for deepL translate:"), wx.Choice, choices= deepLChoices)
+		self.googleTranslateComboBox.SetSelection([indx for indx, val in enumerate(self.availableLanguages) if val[0]== config.conf["searchWith"]["googleTranslateLang"]][0])
+		self.deepLTranslateComboBox.SetSelection([indx for indx, val in enumerate(deepLLanguages) if val[0]== config.conf["searchWith"]["deepLTranslateLang"]][0])
+
 		# For advanced users group
 		# Translators: Label of group for advanced users.
 		staticCheckSizer= sHelper.addItem(wx.StaticBoxSizer(wx.VERTICAL, self, _("For advanced users")))
-		# Translators: Label of checkbox preserve data.
-		self.advancedCheckbox= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Preserve data upon installing a new version"))
+		# Translators: Label of checkbox preserve data folder.
+		self.advancedCheckbox= wx.CheckBox(staticCheckSizer.GetStaticBox(), label=_("Preserve data folder upon installing a new version"))
 		staticCheckSizer.Add(self.advancedCheckbox)
 		self.advancedCheckbox.SetValue(config.conf["searchWith"]["preserveDataFolder"])
 
@@ -488,6 +525,8 @@ class SearchWithPanel(gui.SettingsPanel):
 		config.conf["searchWith"]["menuItems"]= self.customMenu.GetItems()
 		config.conf["searchWith"]["lang"]= self.langsComboBox.GetSelection()
 		config.conf["searchWith"]["useAsDefaultQuery"]= self.defaultQueryCombobox.GetSelection()
+		config.conf["searchWith"]["googleTranslateLang"] = [x[0] for x in self.availableLanguages][self.googleTranslateComboBox.GetSelection()]
+		config.conf["searchWith"]["deepLTranslateLang"] = [x[0] for x in deepLLanguages][self.deepLTranslateComboBox.GetSelection()]
 		config.conf["searchWith"]["preserveDataFolder"]= self.advancedCheckbox.GetValue()
 
 # Graphical user interface for search with dialog
@@ -577,10 +616,13 @@ class OtherEnginesMenu(wx.Menu):
 			# Translators: Title of message box.
 			_("Error Message"), style= wx.OK|wx.ICON_ERROR)
 			log.info('Error getting url', exc_info= 1)
-		else:
+			return
 		# Escaping special characters in the query string.
-			self.text= urllib.parse.quote(self.text)
+		self.text= urllib.parse.quote(self.text)
+		if label in ("GoogleTranslate", "DeepL Translator"):
+			useTranslateEngine(label, url, self.text)
+		else:
 			webbrowser.open(url%{'text': self.text})
-			import speech
-			speech.cancelSpeech()
-			wx.CallLater(4000, self.parentDialog.Destroy)
+		import speech
+		speech.cancelSpeech()
+		wx.CallLater(4000, self.parentDialog.Destroy)
