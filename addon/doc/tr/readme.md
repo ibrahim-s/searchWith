@@ -1,141 +1,132 @@
-# İle Ara
+# İle Ara #
 
-Yazar: Ibrahim Hamadeh  
-[2.4 kararlı sürümü indirin][1]  
-NVDA uyumluluğu: 2019.3 ve sonrası
+* Yazar: Ibrahim Hamadeh
+* [Kararlı sürümü][1] indir
+* NVDA uyumluluğu: 2019.3 ve sonrası
 
-Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı olur.  
-Hiçbir metnin seçilmesine izin vermeyin ve eklentinin Kısa yol tuşlarına basın.  
-Arama sorgusu girmek için bir düzenleme kutusu içeren iletişim kutusu görüntülenecektir.  
-Google ile arama yapmak için enter tuşuna, diğer motorlarla arama yapmak için sekme tuşuna basın.  
-Veya
-bir metin seçin ve Eklentinin kısa yol tuşlarına bir kez basın, çeşitli arama motorları bulunan bir menü açılacaktır.  
-Metin seçiliyken google ile arama yapmak için kısa yol tuşlarına iki defa basılması yeterli olacaktır.  
-Eklenti için Varsayılan hareket: NVDA+ Windows+ S  .  
-Tuş vuruşu sizin için çalışmıyorsa veya diğer tuş vuruşlarıyla çakışıyorsa,  
-her zaman olduğu gibi bir Kısa yol ekleyebilir veya mevcut olanı şu şekilde değiştirebilirsiniz: NVDA
-menü>Tercihler>Girdi Hareketleri>İle Ara kategorisi.
+Bu eklenti, çeşitli arama motorları aracılığıyla metin aramanıza yardımcı
+olur. Hiçbir metin seçili değilken  eklenti Kısayol tuşuna basın, açılan
+iletişim kutusundan yazı alanına gireceğiniz ifadeyi doğrudan Google'da
+aramak için enter tuşuna basabilirsiniz. Yazı alanına gireceğiniz ifadeyi
+başka bir arama motorunda aramak isterseniz tab tuşuna basarak "diğer
+motorlar" düğmesine ulaşıp  etkinleştirerek listeden arama motorunu
+seçebilirsiniz.
 
-## kullanım
+Seçili metni Google'da aramak için eklenti kısayoluna iki kez basın. Seçili
+metni google dışında bir arama motoru kullanarak aramak isterseniz, kısayola
+bir kez bastığınızda liste gösterilecektir.
 
-  *  Bir arama sorgusu girmek istiyorsanız, eklenti hareketine basmanız yeterlidir.
-  *  Arama terimini girmek için düzenleme alanı içeren bir iletişim kutusu görüntülenecektir. Google ile arama yapmak ister misiniz? sadece enter'a basın.
-  *  Aksi takdirde Sekme tuşuna basarak Diğer Motorlar düğmesinin üzerine gelip boşluk tuşu ile etkinleştirin.
-  *  Çeşitli arama motorlarının seçilebileceği bir açılır menü görünecektir.   
-Yahoo, Bing, DuckDuckGo ve Youtube.  
-Bu varsayılan menüdür ve eklentinin ayar panelinden değiştirebilirsiniz.
-  *  Eklentiyi kullanmanın başka bir yolu da bir metin seçmektir.   
-Varsayılan kısa yol tuşlarına veya sizin atadığınız tuşlara basıldığında  
-çeşitli arama motorları içeren sanal bir menü görüntülenecektir  
-Ya varsayılan menü ya da ihtiyaçlarınıza göre sıraladığınız herhangi bir menü.
-  *  Birini seçin ve enter tuşuna basın, varsayılan tarayıcı arama sonuçlarını görüntüleyerek açılacaktır.  
-Veya doğrudan Google ile arama yapmak istiyorsanız  
-Kısa yol tuşlarına iki defa peş peşe basmanız yeterli olacaktır.
-	*	Pano metni için arama menüsünü tetikleyin, iki kez basıldığında, bu metni doğrudan Google tarafından arar.  
-	*	Son konuşulan metin için arama menüsünü tetikleyin, iki kez basıldığında, bu metni doğrudan Google tarafından arar.  
-  *  Arama menüsünü değiştirmek ister misiniz?
-  *  Evet, bunu ayar panelinden yapabilir ve menüyü ruh halinize ve ihtiyaçlarınıza göre ayarlayabilirsiniz.
-  *  Oradan, Diğer arama motorlarını menüye ekleyebilirsiniz.
-  *  isterseniz, bir öğeyi menüdenn kaldırabilir, yukarı taşıyabilir, aşağı taşıyabilir veya geri döndürüp varsayılan düzeye sıfırlayabilirsiniz.
-  *  Bu değişikliklerin kalıcı olmasını istiyorsanız, yapılandırmadan sonra ayarları kaydetmeniz gerekir.
-  *  Diğer dil seçeneklerini kullanarak Google'da arama yapmak ister misiniz?   
-NVDA ayarlar penceresinde, İle   Ara kategorisine gidin.  
-Seçim kutusunda Google araması için aşağıdaki seçeneklerden birini seçebilirsiniz:  
-    1.  Tarayıcı ayarlarını ve dilini kullan.
-    2.  NVDA dilini kullan.
-    3.  Windows dilini kullan.
-*	Son olarak, İle ara iletişim kutusunda varsayılan sorguyu seçme seçeneğiniz vardır.  
-ayar panelindeki Varsayılan sorgu için Seçim kutusundan Dilediğiniz seçeneği seçebilirsiniz.  
-	*	Boş bırak  
-	*	Pano metnini kullan  
-	*	Son konuşulan metni kullan  
-Pano veya son söylenen metin seçilirse, kolayca geçersiz kılabilmeniz için arama kutusundaki metin seçili olarak görüntülenecektir.  
-*	Son olarak, özellikle ileri düzey kullanıcılar için
-Ayar panelindeki bir onay kutusundan, yeni bir sürüm yükledikten sonra veri klasörünüzü korumak isteyip istemediğinizi seçebilirsiniz.
-Yeni eklenti sürümüne dahil edilmişse, yeni arama motorları almayacağınızı seçerek unutmayın.
-Ve işte bu kadar, iyiyi aramayı ve bulmayı umuyoruz, mutlu aramalar!  
+Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu hareket sizin için çalışmıyor veya başka bir eklenti ile çakışıyorsa, NVDA menüsü>tercihler>Girdi Hareketleri>İle Ara kategorisine giderek bu hareketi değiştirebilirsiniz.
 
-### 2.4 için değişiklikler ###
+## Kullanım
 
-*	Yardım ve dil dosyaları güncellendi.
+* Bir arama sorgusu girmek istediğinizde eklenti hareketine basmanız
+  yeterlidir. Arama terimini girebileceğiniz yazma alanına odaklı bir
+  pencere açılacaktır.
+* Google ile arama yapmak isterseniz sadece enter'a basın.
+* Aksi takdirde Sekme tuşuna basarak Diğer Motorlar düğmesinin üzerine gelip
+  boşluk tuşu ile etkinleştirin. Çeşitli arama motorlarının seçilebileceği
+  bir açılır menü görünecektir. Yahoo, Bing, DuckDuckGo ve Youtube. Bu
+  varsayılan menüdür ve eklentinin ayar panelinden değiştirebilirsiniz.
+* Eklentiyi kullanmanın başka bir yolu da bir metin seçmektir. Metni seçili
+  hale getirdikten sonra, eklentinin varsayılan veya sizin belirlediğiniz
+  hareketine bastığınızda, Dilediğiniz arama motorunu seçebileceğiniz bir
+  liste açılır. Bu liste Ayarlar panelinden yapılandırılabilir.
+* Birini seçin ve enter tuşuna basın, varsayılan tarayıcı arama sonuçlarını
+  görüntüleyerek açılacaktır. veya doğrudan Google ile arama yapmak
+  istiyorsanız, harekete iki kez basın ve işlem tamam.
+* Özellikle pano veya son konuşulan metin için arama menüsünü tetiklemek mi
+  istiyorsunuz? TAMAM, öyleyse girdi hareketleri iletişim kutusundan
+  yapabilirsiniz, bu komutlar için girdi hareketi atayın:
+    * Pano metni için arama menüsünü açar ve iki kez basıldığında bu metni
+      doğrudan Google ile arar.
+    * Son söylenen için arama menüsünü açar ve iki kez basıldığında bu metni
+      doğrudan Google ile arar.
+* İle Ara menüsünü değiştirmek ister misiniz? Evet, bunu ayar panelinden
+  yapabilir ve menüyü ruh halinize ve ihtiyaçlarınıza göre
+  ayarlayabilirsiniz.
+* Oradan, diğer mevcut arama motorlarını ile ara menüsüne ekleyebilir, bir
+  öğeyi kaldırabilir, yukarı taşıyabilir, aşağı taşıyabilir veya menüyü
+  varsayılan duruma getirebilirsiniz.
+* Yaptığınız ayarın kalıcı olması için sonrasında NVDA konfigürasyonunu
+  kaydettiğinizden emin olun.
+* Diğer dillerde Google'da arama yapmak ister misiniz?
+* Ardından, ayar panelinde Şununla Ara kategorisine gidin, oradaki Google'da
+  ara seçim kutusundan kulllanılmasını istediğiniz dili seçebilirsiniz:
+
+    1. Tarayıcı ayarlarını ve dilini kullan.
+    2. NVDA dilini kullan.
+    3. Windows dilini kullan.
+
+* Son olarak, İle ara iletişim kutusunda varsayılan sorguyu seçme
+  seçeneğiniz vardır. ayar panelindeki Varsayılan sorgu için Seçim
+  kutusundan Dilediğiniz seçeneği seçebilirsiniz
+
+    * Boş bırak
+    * Pano metnini kullan
+    * Son konuşulan metni kullan
+
+* Pano veya son konuşulan metin seçilirse, ilgili metin arama kutusuna
+  kendiliğinden eklenecektir. Böylece hızlıca arama yapabilirsiniz.
+* Son olarak, özellikle ileri düzey kullanıcılar için
+* Ayar panelindeki bir onay kutusu aracılığıyla, yeni bir sürüm yükledikten
+  sonra veri klasörünüzü korumak isteyip istemediğinizi seçebilirsiniz. Bu
+  da verilerinizin korunacağı, ancak yeni sürümde yeni girdilerin ekleneceği
+  anlamına gelir.
+
+Ve işte bu, iyi şeyler aramanızı ve bulmanızı umuyoruz, mutlu aramalar!
 
 ### 2.3 için değişiklikler ###
 
-*	Şimdi ayarlar panelinden verileri korumayı seçmek, yeni veri girişlerini almayacağınız anlamına gelmez.
-ancak yeni sürümdeki yeni girişler birleştirilecek ve eski veri dosyanıza eklenecektir.
-*	NVDA sürüm 2023.1 ile uyumlu olması için son test edilen sürümü 2023.1 olarak güncellendi.
-
-### 2.2 için değişiklikler ###
-
-*	Yardım ve dil dosyaları güncellendi.
-
-### 2.1 için değişiklikler ###
-
-*	Yardım ve dil dosyaları güncellendi.
+* Şimdi ayar panelinden verileri korumayı seçmek, yeni veri girişlerini
+  almayacağınız anlamına gelmez, ancak yeni sürümdeki yeni girişler
+  birleştirilecek ve eski veri dosyanıza eklenecektir.
+* NVDA sürüm 2023.1 ile uyumlu hale gelecek şekilde güncellendi.
 
 ### 2.0 için değişiklikler ###
 
-*	Eklenti güvenli modda devre dışı bırakılır.
-*	En son addon API sürümüne uymak için son test edilen sürümü 2022.1'e güncelleyin.
-
-### 1.9 için değişiklikler ###
-
-*	Yerelleştirme ve belge güncellemeleri.
+* Eklenti güvenli modda devre dışı bırakıldı.
+* Son test edilen sürüm 2022.1'e güncellendi ve en son Eklenti api sürümüyle
+  uyumlu hale getirildi.
 
 ### 1.8 için değişiklikler ###
 
-*	Gelişmiş kullanıcıların veri klasörlerini korumalarına izin vermek için ayar paneline bir onay kutusu eklendi.
-*	Girdi hareketlerine iki yeni giriş eklendi:
-	*	Pano metni için arama menüsünü tetikleyin, iki kez basın, doğrudan Google'da arama yapın.
-	*	Son konuşulan metin için arama menüsünü tetikleyin, iki kez basın, doğrudan Google'da arama yapın.
+* İleri düzey kullanıcıların veri klasörlerini korumalarına izin vermek için
+  ayar paneline bir onay kutusu eklendi.
+* Girdi hareketlerine iki yeni komut eklendi:
+    * panodaki metin için arama menüsünü açar. İki kez basılırsa metin
+      doğrudan Google'da aranır.
+    * Son söylenen için arama menüsünü açar. İki kez basılırsa metin
+      doğrudan Google'da aranır.
 
-### 1.7 için değişiklikler ###
+### 1.7 için değişiklikler
 
-*	İle Ara iletişim kutusunda varsayılan sorgu için bir seçim kutusu eklendi.  
-*	Boş bırak, Pano metnini kullan veya Son söylenen metni kullan'ı seçebilirsiniz.  
-
-### 1.6 için değişiklikler ###
-
-*	Birkaç yeni site ve arama motoru eklendi:  
-	*	Google Çeviri  
-	*	GitHub'da NVDA Sorunları  
-*	Geleneksel komut dosyası hareketi yolu yerine komut dosyası dekoratörlerini kullanın.  
-
-### 1.5 için değişiklikler ###
-
-*	URL'ye eklemeden önce sorgu dizesindeki özel karakterlerden kaçarak ciddi bir hatayı düzeltme.  
-
-### 1.4 için değişiklikler ###
-
-*	Yerelleştirme güncellemeleri eklendi.  
-*	Komut dosyası işlevleri altındaki bazı belge dizelerini kaldırıldı, giriş hareketlerinde gösterilmeye uygun değil.  
-
-
-### 1.3 için değişiklikler ###
-
-*	Çeviri sistemi tarafından yerelleştirme güncellemeleri eklendi.  
-
+* İle Ara iletişim kutusunda varsayılan sorgu için bir seçim kutusu eklendi.
+* Boş bırak, Pano metnini kullan veya Son konuşulan metni kullan'ı
+  seçebilirsiniz.
 
 ### 1.2 için değişiklikler
 
-  *  Portekizce (Brezilya), Portekizce (Portekiz) ve Türkçe için çeviriler eklendi.
+* Stackoverflow, Stackexchange, GoogleBooks ve diğerleri gibi menüye
+  eklenebilecek daha fazla site eklendi.
+* İletişim kutusuyla aramada, son konuşulan metni varsayılan sorgu olarak
+  kullanma seçeneği eklendi.
 
-### 0.7 için değişiklikler  
+### 0.4 için değişiklikler
 
-  *  Stackoverflow, Stackexchange, GoogleBooks ve diğerleri gibi menüye eklenebilecek daha fazla site ekleyin.  
-  *  İle Ara İletişim kutusuyla aramada, son konuşulan metni varsayılan sorgu olarak kullanma Seçeneği eklendi.  
+* Herhangi bir metin seçilmemişse, bir arama sorgusu girmek için bir
+  iletişim kutusu eklendi.
+* Kullanıcı ihtiyaçlarına göre ile Ara ayar panelinden menüyü deyiştirmek
+  mümkün kılındı.
 
-### 0.4 için değişiklikler  
+### 0.3 için değişiklikler
 
-  *  Herhangi bir metin seçilmemişse, bir arama sorgusu girmek için iletişim kutusu eklendi.  
-  *  Kullanıcı ihtiyaçlarına göre ayar panelinden İle Ara menüsünün yapılandırılabilmesi mümkün kılındı.  
+* Google aramada daha fazla dil seçeneği sunan ayar paneli eklendi.
 
-### 0.3 için değişiklikler  
+### 0.1 için değişiklikler
 
-  *  Google aramada daha fazla dil seçeneği sunan ayar paneli eklendi.  
+* İlk sürüm
 
-### 0.1 için değişiklikler  
+[[!tag dev stable]]
 
-  *  İlk sürüm.  
-
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/v2.4/searchWith-2.4.nvda-addon
+[1]: https://www.nvaccess.org/addonStore/legacy?file=searchwith
