@@ -1,7 +1,7 @@
 # Search With #
 
 *	Author: Ibrahim Hamadeh
-*	Download [Stable version 2.5][1]
+*	Download [Stable version 2.5.5][1]
 *	NVDA compatibility: 2019.3 and beyond
 
 This addon helps you to search text, via various search engines.  
@@ -53,10 +53,17 @@ from the Options for default query combo box in setting panel, you can choose ei
 	*	Use clipboard text
 	*	Use last spoken text  
 And if clipboard or last spoken text is chosen, text in search box will be displayed selected, so that you can easily override it.  
+*	Now let's choose the target language for translate engines, Google Translate and DeepL translator.
+*	Still in setting panel, under Translation engines group, there are two combo boxes, one for Google Translate and the other for DeepL Translator. Choose the target language you want for each of them and you are done.
 *	Lastly, especially for advanced users  
 You can through a check box in setting panel, choose if you want to preserve your data folder upon installing a new version.  
 This means that your data will be sustained, but added to it the newly entries in the new version.  
 And that's it, hope to search for good and find it, happy searching!  
+
+### Changes for 2.5.5 ###
+
+*	Add DeepL translator to available engines.
+*	Add two combo boxes in setting panel, to choose target language for Google translate and DeepL translator.
 
 ### Changes for 2.5 ###
 
