@@ -9,7 +9,7 @@
 	"GoogleMaps": "https://www.google.com/maps/place/%(text)s",
 	"GoogleScholar": "https://scholar.google.com/scholar?q=%(text)s",
 	"NVDAIssuesOnGitHub": "https://github.com/nvaccess/nvda/issues/%(text)s",
-	"DeepL Translator": "https://www.deepl.com/translator#auto/%(tl)s/%(text)s",
+	"DeepLTranslator": "https://www.deepl.com/translator#auto/%(tl)s/%(text)s",
 	"Reddit.com": "https://www.reddit.com/search/?q=%(text)s",
 	"Ask.com": "https://www.ask.com/web?q=%(text)s",
 	"Archive.org": "https://archive.org/search.php?query=%(text)s",

@@ -518,6 +518,10 @@ class SearchWithPanel(gui.SettingsPanel):
 		''' Setting search with menu to default.'''
 		self.customMenu.Set(MenuHelper.defaultMenuItems)
 		self.customMenu.SetSelection(0)
+		# Available menu items to add then will be changed.
+		basicItemsToAdd= [key for key in MenuHelper.allItemsDict if key not in MenuHelper.defaultMenuItems]
+		self.availableItems.Set(basicItemsToAdd)
+		self.availableItems.SetSelection(0)
 		# Translators: Message informing that menu was set to default.
 		core.callLater(100, ui.message, _("Information: Menu set to default"))
 

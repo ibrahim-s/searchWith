@@ -1,7 +1,7 @@
 # Search With #
 
 *	Author: Ibrahim Hamadeh
-*	Download [Stable version 2.5.5][1]
+*	Download [Stable version 2.5.3][1]
 *	NVDA compatibility: 2019.3 and beyond
 
 This addon helps you to search text, via various search engines.  
@@ -60,7 +60,7 @@ You can through a check box in setting panel, choose if you want to preserve you
 This means that your data will be sustained, but added to it the newly entries in the new version.  
 And that's it, hope to search for good and find it, happy searching!  
 
-### Changes for 2.5.5 ###
+### Changes for 2.5.3 ###
 
 *	Add DeepL translator to available engines.
 *	Add two combo boxes in setting panel, to choose target language for Google translate and DeepL translator.
@@ -144,4 +144,4 @@ but the new entries in the new version, will be merged and added to your old dat
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/2.5/searchWith-2.5.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/2.5.3/searchWith-2.5.3.nvda-addon
