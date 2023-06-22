@@ -86,7 +86,7 @@ def useTranslateEngine(name, url, text):
 	if name== "GoogleTranslate":
 		lang= config.conf["searchWith"]["googleTranslateLang"]
 		lang= lang if lang != "Windows" else languageHandler.getWindowsLanguage()
-	elif name== "DeepL Translator":
+	elif name== "DeepLTranslator":
 		lang= config.conf["searchWith"]["deepLTranslateLang"]
 	targetLanguage= lang if '_' not in lang else lang.split('_')[0]
 	#fullUrl = url%{'text': text, 'tl': targetLanguage}
@@ -257,7 +257,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			log.info('Error getting url', exc_info=1)
 		else:
 			engineName= MenuHelper.getMenuItems()[index]
-			if engineName in ("GoogleTranslate", "DeepL Translator"):
+			if engineName in ("GoogleTranslate", "DeepLTranslator"):
 				useTranslateEngine(engineName, url, text)
 			else:
 				webbrowser.open(url%{'text': text})
@@ -623,7 +623,7 @@ class OtherEnginesMenu(wx.Menu):
 			return
 		# Escaping special characters in the query string.
 		self.text= urllib.parse.quote(self.text)
-		if label in ("GoogleTranslate", "DeepL Translator"):
+		if label in ("GoogleTranslate", "DeepLTranslator"):
 			useTranslateEngine(label, url, self.text)
 		else:
 			webbrowser.open(url%{'text': self.text})
