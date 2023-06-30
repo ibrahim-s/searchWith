@@ -154,14 +154,26 @@ msgstr "Usa l'ultimo testo pronunciato"
 msgid "Options for default query:"
 msgstr "Opzioni per la query predefinita:"
 
+#. Translators: Label of options to choose target language for translation engines.
+msgid "Translation engines"
+msgstr ""
+
+#. Translators: Label of combo box for google translate.
+msgid "Target language for google translate:"
+msgstr ""
+
+#. Translators: Label of combo box for deepL translate.
+msgid "Target language for deepL translate:"
+msgstr ""
+
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
 msgstr "Per utenti avanzati"
 
-#. Translators: Label of checkbox preserve data.
+#. Translators: Label of checkbox preserve data folder.
 #, fuzzy
-msgid "Preserve data upon installing a new version"
+msgid "Preserve data folder upon installing a new version"
 msgstr ""
 "Conserva la cartella dei dati durante l'installazione di una nuova versione"
 

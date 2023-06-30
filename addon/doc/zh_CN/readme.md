@@ -40,10 +40,22 @@ Google 进行搜索。
     * 使用最后依次朗读的文本
 
 * 如果选择使用剪贴板或上次朗读的文本，搜索框中的文本将被选中，便于一键清除。
+* Now let's choose the target language for translate engines, Google
+  Translate and DeepL translator.
+* Still in setting panel, under Translation engines group, there are two
+  combo boxes, one for Google Translate and the other for DeepL
+  Translator. Choose the target language you want for each of them and you
+  are done.
 * 最后，特别是对于高级用户
 * 在设置面板中勾选“保存用户数据”，更新新版新增的搜索引擎条目的同时也会保留用户自定义的搜索引擎条目。
 
 就这样吧，希望你搜索快乐，快乐搜索！
+
+### Changes for 2.5.3 ###
+
+* Add DeepL translator to available engines.
+* Add two combo boxes in setting panel, to choose target language for Google
+  translate and DeepL translator.
 
 ### 2.3 的变化 ###
 

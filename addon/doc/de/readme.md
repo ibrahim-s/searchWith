@@ -73,6 +73,12 @@ Der Standard-Tastenbefehl für die Erweiterung lautet: NVDA+Windows+S. Wenn der 
 * Und wenn die Zwischenablage oder der zuletzt gesprochene Text ausgewählt
   ist, wird der Text im Suchfeld markiert angezeigt, so dass Sie ihn leicht
   überschreiben können.
+* Now let's choose the target language for translate engines, Google
+  Translate and DeepL translator.
+* Still in setting panel, under Translation engines group, there are two
+  combo boxes, one for Google Translate and the other for DeepL
+  Translator. Choose the target language you want for each of them and you
+  are done.
 * Und schließlich, insbesondere für fortgeschrittene Benutzer
 * Sie können über ein Kontrollkästchen im den Einstellungen auswählen, ob
   Sie den gespeicherten Datenordner bei der Installation einer neuen Version
@@ -81,6 +87,12 @@ Der Standard-Tastenbefehl für die Erweiterung lautet: NVDA+Windows+S. Wenn der 
 
 Und das war's, ich hoffe, Sie suchen und finden das Gute, viel Spaß beim
 Suchen!
+
+### Changes for 2.5.3 ###
+
+* Add DeepL translator to available engines.
+* Add two combo boxes in setting panel, to choose target language for Google
+  translate and DeepL translator.
 
 ### Änderungen in 2.3 ###
 

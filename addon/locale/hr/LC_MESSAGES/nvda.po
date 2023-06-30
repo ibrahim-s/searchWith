@@ -146,13 +146,26 @@ msgstr "Koristi zadnji izgovoreni tekst"
 msgid "Options for default query:"
 msgstr "Opcije za standardni upit:"
 
+#. Translators: Label of options to choose target language for translation engines.
+msgid "Translation engines"
+msgstr ""
+
+#. Translators: Label of combo box for google translate.
+msgid "Target language for google translate:"
+msgstr ""
+
+#. Translators: Label of combo box for deepL translate.
+msgid "Target language for deepL translate:"
+msgstr ""
+
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
 msgstr "Za napredne korisnike"
 
-#. Translators: Label of checkbox preserve data.
-msgid "Preserve data upon installing a new version"
+#. Translators: Label of checkbox preserve data folder.
+#, fuzzy
+msgid "Preserve data folder upon installing a new version"
 msgstr "Sačuvaj podatke nakon instaliranja nove verzije"
 
 #. Translators: Message informing that an item was added

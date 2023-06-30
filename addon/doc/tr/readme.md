@@ -68,6 +68,11 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
 
 * Pano veya son konuşulan metin seçilirse, ilgili metin arama kutusuna
   kendiliğinden eklenecektir. Böylece hızlıca arama yapabilirsiniz.
+* Şimdi çeviri motorları, Google Çeviri ve DeepL çevirmeni için hedef dili
+  seçelim.
+* Yine ayar panelinde, Çeviri motorları grubu altında, biri Google Çeviri ve
+  diğeri DeepL Çeviri için olmak üzere iki açılır kutu vardır. Her biri için
+  istediğiniz hedef dili seçebilir ve işinizi bitirebilirsiniz.
 * Son olarak, özellikle ileri düzey kullanıcılar için
 * Ayar panelindeki bir onay kutusu aracılığıyla, yeni bir sürüm yükledikten
   sonra veri klasörünüzü korumak isteyip istemediğinizi seçebilirsiniz. Bu
@@ -75,6 +80,12 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
   anlamına gelir.
 
 Ve işte bu, iyi şeyler aramanızı ve bulmanızı umuyoruz, mutlu aramalar!
+
+### 2.5.3 için değişiklikler ###
+
+* Mevcut motorlara DeepL Çeviri eklendi.
+* Google çeviri ve DeepL Çeviri için hedef dili seçmek üzere ayar paneline
+  iki Açılabilir seçim kutusu eklendi.
 
 ### 2.3 için değişiklikler ###
 

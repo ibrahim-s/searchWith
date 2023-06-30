@@ -68,6 +68,12 @@ El gesto predeterminado del complemento es: NVDA+windows+s. Si el atajo no te fu
 * Y si se elige portapapeles o último texto verbalizado, se mostrará el
   texto seleccionado en el cuadro de búsqueda, de modo que puedas
   reemplazarlo con facilidad.
+* Ahora, elijamos el idioma de destino para los motores de traducción, el
+  traductor de Google y el traductor DeepL.
+* Todavía en el panel de opciones, bajo el grupo de motores de traducción,
+  hay dos cuadros combinados: uno para el traductor de Google y el otro para
+  el traductor DeepL. Elige el idioma de destino que quieres para cada uno y
+  todo listo.
 * Finalmente, y en especial para usuarios avanzados
 * Mediante una casilla de verificación en el panel de opciones, puedes
   elegir preservar tu carpeta de datos al instalar una nueva versión. Esto
@@ -75,6 +81,12 @@ El gesto predeterminado del complemento es: NVDA+windows+s. Si el atajo no te fu
   incluidos en la actualización.
 
 Y esto es todo, espero que encuentres lo que buscas, ¡feliz búsqueda!
+
+### Cambios para 2.5.3 ###
+
+* Se añade el traductor DeepL a los motores disponibles.
+* Se añaden dos cuadros combinados en el panel de opciones para elegir el
+  idioma de destino en los traductores de Google y DeepL.
 
 ### Cambios para 2.3 ###
 

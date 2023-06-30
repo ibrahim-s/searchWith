@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: searchWith 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-16 10:46+0000\n"
-"PO-Revision-Date: 2023-02-24 20:25+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2023-06-24 00:14+0200\n"
+"Last-Translator: José Manuel Delicado <jm.delicado@nvda.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
@@ -145,14 +145,26 @@ msgstr "Usar último texto verbalizado"
 msgid "Options for default query:"
 msgstr "Opciones de consulta predeterminada:"
 
+#. Translators: Label of options to choose target language for translation engines.
+msgid "Translation engines"
+msgstr "Motores de traducción"
+
+#. Translators: Label of combo box for google translate.
+msgid "Target language for google translate:"
+msgstr "Idioma de destino para el traductor de Google:"
+
+#. Translators: Label of combo box for deepL translate.
+msgid "Target language for deepL translate:"
+msgstr "Idioma de destino para el traductor DeepL:"
+
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 msgid "For advanced users"
 msgstr "Para usuarios avanzados"
 
-#. Translators: Label of checkbox preserve data.
-msgid "Preserve data upon installing a new version"
-msgstr "Preservar datos al instalar una nueva versión"
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr "Preservar carpeta de datos al instalar una nueva versión"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
