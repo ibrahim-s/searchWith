@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: 'searchWith'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-10-28 14:35+0800\n"
-"PO-Revision-Date: 2023-02-25 18:42+0800\n"
+"PO-Revision-Date: 2023-07-15 09:46+0800\n"
 "Last-Translator: \n"
 "Language-Team: cary-rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Translators: Search with menu title.
 msgid "Search With Menu"
@@ -143,15 +143,15 @@ msgstr "默认搜索关键词："
 
 #. Translators: Label of options to choose target language for translation engines.
 msgid "Translation engines"
-msgstr ""
+msgstr "翻译引擎"
 
 #. Translators: Label of combo box for google translate.
 msgid "Target language for google translate:"
-msgstr ""
+msgstr "谷歌翻译的目标语言："
 
 #. Translators: Label of combo box for deepL translate.
 msgid "Target language for deepL translate:"
-msgstr ""
+msgstr "deepL 翻译的目标语言："
 
 #. For advanced users group
 #. Translators: Label of group for advanced users.
@@ -159,9 +159,8 @@ msgid "For advanced users"
 msgstr "针对高级用户"
 
 #. Translators: Label of checkbox preserve data folder.
-#, fuzzy
 msgid "Preserve data folder upon installing a new version"
-msgstr "安装新版时保留数据"
+msgstr "安装新版时保留数据目录"
 
 #. Translators: Message informing that an item was added
 msgid "Information: Item added"
