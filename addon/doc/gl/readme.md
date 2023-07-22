@@ -69,6 +69,12 @@ O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che
 * E se se escollen o portapapeis ou o último texto falado, o texto na caixa
   de búsqueda amosarase seleccionado, de xeito que poidas sobrescribilo
   facilmente.
+* Now let's choose the target language for translate engines, Google
+  Translate and DeepL translator.
+* Still in setting panel, under Translation engines group, there are two
+  combo boxes, one for Google Translate and the other for DeepL
+  Translator. Choose the target language you want for each of them and you
+  are done.
 * Finalmente, en especial para usuarios avanzados
 * Podes, mediante unha caixa de verificación no panel de opcións, escoller
   se desexas preservar o teu cartafol de datos cando instales unha nova
@@ -76,6 +82,12 @@ O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che
   engadíndolles as novas entradas da nova versión.
 
 E iso é todo, desexo que procures o ben e o atopes, feliz procura!
+
+### Changes for 2.5.3 ###
+
+* Add DeepL translator to available engines.
+* Add two combo boxes in setting panel, to choose target language for Google
+  translate and DeepL translator.
 
 ### Cambios para 2.3 ###
 

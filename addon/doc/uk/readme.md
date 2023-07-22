@@ -68,28 +68,33 @@
 
 * І якщо вибрано буфер обміну або останній вимовлений текст, текст у вікні
   пошуку буде відображатися виділеним, щоб ви могли легко замінити його.
-*	Нарешті, особливо для досвідчених користувачів  
-Ви можете за допомогою прапорця на панелі налаштувань вибрати, чи хочете 
-  зберегти папку з даними при встановленні нової версії. Це означає
-  що ваші дані будуть збережені, але до них будуть додані нові записи з
-  нової версії.
+* Now let's choose the target language for translate engines, Google
+  Translate and DeepL translator.
+* Still in setting panel, under Translation engines group, there are two
+  combo boxes, one for Google Translate and the other for DeepL
+  Translator. Choose the target language you want for each of them and you
+  are done.
+* Нарешті, особливо для досвідчених користувачів
+* You can through a check box in setting panel, choose if you want to
+  preserve your data folder upon installing a new version. And this means
+  that your data will be sustained, but added to it the newly entries in the
+  new version.
 
 Ось і все, сподіваюся, ви  будете шукати добро і знайдете його, щасливого
 пошуку!
 
-### Зміни у версії 2.4
+### Changes for 2.5.3 ###
 
-* Оновлення локалізації й документації.
+* Add DeepL translator to available engines.
+* Add two combo boxes in setting panel, to choose target language for Google
+  translate and DeepL translator.
 
-### Зміни у версії 2.3 ### * Тепер вибір збереження даних з панелі налаштувань не означає, що нові записи не будуть збережені.
+### Changes for 2.3 ###
 
-* Тепер вибір збереження даних з панелі налаштувань не означає, що ви не отримаєте нові записи даних  
-але нові записи в новій версії будуть об'єднані і додані до вашого старого файлу даних.  
-* Оновлення останньої перевіреної версії до версії 2023.1, щоб відповідати NVDA версії 2023.1.
-
-### Зміни у версії 2.2
-
-* Додано оновлення локалізації та документації.
+* Now choosing to preserve data from setting panel, does not means that you
+  will not get the new data entries, but the new entries in the new version,
+  will be merged and added to your old data file.
+* Update last tested version to 2023.1 to comply with NVDA version 2023.1.
 
 ### Зміни у версії 2.0 ###
 

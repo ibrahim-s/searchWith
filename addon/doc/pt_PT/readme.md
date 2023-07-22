@@ -69,6 +69,12 @@ O atalho predefinido para o extra é: NVDA+ Windows+ S. Se a tecla não funciona
 * E se a área de transferência ou o último texto falado for escolhido, o
   texto na caixa de pesquisa será apresentado seleccionado, para que possa
   facilmente substituí-lo.
+* Now let's choose the target language for translate engines, Google
+  Translate and DeepL translator.
+* Still in setting panel, under Translation engines group, there are two
+  combo boxes, one for Google Translate and the other for DeepL
+  Translator. Choose the target language you want for each of them and you
+  are done.
 * Por último, especialmente para os utilizadores avançados
 * Pode, através de uma caixa de verificação no painel de definições,
   escolher se pretende preservar a sua pasta de dados ao instalar uma nova
@@ -76,6 +82,12 @@ O atalho predefinido para o extra é: NVDA+ Windows+ S. Se a tecla não funciona
   adicionadas as novas entradas na nova versão.
 
 Espero que pesquise e encontre o que precisa. Boas pesquisas!
+
+### Changes for 2.5.3 ###
+
+* Add DeepL translator to available engines.
+* Add two combo boxes in setting panel, to choose target language for Google
+  translate and DeepL translator.
 
 ### Alterações para 2.3 ###
 

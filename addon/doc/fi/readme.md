@@ -67,6 +67,11 @@ Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S. Mikäli tämä näppäi
 
 * Mikäli "leikepöydän teksti" tai "viimeksi puhuttu teksti" valitaan,
   hakukentän teksti näytetään valittuna, jotta voit helposti korvata sen.
+* Käännöskoneiden (Google-käänntäjä ja DeepL Translator) kohdekielen
+  valitseminen on nyt mahdollista.
+* Asetuspaneelin Käännöskoneet-ryhmässä on kaksi yhdistelmäruutua; toinen
+  Google-kääntäjälle ja toinen DeepL Translatorille. Valitse molemmille
+  haluamasi kohdekieli, ja olet valmis tekstin kääntämiseen.
 * Lopuksi erityisesti kokeneille käyttäjille
 * Voit valita asetuspaneelissa olevalla valintaruudulla, haluatko säilyttää
   lisäosan datakansion sisällön uutta versiota asennettaessa. Jos valitset
@@ -74,6 +79,12 @@ Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S. Mikäli tämä näppäi
   datatiedostoon.
 
 Siinä kaikki. Toivottavasti löydät etsimäsi.
+
+### Muutokset versiossa 2.5.3 ###
+
+* Lisätty DeepL Translator käytettävissä olevaksi käännöskoneeksi.
+* Lisätty asetuspaneeliin kaksi yhdistelmöruutua , joista voidaan valita
+  Google-kääntäjän ja DeepL Translatorin kohdekieli.
 
 ### Muutokset versiossa 2.3 ###
 

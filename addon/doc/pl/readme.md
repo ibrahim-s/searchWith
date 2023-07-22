@@ -68,6 +68,12 @@ Domyślnym gestem dla dodatku jest: NVDA+ Windows+ S. Jeśli naciśnięcie nie d
 * A jeśli wybrany zostanie schowek lub ostatni tekst mówiony, tekst w polu
   wyszukiwania zostanie wyświetlony zaznaczony, dzięki czemu można go łatwo
   zastąpić.
+* Now let's choose the target language for translate engines, Google
+  Translate and DeepL translator.
+* Still in setting panel, under Translation engines group, there are two
+  combo boxes, one for Google Translate and the other for DeepL
+  Translator. Choose the target language you want for each of them and you
+  are done.
 * Wreszcie, szczególnie dla zaawansowanych użytkowników
 * You can through a check box in setting panel, choose if you want to
   preserve your data folder upon installing a new version. And this means
@@ -76,6 +82,12 @@ Domyślnym gestem dla dodatku jest: NVDA+ Windows+ S. Jeśli naciśnięcie nie d
 
 I to wszystko, mam nadzieję szukać dobra i znaleźć je, szczęśliwe
 poszukiwania!
+
+### Changes for 2.5.3 ###
+
+* Add DeepL translator to available engines.
+* Add two combo boxes in setting panel, to choose target language for Google
+  translate and DeepL translator.
 
 ### Changes for 2.3 ###
 

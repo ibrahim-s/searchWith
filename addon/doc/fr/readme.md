@@ -76,6 +76,12 @@ Le geste par défaut pour l'extension est : NVDA+ Windows+ S. Si la frappe au cl
 * Et si le presse-papiers ou le dernier texte annoncé est choisi, le texte
   dans la zone de recherche s'affichera sélectionné, afin que vous puissiez
   facilement le remplacer.
+* Choisissons maintenant la langue cible pour les moteurs de traduction,
+  Google Translate et DeepL Translator.
+* Toujours dans le panneau de paramètres, sous le groupe Moteurs de
+  traduction, il y a deux zones de liste déroulante, l'une pour Google
+  Translate et l'autre pour DeepL Translator. Choisissez la langue cible que
+  vous souhaitez pour chacun d'eux et vous avez terminé.
 * Enfin, surtout pour les utilisateurs avancés
 * Vous pouvez via une case à cocher dans le panneau de paramètres, de
   choisir si vous souhaitez conserver votre dossier de données lors de
@@ -85,6 +91,12 @@ Le geste par défaut pour l'extension est : NVDA+ Windows+ S. Si la frappe au cl
 
 Et c'est tout, j'espère que vous trouverez ce que vous recherchez, bonne
 recherche !
+
+### Changements de la version 2.5.3 ###
+
+* Ajouter DeepL Translator aux moteurs disponibles.
+* Ajouter deux  zones de liste déroulante  dans le panneau de paramètres,
+  pour choisir la langue cible pour Google Translate et DeepL Translator.
 
 ### Changements de la version 2.3 ###
 
