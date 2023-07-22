@@ -53,40 +53,39 @@ Eklenti için varsayılan hareket: NVDA+ Windows+ S olarak belirlenmiştir. Bu h
 * Diğer dillerde Google'da arama yapmak ister misiniz?
 * Ardından, ayar panelinde Şununla Ara kategorisine gidin, oradaki Google'da
   ara seçim kutusundan kulllanılmasını istediğiniz dili seçebilirsiniz:
+
     1. Tarayıcı ayarlarını ve dilini kullan.
     2. NVDA dilini kullan.
     3. Windows dilini kullan.
+
 * Son olarak, İle ara iletişim kutusunda varsayılan sorguyu seçme
   seçeneğiniz vardır. ayar panelindeki Varsayılan sorgu için Seçim
   kutusundan Dilediğiniz seçeneği seçebilirsiniz
+
     * Boş bırak
     * Pano metnini kullan
     * Son konuşulan metni kullan
+
 * Pano veya son konuşulan metin seçilirse, ilgili metin arama kutusuna
   kendiliğinden eklenecektir. Böylece hızlıca arama yapabilirsiniz.
-*	Şimdi çeviri motorları, Google Çeviri ve DeepL Çeviri için hedef dili seçelim.
-*	Yine ayar panelinde, Çeviri motorları grubu altında, biri Google Çeviri ve diğeri DeepL Çeviri için olmak üzere iki adet birleşik giriş kutusu vardır. Her biri için istediğiniz hedef dili seçin ve Tamama basın.
+* Şimdi çeviri motorları, Google Çeviri ve DeepL çevirmeni için hedef dili
+  seçelim.
+* Yine ayar panelinde, Çeviri motorları grubu altında, biri Google Çeviri ve
+  diğeri DeepL Çeviri için olmak üzere iki açılır kutu vardır. Her biri için
+  istediğiniz hedef dili seçebilir ve işinizi bitirebilirsiniz.
 * Son olarak, özellikle ileri düzey kullanıcılar için
 * Ayar panelindeki bir onay kutusu aracılığıyla, yeni bir sürüm yükledikten
   sonra veri klasörünüzü korumak isteyip istemediğinizi seçebilirsiniz. Bu
   da verilerinizin korunacağı, ancak yeni sürümde yeni girdilerin ekleneceği
   anlamına gelir.
 
-İşte bu kadar, iyiyi arayıp bulmak dileğiyle, mutlu aramalar!
+Ve işte bu, iyi şeyler aramanızı ve bulmanızı umuyoruz, mutlu aramalar!
 
 ### 2.5.3 için değişiklikler ###
 
-*	Mevcut motorlara DeepL çevirmeni eklendi.
-*	Google çeviri ve DeepL Çeviri için hedef dili seçmek üzere ayar paneline iki seçim kutusu eklendi.
-
-### 2.5 için değişiklikler ###
-
-*	Eklentinin adını 'searchWith'e döndürür (camel case).
-*	Google Akademik mevcut motorlara eklendi.
-
-### 2.4 için değişiklikler ###
-
-*	Dil dosyaları ve Belgeler güncellendi.
+* Mevcut motorlara DeepL Çeviri eklendi.
+* Google çeviri ve DeepL Çeviri için hedef dili seçmek üzere ayar paneline
+  iki Açılabilir seçim kutusu eklendi.
 
 ### 2.3 için değişiklikler ###
 
