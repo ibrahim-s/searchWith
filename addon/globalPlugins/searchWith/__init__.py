@@ -353,7 +353,7 @@ if not config.conf["searchWith"]["menuItems"]:
 	config.conf["searchWith"]["menuItems"]= MenuHelper.defaultMenuItems
 
 #make  SettingsPanel  class
-class SearchWithPanel(gui.SettingsPanel):
+class SearchWithPanel(gui.settingsDialogs.SettingsPanel):
 	# Translators: title of the panel
 	title= _("Search With")
 
