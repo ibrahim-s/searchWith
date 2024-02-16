@@ -15,7 +15,7 @@
 системи. Щоб шукати виділений текст безпосередньо в Google, натисніть цю
 комбінацію двічі.
 
-Початковий жест для додатка: NVDA+Windows+S. Якщо натискання клавіші не працює або конфліктує з іншими комбінаціями клавіш, ви можете, як завжди, додати жест або змінити вже наявний, перейшовши до: меню NVDA>налаштування>Жести вводу>категорія «Пошук за допомогою».
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Використання
 

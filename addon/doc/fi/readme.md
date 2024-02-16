@@ -15,7 +15,7 @@ joka avaa valintaikkunan, josta voit valita haluamasi hakukoneen. Voit
 halutessasi etsiä valittua tekstiä myös suoraan Googlella painamallla
 näppäinkomentoa kahdesti.
 
-Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S. Mikäli tämä näppäinkomento ei toimi tai on ristiriidassa jonkin muun näppäinkomennon kanssa, voit lisätä uuden näppäinkomennon tai muuttaa oletusarvoista avaamalla NVDA-valikon, menemällä Asetukset-alivalikkoon ja valitsemalla Näppäinkomennot-vaihtoehdon ja sitten Hae hakukoneella -kategorian.
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Käyttö
 

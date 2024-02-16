@@ -10,7 +10,7 @@ Google 搜索，或按 Tab 键选择其他引擎进行搜索。
 或者您可以选中想搜索的文本，按一次搜索快捷键，此时会显示一个菜单，其中包含各种搜索引擎可供选择。您也可以在选中想搜索的文本后，连按两次搜索快捷键直接使用
 Google 进行搜索。
 
-插件的默认搜索快捷键是： NVDA + Windows + S。如果该快捷键不适合您，或者雨其他功能冲突，您可以依次转到： NVDA 菜单 > 选项 > 按键与手势 > 快捷搜索类别下进行添加或更改。
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## 使用
 

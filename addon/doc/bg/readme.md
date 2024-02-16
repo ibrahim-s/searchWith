@@ -14,7 +14,7 @@
 задействате командата двукратно, директно ще задействате търсене на
 маркирания текст с Google.
 
-Клавишната комбинация по подразбиране за добавката е NVDA+Windows+S. Ако клавишната комбинация не работи за вас или се използва от друго приложение, както винаги можете да добавите жест (напр. клавишна комбинация) или да промените съществуващия, като отидете в менюто на NVDA -> Настройки -> Жестове на въвеждане -> категорията "Търсене с".
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Начин на употреба
 

@@ -14,7 +14,7 @@ unha vez, amosarase un menú con varios motores de procura para escoller. e
 podes se queres, premer o xesto dúas veces para procurar o texto con Google
 directamente.
 
-O xesto por defecto para o complemento é: NVDA+ Windows+ S. Se o atallo non che funciona, ou fai conflito con outro, podes coma sempre engadir un xesto ou cambiar o existente indo a: menú NVDA>preferencias>xestosDeEntrada>categoría Search With.
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Uso
 

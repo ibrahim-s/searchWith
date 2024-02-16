@@ -15,7 +15,7 @@ uma vez, será mostrado um menu com vários motores de busca para escolher. e
 pode, se quiser, pressionar o comando duas vezes, para pesquisar
 directamente o texto seleccionado com o Google.
 
-O atalho predefinido para o extra é: NVDA+ Windows+ S. Se a tecla não funcionar para si, ou entrar em conflito com outra tecla, pode, como sempre, adicionar um atalho ou alterar o existente indo a: Menu NVDA>Preferências>definir comandos>Pesquisar com categoria.
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Utilização
 
