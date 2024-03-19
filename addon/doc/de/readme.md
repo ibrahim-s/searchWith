@@ -16,7 +16,7 @@ Suchmaschinen zur Auswahl angezeigt. Und Sie können, wenn Sie möchten, den
 Tastenbefehl zweimal drücken, um den ausgewählten Text direkt mit Google zu
 suchen.
 
-Der Standard-Tastenbefehl für die Erweiterung lautet: NVDA+Windows+S. Wenn der Tastendruck für Sie nicht funktioniert oder mit einem anderen Tastendruck kollidiert, können Sie wie immer eine neuen Tastenbefehl hinzufügen oder die vorhandene ändern, indem Sie zu: NVDA-Menü > Einstellungen > Werkzeuge > Tastenbefehle und dort die Kategorie für dieser Erweiterung auswählen.
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Anwendung
 

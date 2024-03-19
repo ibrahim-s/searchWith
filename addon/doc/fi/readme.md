@@ -15,7 +15,7 @@ joka avaa valintaikkunan, josta voit valita haluamasi hakukoneen. Voit
 halutessasi etsiä valittua tekstiä myös suoraan Googlella painamallla
 näppäinkomentoa kahdesti.
 
-Lisäosan oletusarvoinen näppäinkomento on NVDA+Win+S. Mikäli tämä näppäinkomento ei toimi tai on ristiriidassa jonkin muun näppäinkomennon kanssa, voit lisätä uuden näppäinkomennon tai muuttaa oletusarvoista avaamalla NVDA-valikon, menemällä Asetukset-alivalikkoon ja valitsemalla Näppäinkomennot-vaihtoehdon ja sitten Hae hakukoneella -kategorian.
+Lisäosan oletusarvoinen näppäinkomento on NVDA+Windows+S. Mikäli tämä näppäinkomento ei toimi tai on ristiriidassa jonkin muun näppäinkomennon kanssa, voit lisätä uuden näppäinkomennon tai muuttaa oletusarvoista avaamalla NVDA-valikon, menemällä Asetukset-alivalikkoon ja valitsemalla Näppäinkomennot-vaihtoehdon ja sitten Hae hakukoneella -kategorian.
 
 ## Käyttö
 

@@ -15,7 +15,7 @@ zostanie wyświetlone menu z różnymi wyszukiwarkami do wyboru. i możesz,
 jeśli chcesz, naciśnij gest dwa razy, aby wyszukać wybrany tekst
 bezpośrednio w Google.
 
-Domyślnym gestem dla dodatku jest: NVDA+ Windows+ S. Jeśli naciśnięcie nie działa dla Ciebie lub powoduje konflikt z innym naciśnięciem, możesz jak zawsze dodać gest lub zmienić istniejący, przechodząc do: MENU NVDA>oferty>InputGestury>Wyszukiwanie z kategorią.
+The Default gesture for the addon is: NVDA+ Windows+ S. If the keystroke do not work for you, or conflict with other keystroke, you can as always add a gesture or change the existent one going to: NVDA menu>preferences>inputGestures>Search With category.
 
 ## Użycie
 
