@@ -439,10 +439,10 @@ class SearchWithPanel(gui.settingsDialogs.SettingsPanel):
 		self.availableLanguages = languageHandler.getAvailableLanguages(presentational=True)
 		googleChoices = [x[1] for x in self.availableLanguages]
 		deepLChoices = [x[1] for x in deepLLanguages]
-		sizer1= gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
+		sizer1= gui.guiHelper.BoxSizerHelper(self, orientation= wx.VERTICAL)
 		# Translators: Label of combo box for google translate.
 		self.googleTranslateComboBox = sizer1.addLabeledControl(_("Target language for google translate:"), wx.Choice, choices= googleChoices)
-		sizer2 = gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
+		sizer2 = gui.guiHelper.BoxSizerHelper(self, orientation= wx.VERTICAL)
 		# Translators: Label of combo box for deepL translate.
 		self.deepLTranslateComboBox= sizer2.addLabeledControl(_("Target language for deepL translate:"), wx.Choice, choices= deepLChoices)
 		self.googleTranslateComboBox.SetSelection([indx for indx, val in enumerate(self.availableLanguages) if val[0]== config.conf["searchWith"]["googleTranslateLang"]][0])
