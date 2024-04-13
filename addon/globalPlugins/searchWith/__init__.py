@@ -439,14 +439,14 @@ class SearchWithPanel(gui.settingsDialogs.SettingsPanel):
 		self.availableLanguages = languageHandler.getAvailableLanguages(presentational=True)
 		googleChoices = [x[1] for x in self.availableLanguages]
 		deepLChoices = [x[1] for x in deepLLanguages]
-		sizer1= gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
+		googleTranslateSizer = gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
 		# Translators: Label of combo box for google translate.
-		staticText1= sizer1.addItem(wx.StaticText(staticTranslationEnginesSizer.GetStaticBox(), label= _("Target language for google translate:")))
-		self.googleTranslateComboBox = sizer1.addItem(wx.Choice(staticTranslationEnginesSizer.GetStaticBox(), choices= googleChoices))
-		sizer2 = gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
+		googleTranslateSizer.addItem(wx.StaticText(staticTranslationEnginesSizer.GetStaticBox(), label= _("Target language for google translate:")))
+		self.googleTranslateComboBox = googleTranslateSizer.addItem(wx.Choice(staticTranslationEnginesSizer.GetStaticBox(), choices= googleChoices))
+		deepLTranslateSizer = gui.guiHelper.BoxSizerHelper(staticTranslationEnginesSizer.GetStaticBox(), orientation= wx.VERTICAL)
 		# Translators: Label of combo box for deepL translate.
-		staticText2 = sizer2.addItem(wx.StaticText(staticTranslationEnginesSizer.GetStaticBox(), label= _("Target language for deepL translate:")))
-		self.deepLTranslateComboBox= sizer2.addItem(wx.Choice(staticTranslationEnginesSizer.GetStaticBox(), choices= deepLChoices))
+		deepLTranslateSizer.addItem(wx.StaticText(staticTranslationEnginesSizer.GetStaticBox(), label= _("Target language for deepL translate:")))
+		self.deepLTranslateComboBox= deepLTranslateSizer.addItem(wx.Choice(staticTranslationEnginesSizer.GetStaticBox(), choices= deepLChoices))
 		self.googleTranslateComboBox.SetSelection([indx for indx, val in enumerate(self.availableLanguages) if val[0]== config.conf["searchWith"]["googleTranslateLang"]][0])
 		self.deepLTranslateComboBox.SetSelection([indx for indx, val in enumerate(deepLLanguages) if val[0]== config.conf["searchWith"]["deepLTranslateLang"]][0])
 
