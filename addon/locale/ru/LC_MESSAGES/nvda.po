@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: 'searchWith' '2.5.3'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2023-06-21 15:44+0300\n"
-"PO-Revision-Date: 2024-04-02 11:28+0300\n"
-"Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
+"PO-Revision-Date: 2024-08-01 16:03+0300\n"
+"Last-Translator: Ruslan Kolodyazhni <rupelodn@gmail.com>\n"
 "Last-Translator: \n"
 "Language-Team: Alex Yeshanu <eshanuap@gmail.com>, Danil Kostenkov "
 "<danilkostenkov38@gmail.com>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Search with menu title.
 #: addon\globalPlugins\searchWith\__init__.py:214
 msgid "Search With Menu"
-msgstr "Меню Search With"
+msgstr "Меню Поиска с Помощью"
 
 #. Translators: Message displayed if error happens in getting url.
 #: addon\globalPlugins\searchWith\__init__.py:253
@@ -55,9 +55,9 @@ msgid ""
 "Display Search with dialog to enter a search query. And if text selected, "
 "displays a virtual menu pressed once, searches Google directly pressed twice."
 msgstr ""
-"Отображает диалоговое окно для ввода поискового запроса. И, если выделен "
-"текст, нажатие один раз показывает виртуальное меню с выбором поисковика, "
-"нажатие дважды запускает поиск с помощью Google напрямую."
+"Отображает диалог для ввода поискового запроса. И, если выделен текст, "
+"нажатие один раз показывает виртуальное меню с выбором поисковика, нажатие "
+"дважды запускает поиск с помощью Google напрямую."
 
 #. Translators: Category of addon in input gestures.
 #. Translators: title of the panel
@@ -71,7 +71,7 @@ msgstr ""
 #: addon\globalPlugins\searchWith\__init__.py:358
 #: addon\globalPlugins\searchWith\__init__.py:538 buildVars.py:23
 msgid "Search With"
-msgstr "Search With"
+msgstr "Поиск с Помощью"
 
 #. Translators: Message displayed in input help mode.
 #: addon\globalPlugins\searchWith\__init__.py:324
@@ -109,7 +109,7 @@ msgstr "&Добавить в меню"
 #. Translators: Search with menu items.
 #: addon\globalPlugins\searchWith\__init__.py:380
 msgid "Search with menu"
-msgstr "Меню Search with"
+msgstr "Меню Поиска с Помощью"
 
 #. Translators: Label of remove button.
 #: addon\globalPlugins\searchWith\__init__.py:390
@@ -129,7 +129,7 @@ msgstr "Переместить &ниже"
 #. Translators: Label of set menu to default button.
 #: addon\globalPlugins\searchWith\__init__.py:399
 msgid "Set menu to default"
-msgstr "&Сбросить по умолчанию"
+msgstr "Выбрать меню по умолчанию"
 
 #. Translators: Label of options in searching google.
 #: addon\globalPlugins\searchWith\__init__.py:404
@@ -139,7 +139,7 @@ msgstr "В поиске Google"
 #. Translators: Option in cumbo box to choose browser setting
 #: addon\globalPlugins\searchWith\__init__.py:407
 msgid "Browser language and setting"
-msgstr "Язык браузера"
+msgstr "Язык и настройки браузера"
 
 #. Translators: Option in cumbo box to choose NVDA language
 #: addon\globalPlugins\searchWith\__init__.py:409
@@ -159,12 +159,12 @@ msgstr "&Использовать:"
 #. Translators: In search with dialog group
 #: addon\globalPlugins\searchWith\__init__.py:421
 msgid "In search with dialog"
-msgstr "В диалоге Search with"
+msgstr "В диалоге Поиска с Помощью"
 
 #. Translators: An option to use for default query.
 #: addon\globalPlugins\searchWith\__init__.py:424
 msgid "Leave Blank"
-msgstr "Оставить поле пустым"
+msgstr "Оставить Пустым"
 
 #. Translators: An option to use for default query.
 #: addon\globalPlugins\searchWith\__init__.py:426
@@ -189,18 +189,18 @@ msgstr "Системы  перевода текста"
 #. Translators: Label of combo box for google translate.
 #: addon\globalPlugins\searchWith\__init__.py:444
 msgid "Target language for google translate:"
-msgstr "Язык перевода для Google translate:"
+msgstr "Целевой язык для Google translate:"
 
 #. Translators: Label of combo box for deepL translate.
 #: addon\globalPlugins\searchWith\__init__.py:447
 msgid "Target language for deepL translate:"
-msgstr "Язык перевода для deepL translate:"
+msgstr "Целевой язык для deepL translate:"
 
 #. For advanced users group
 #. Translators: Label of group for advanced users.
 #: addon\globalPlugins\searchWith\__init__.py:453
 msgid "For advanced users"
-msgstr "Для продвинутых пользователей"
+msgstr "Для опытных пользователей"
 
 #. Translators: Label of checkbox preserve data folder.
 #: addon\globalPlugins\searchWith\__init__.py:455
@@ -230,12 +230,12 @@ msgstr "Информация: элемент перемещён ниже"
 #. Translators: Message informing that menu was set to default.
 #: addon\globalPlugins\searchWith\__init__.py:522
 msgid "Information: Menu set to default"
-msgstr "Информация: Меню сброшено по умолчанию"
+msgstr "Информация: Меню установлено по умолчанию"
 
 #. Translators: Label of static text
 #: addon\globalPlugins\searchWith\__init__.py:545
 msgid "Search with google"
-msgstr "Поиск google"
+msgstr "Поиск с помощью google"
 
 #. Translators: Label of text control to enter query.
 #: addon\globalPlugins\searchWith\__init__.py:547
@@ -265,8 +265,7 @@ msgstr ""
 "Это дополнение поможет вам выполнять поиск текста с помощью различных "
 "поисковых систем.\n"
 "Не выделяйте текст и нажмите на жест дополнения.\n"
-"Откроется диалоговое окно с полем редактирования для ввода поискового "
-"запроса.\n"
+"Откроется диалог с полем редактирования для ввода поискового запроса.\n"
 "Для поиска с помощью Google нажмите enter или tab для поиска с помощью "
 "других поисковых систем.\n"
 "Или\n"
