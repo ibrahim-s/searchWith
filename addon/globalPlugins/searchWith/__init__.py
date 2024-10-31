@@ -77,7 +77,7 @@ def searchWithGoogle(text):
 	langParam= f"&lr=lang_{lang}&hr={lang}" if lang else ""
 	# Escaping special characters in the query string.
 	text= urllib.parse.quote(text)
-	webbrowser.open(googleUrl+ text+ langParam)
+	webbrowser.open(googleUrl+ text+ langParam, new=2)
 
 def useTranslateEngine(name, url, text):
 	''' Using either GoogleTranslate or DeepLTranslator to translate the text. 
@@ -90,7 +90,7 @@ def useTranslateEngine(name, url, text):
 		lang= config.conf["searchWith"]["deepLTranslateLang"]
 	targetLanguage= lang if '_' not in lang else lang.split('_')[0]
 	#fullUrl = url%{'text': text, 'tl': targetLanguage}
-	webbrowser.open(url%{'text': text, 'tl': targetLanguage})
+	webbrowser.open(url%{'text': text, 'tl': targetLanguage}, new=2)
 		#log.info(f'fullUrl: {fullUrl}')
 
 # Default search engines dict, name and url
@@ -260,7 +260,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if engineName in ("GoogleTranslate", "DeepLTranslator"):
 				useTranslateEngine(engineName, url, text)
 			else:
-				webbrowser.open(url%{'text': text})
+				webbrowser.open(url%{'text': text}, new=2)
 		finally:
 			self.clearVirtual()
 
@@ -628,7 +628,7 @@ class OtherEnginesMenu(wx.Menu):
 		if label in ("GoogleTranslate", "DeepLTranslator"):
 			useTranslateEngine(label, url, self.text)
 		else:
-			webbrowser.open(url%{'text': self.text})
+			webbrowser.open(url%{'text': self.text}, new=2)
 		import speech
 		speech.cancelSpeech()
 		wx.CallLater(4000, self.parentDialog.Destroy)
