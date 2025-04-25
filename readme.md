@@ -2,7 +2,7 @@
 
 *	Authors: Ibrahim Hamadeh, Cary Rowen
 *	NVDA compatibility: 2019.3 and beyond
-*	Download [Stable version 2.6.4][1]
+*	Download [development version 2.6.5][1]
 
 This addon helps you to search text, via various search engines.  
 Let no text selected, and press the gesture of the addon  
@@ -180,4 +180,4 @@ but the new entries in the new version, will be merged and added to your old dat
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/2.6.4/searchWith-2.6.4.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/2.6.5/searchWith-2.6.5.nvda-addon
