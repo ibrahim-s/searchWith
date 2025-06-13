@@ -2,7 +2,7 @@
 
 *	Authors: Ibrahim Hamadeh, Cary Rowen
 *	NVDA compatibility: 2019.3 and beyond
-*	Download [development version 2.6.5][1]
+*	Download [version 2.6.6][1]
 
 This addon helps you to search text, via various search engines.  
 Let no text selected, and press the gesture of the addon  
@@ -59,6 +59,10 @@ And if clipboard or last spoken text is chosen, text in search box will be displ
 You can through a check box in setting panel, choose if you want to preserve your data folder upon installing a new version.  
 This means that your data will be sustained, but added to it the newly entries in the new version.  
 And that's it, hope to search for good and find it, happy searching!  
+
+### Changes for 2.6.6 ###
+
+*	Update last tested version, thus make the addon compatible with NVDA2025.1 release.
 
 ### Changes for 2.6.4 ###
 
@@ -180,4 +184,4 @@ but the new entries in the new version, will be merged and added to your old dat
 
 *	Initial version  
 
-[1]: https://github.com/ibrahim-s/searchWith/releases/download/2.6.5/searchWith-2.6.5.nvda-addon
+[1]: https://github.com/ibrahim-s/searchWith/releases/download/2.6.6/searchWith-2.6.6.nvda-addon
