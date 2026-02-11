@@ -22,7 +22,6 @@ import webbrowser
 import urllib
 import speech
 import speechViewer
-import versionInfo
 from .deepL import deepLLanguages
 from logHandler import log
 
@@ -140,8 +139,6 @@ class MenuHelper:
 
 class LastSpoken:
 	''' Helper class that contains the code, to get last spoken text.'''
-	# Build year of NVDA version
-	BUILD_YEAR = getattr(versionInfo, 'version_year', 2021)
 	# Before before last spoken is needed, in case of searching Google directly for last spoken text
 	# Last spoken will be the first item of menu, and before that search with menu, so we want last spoken before that .
 	# lastSpokenText is a deque, of maximum length of 3.
@@ -149,19 +146,12 @@ class LastSpoken:
 
 	@classmethod
 	def _patch(cls):
-		if cls.BUILD_YEAR >= 2021:
-			cls.oldSpeak = speech.speech.speak
-			speech.speech.speak = cls.mySpeak
-		else:
-			cls.oldSpeak = speech.speak
-			speech.speak = cls.mySpeak
+		cls.oldSpeak = speech.speech.speak
+		speech.speech.speak = cls.mySpeak
 
 	@classmethod
 	def terminate(cls):
-		if cls.BUILD_YEAR >= 2021:
-			speech.speech.speak = cls.oldSpeak
-		else:
-			speech.speak = cls.oldSpeak
+		speech.speech.speak = cls.oldSpeak
 
 	@classmethod
 	def mySpeak(cls, sequence, *args, **kwargs):
