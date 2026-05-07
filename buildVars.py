@@ -30,11 +30,11 @@ select some text and press once, a menu will be displayed with various search en
 And while text is selected, you can press the gesture twice to search with Google directly.
 The Default gesture for the addon is: NVDA+ Windows+ S."""),
 	# version
-	addon_version="2.6.7",
+	addon_version="2.6.8",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""Update minimum tested NVDA version to 2021.1,
-and update addon template to latest."""),
+	addon_changelog=_("""- Update last tested version to comply with recent NVDA 2026.1 release.
+"""),
 	# Author(s)
 	addon_author="ibrahim hamadeh <ibra.hamadeh@hotmail.com>, Cary Rowen <manchen_0528@outlook.com>",
 	# URL for the add-on documentation support
